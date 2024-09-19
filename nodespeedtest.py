@@ -57,17 +57,17 @@ def kill_clash_process():
         print("未找到 clash.exe 进程")
 
 
-def upload_yaml_to_clash():
+def upload_yaml_to_clash(path='config.yaml'):
     """
     上传 YAML 配置到 Clash 内核
     :return:
     """
     # 定义要执行的 Clash 命令和配置文件路径
     clash_executable = r'.\clash.exe'
-    config_file = r'.\config.yaml'
+    # config_file = path
 
     # 构建命令行参数，注意：每个部分要作为单独的字符串
-    command = [clash_executable, '-f', config_file]
+    command = [clash_executable, '-f', path]
 
     try:
         # 执行命令行，启动 clash.exe 并传递配置文件
@@ -83,13 +83,20 @@ def upload_yaml_to_clash():
         print(f"执行 Clash 进程时出错: {e}")
 
 
-def download_yaml(url):
+def download_yaml():
     """
     下载 YAML 文件
     :param url:
     :return:
     """
-
+    urls = []
+    with open('suburls', 'r') as f:
+        for url in f:
+            urls.append(url.strip())  # 去除行尾的换行符
+    # 使用 '|' 将多个URL连接
+    joined_urls = '|'.join(urls)
+    encode_url(joined_urls)
+    yaml_url = 'http://10.35.26.42:25500/sub?target=clash&url=' + encode_url(joined_urls)
     # 替换 cipher 配置
     def replace_cipher(data):
         if isinstance(data, dict):
@@ -122,7 +129,7 @@ def download_yaml(url):
             return unique_list
         return data
 
-    response = requests.get(url)
+    response = requests.get(yaml_url)
     try:
         if response.status_code == 200:
             # 下载节点保存到本地
@@ -138,7 +145,7 @@ def download_yaml(url):
                 remove_duplicates(data)
             # 处理几点后写入到本地文件
             with open('config.yaml', 'w', encoding='utf-8') as file:
-                yaml.dump(data, file, default_flow_style=False)
+                yaml.dump(data, file, default_flow_style=True)
                 return data
         else:
             raise Exception(f"无法下载 YAML 文件: {response.status_code}")
@@ -231,12 +238,14 @@ def generate_sorted_yaml(config, sorted_proxies):
         print(f"生成新的排序后的配置文件时出错: {e}")
 
 
-def run_tests_in_parallel(proxies):
+def run_tests_in_parallel():
     """
     使用线程池并发测试所有节点的延迟
     :param proxies:
     :return:
     """
+    # 获取所有代理节点并测试延迟
+    proxies = get_proxies()
     try:
         with ThreadPoolExecutor(max_workers=5) as executor:
             # 提交所有任务
@@ -248,41 +257,21 @@ def run_tests_in_parallel(proxies):
                     result = future.result()  # 获取任务结果
                 except Exception as e:
                     print(f"任务发生异常: {e}")
+
+
     except Exception as e:
         print(f"并发测试节点延迟时出错: {e}")
 
+def start_latency_testing():
 
-if __name__ == '__main__':
-    print('YAML 文件开始下载。。。。。')
-    # 替换为你的订阅链接
-    # yaml_url = 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Supprise0901/Fetch/main/Superspeed.yaml'
-    # yaml_url = 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash'
-    # yaml_url = 'http://10.35.26.42:25500/sub?target=clash&url=https%3A%2F%2Fmirror.ghproxy.com%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2Fripaojiedian%2Ffreenode%2Fmain%2Fclash%7Chttps%3A%2F%2Fmirror.ghproxy.com%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2FSupprise0901%2FFetch%2Fmain%2FSuperspeed.yaml%7Chttps%3A%2F%2Fmirror.ghproxy.com%2Fraw.githubusercontent.com%2Faiboboxx%2Fv2rayfree%2Fmain%2Fv2%7Chttps%3A%2F%2Fmirror.ghproxy.com%2Fraw.githubusercontent.com%2Fmfuu%2Fv2ray%2Fmaster%2Fmerge%2Fmerge_clash.yaml%7Chttps%3A%2F%2Fmirror.ghproxy.com%2Fraw.githubusercontent.com%2Fpeasoft%2FNoMoreWalls%2Fmaster%2Flist.txt%7Chttps%3A%2F%2Fmirror.ghproxy.com%2Fraw.githubusercontent.com%2Faiboboxx%2Fv2rayfree%2Fmain%2Fv2%7C%7C%7C'
-    urls = []
-    with open('suburls', 'r') as f:
-        for url in f:
-            urls.append(url.strip())  # 去除行尾的换行符
-    # 使用 '|' 将多个URL连接
-    joined_urls = '|'.join(urls)
-    encode_url(joined_urls)
-    yaml_url = 'http://10.35.26.42:25500/sub?target=clash&url=' + encode_url(joined_urls)
-
-    # 定义 Clash API 地址
-    clash_api_url = 'http://127.0.0.1:9090'
     # 下载并解析 YAML 内容
-    yaml_content = download_yaml(yaml_url)
-
+    yaml_content = download_yaml()
     # 推送 YAML 到 Clash 内核
     kill_clash_process()
     time.sleep(2)
     upload_yaml_to_clash()
-
-    # 获取所有代理节点并测试延迟
-    proxies = get_proxies()
-    # 存储所有节点的延迟测试结果
-    delay_results = []
     # 超线程测试所有节点的延迟
-    run_tests_in_parallel(proxies)
+    run_tests_in_parallel()
     time.sleep(2)
     # 按延迟从小到大排序
     sorted_delays = sorted(delay_results, key=lambda x: x[1])
@@ -295,4 +284,17 @@ if __name__ == '__main__':
     pprint(proxy_list)
     # 生成新的配置文件
     generate_sorted_yaml(yaml_content, proxy_list)
+
+if __name__ == '__main__':
+    print('YAML 文件开始下载。。。。。')
+    # 定义 Clash API 地址
+    clash_api_url = 'http://127.0.0.1:9090'
+    # 存储所有节点的延迟测试结果
+    delay_results = []
+    # 开始延迟测试
+    start_latency_testing()
+
+
+
+
 

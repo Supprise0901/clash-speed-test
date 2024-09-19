@@ -46,17 +46,16 @@ def kill_clash_process():
         print("未找到 clash.exe 进程")
 
 
-def upload_yaml_to_clash():
+def upload_yaml_to_clash(path='config.yaml'):
     """
     上传 YAML 配置到 Clash 内核
     :return:
     """
     # 定义要执行的 Clash 命令和配置文件路径
-    clash_executable = '.\clash.exe'
-    config_file = '.\clash.yaml'
+    clash_executable = r'.\clash.exe'
 
     # 构建命令行参数，注意：每个部分要作为单独的字符串
-    command = [clash_executable, '-f', config_file]
+    command = [clash_executable, '-f', path]
 
     try:
         # 执行命令行，启动 clash.exe 并传递配置文件
@@ -75,7 +74,7 @@ def upload_yaml_to_clash():
 # 获取所有代理节点信息
 def get_proxies():
     url = f"{CLASH_API_URL}/proxies"
-    response = requests.get(url, headers=headers)
+    response = requests.get(url)
     return response.json()
 
 
@@ -85,7 +84,7 @@ def switch_proxy(proxy_name):
     data = {
         "name": proxy_name
     }
-    response = requests.put(url, headers=headers, json=data)
+    response = requests.put(url, json=data)
     return response.json()
 
 
@@ -99,29 +98,29 @@ def test_proxy_speed(proxy_name):
 
     # 设置代理
     proxies = {
-        "http": CLASH_PROXY,
-        "https": CLASH_PROXY,
+        "http": 'http://127.0.0.1:7890',
+        "https": 'http://127.0.0.1:7890',
     }
 
     # 开始下载并测量时间
     start_time = time.time()
     response = requests.get(test_url, stream=True, proxies=proxies)
-
+    # 计算总下载量
     total_length = 0
-
-    # 逐块下载，直到达到5秒钟为止
+    # 测试下载时间（秒）
+    test_duration = 5  # 逐块下载，直到达到5秒钟为止
     for data in response.iter_content(chunk_size=4096):
         total_length += len(data)
         elapsed_time = time.time() - start_time
-        if elapsed_time >= TEST_DURATION:
+        if elapsed_time >= test_duration:
             break
 
     # 逐块下载，直到达到 10MB 为止
-    # MAX_SIZE = 10 * 1024 * 1024  # 50MB 转换为字节
+    # max_size = 10 * 1024 * 1024  # 50MB 转换为字节
     # for data in response.iter_content(chunk_size=4096):
     #     total_length += len(data)
     #     # 检查是否已达到 10MB
-    #     if total_length >= MAX_SIZE:
+    #     if total_length >= max_size:
     #         break
 
     # 计算速度：Bps -> MB/s
@@ -196,45 +195,27 @@ def generate_yaml(sorted_proxies):
     print(f"New YAML configuration saved to Superspeed.yaml")
 
 
-# 测试所有代理节点速度并生成新配置文件
-if __name__ == "__main__":
-    # Clash API 地址和授权信息
-    CLASH_API_URL = "http://127.0.0.1:9090"  # Clash 的 API 地址
-    SECRET = "your-secret-here"  # Clash API 的 secret，如果有的话
+#
+def start_download_test():
+    """
+    开始下载测试
 
-    # 请求头，包含授权信息
-    headers = {
-        "Authorization": f"Bearer {SECRET}",
-        "Content-Type": "application/json"
-    }
-
-    # 测试文件 URL
-    # test_url = "http://speedtest.tele2.net/10MB.zip"
-    test_url = "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-    # Clash 的 HTTP 代理端口
-    CLASH_PROXY = "http://127.0.0.1:7890"
-
+    """
     # 推送 YAML 到 Clash 内核
     kill_clash_process()
     time.sleep(2)
-    upload_yaml_to_clash()
+    upload_yaml_to_clash(path='clash.yaml')
     time.sleep(2)
-    # 存储所有节点的速度测试结果
-    results_speed = []
-    # 测试下载时间（秒）
-    TEST_DURATION = 5
+
     # 第一步：测试所有节点的下载速度
-    sorted_proxies = test_all_proxies()
+    test_all_proxies()
 
     # 过滤出数值大于等于 0.2 的元素
     filtered_list = [item for item in results_speed if float(item[1]) >= 0.2]
 
-    # 按照数值部分从大到小排序
+    # 按下载速度从大到小排序
     sorted_list = sorted(filtered_list, key=lambda x: float(x[1]), reverse=True)
 
-    # 按下载速度从大到小排序
-    # results_speed.sort(key=lambda x: x[1], reverse=True)
-    # pprint(sorted_list)
     # 要删除的元素列表（只检查第一个元素）
     to_remove = ['🌍 国外媒体', '🔰 节点选择', '🍎 苹果服务', '🎥 NETFLIX', '🐟 漏网之鱼', '♻️ 自动选择', '🌏 国内媒体',
                  '📲 电报信息', '🚫 运营劫持', '🛑 全球拦截', '⛔️ 广告拦截', '🎯 全球直连', '🔰 节点选择', 'Ⓜ️ 微软服务',
@@ -243,4 +224,17 @@ if __name__ == "__main__":
     proxy_list = [item for item in sorted_list if item[0] not in to_remove]
     pprint(proxy_list)
     # 第二步：生成新的 YAML 配置文件
-    generate_yaml(proxy_list)
+    generate_yaml(proxy_list)  #
+
+
+# 测试所有代理节点速度并生成新配置文件
+if __name__ == "__main__":
+    # Clash API 地址和授权信息
+    CLASH_API_URL = "http://127.0.0.1:9090"  # Clash 的 API 地址
+    # 测试文件 URL
+    # test_url = "http://speedtest.tele2.net/10MB.zip"
+    test_url = "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+    # 存储所有节点的速度测试结果
+    results_speed = []
+    # 下载速度测试
+    start_download_test()
