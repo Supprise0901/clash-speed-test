@@ -294,5 +294,4 @@ if __name__ == '__main__':
     pprint(proxy_list)
     # 生成新的配置文件
     generate_sorted_yaml(yaml_content, proxy_list)
-    # 节点download测试
-    subprocess.run(['python', 'nodedownloadtest.py'])
+

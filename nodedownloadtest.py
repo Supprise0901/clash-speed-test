@@ -52,8 +52,8 @@ def upload_yaml_to_clash():
     :return:
     """
     # 定义要执行的 Clash 命令和配置文件路径
-    clash_executable = r'.\clash.exe'
-    config_file = r'.\clash.yaml'
+    clash_executable = '.\clash.exe'
+    config_file = '.\clash.yaml'
 
     # 构建命令行参数，注意：每个部分要作为单独的字符串
     command = [clash_executable, '-f', config_file]
@@ -108,15 +108,22 @@ def test_proxy_speed(proxy_name):
     # 开始下载并测量时间
     start_time = time.time()
     response = requests.get(test_url, stream=True, proxies=proxies)
+    # 10 MB 的限制
+    MAX_SIZE = 10 * 1024 * 1024  # 50MB 转换为字节
     total_length = 0
 
     # 逐块下载，直到达到5秒钟为止
+    # for data in response.iter_content(chunk_size=4096):
+    #   total_length += len(data)
+    #   elapsed_time = time.time() - start_time
+    #   if elapsed_time >= TEST_DURATION:
+    #      break
+    # 逐块下载，直到达到 10MB 为止
     for data in response.iter_content(chunk_size=4096):
         total_length += len(data)
-        elapsed_time = time.time() - start_time
-        if elapsed_time >= TEST_DURATION:
+        # 检查是否已达到 10MB
+        if total_length >= MAX_SIZE:
             break
-
     # 计算速度：Bps -> MB/s
     elapsed_time = time.time() - start_time
     speed = total_length / elapsed_time if elapsed_time > 0 else 0
@@ -229,7 +236,7 @@ if __name__ == "__main__":
     # 存储所有节点的速度测试结果
     results_speed = []
     # 测试下载时间（秒）
-    TEST_DURATION = 8
+    TEST_DURATION = 5
     # 第一步：测试所有节点的下载速度
     sorted_proxies = test_all_proxies()
 
