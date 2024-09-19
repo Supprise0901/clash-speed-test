@@ -253,6 +253,7 @@ def run_tests_in_parallel(proxies):
 
 
 if __name__ == '__main__':
+    print('YAML 文件开始下载。。。。。')
     # 替换为你的订阅链接
     # yaml_url = 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Supprise0901/Fetch/main/Superspeed.yaml'
     # yaml_url = 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash'

@@ -115,6 +115,7 @@ def test_proxy_speed(proxy_name):
         elapsed_time = time.time() - start_time
         if elapsed_time >= TEST_DURATION:
             break
+
     # 逐块下载，直到达到 10MB 为止
     # MAX_SIZE = 10 * 1024 * 1024  # 50MB 转换为字节
     # for data in response.iter_content(chunk_size=4096):
