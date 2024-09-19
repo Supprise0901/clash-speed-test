@@ -86,8 +86,6 @@ def upload_yaml_to_clash(path='config.yaml'):
 def download_yaml():
     """
     下载 YAML 文件
-    :param url:
-    :return:
     """
     urls = []
     with open('suburls', 'r') as f:
@@ -97,6 +95,7 @@ def download_yaml():
     joined_urls = '|'.join(urls)
     encode_url(joined_urls)
     yaml_url = 'http://10.35.26.42:25500/sub?target=clash&url=' + encode_url(joined_urls)
+
     # 替换 cipher 配置
     def replace_cipher(data):
         if isinstance(data, dict):
@@ -241,8 +240,7 @@ def generate_sorted_yaml(config, sorted_proxies):
 def run_tests_in_parallel():
     """
     使用线程池并发测试所有节点的延迟
-    :param proxies:
-    :return:
+
     """
     # 获取所有代理节点并测试延迟
     proxies = get_proxies()
@@ -258,12 +256,11 @@ def run_tests_in_parallel():
                 except Exception as e:
                     print(f"任务发生异常: {e}")
 
-
     except Exception as e:
         print(f"并发测试节点延迟时出错: {e}")
 
-def start_latency_testing():
 
+def start_latency_testing():
     # 下载并解析 YAML 内容
     yaml_content = download_yaml()
     # 推送 YAML 到 Clash 内核
@@ -285,6 +282,7 @@ def start_latency_testing():
     # 生成新的配置文件
     generate_sorted_yaml(yaml_content, proxy_list)
 
+
 if __name__ == '__main__':
     print('YAML 文件开始下载。。。。。')
     # 定义 Clash API 地址
@@ -293,8 +291,3 @@ if __name__ == '__main__':
     delay_results = []
     # 开始延迟测试
     start_latency_testing()
-
-
-
-
-
