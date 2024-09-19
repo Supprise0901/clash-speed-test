@@ -1,9 +1,20 @@
+from pprint import pprint
 import requests
 import yaml
-import json
 import subprocess
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import urllib.parse
+
+
+def encode_url(url):
+    """
+        对 URL 进行编码
+    """
+    encoded_url = urllib.parse.quote_plus(url)
+
+    # print(encoded_url)
+    return encoded_url
 
 
 def get_clash_pid():
@@ -46,10 +57,9 @@ def kill_clash_process():
         print("未找到 clash.exe 进程")
 
 
-def upload_yaml_to_clash(config):
+def upload_yaml_to_clash():
     """
     上传 YAML 配置到 Clash 内核
-    :param config:
     :return:
     """
     # 定义要执行的 Clash 命令和配置文件路径
@@ -61,13 +71,14 @@ def upload_yaml_to_clash(config):
 
     try:
         # 执行命令行，启动 clash.exe 并传递配置文件
-        subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        cmd = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
         # 等待 clash 进程完成
         # stdout, stderr = process.communicate()
 
         # 输出 clash 的 stdout 和 stderr
-        print("配置已成功推送到 Clash 内核")
+        if cmd:
+            print("配置已成功推送到 Clash 内核")
     except Exception as e:
         print(f"执行 Clash 进程时出错: {e}")
 
@@ -78,13 +89,57 @@ def download_yaml(url):
     :param url:
     :return:
     """
+
+    # 替换 cipher 配置
+    def replace_cipher(data):
+        if isinstance(data, dict):
+            for key, value in data.items():
+                if key == 'cipher' and value == 'ss':
+                    data[key] = 'aes-128-gcm'
+                elif isinstance(value, (dict, list)):
+                    replace_cipher(value)
+        elif isinstance(data, list):
+            for item in data:
+                replace_cipher(item)
+
+    # 去重函数
+    def remove_duplicates(data):
+        if isinstance(data, dict):
+            unique_data = {}
+            for key, value in data.items():
+                if isinstance(value, (dict, list)):
+                    value = remove_duplicates(value)
+                unique_data[key] = value
+            return unique_data
+        elif isinstance(data, list):
+            seen = []
+            unique_list = []
+            for item in data:
+                item = remove_duplicates(item)
+                if item not in seen:
+                    seen.append(item)
+                    unique_list.append(item)
+            return unique_list
+        return data
+
     response = requests.get(url)
     try:
         if response.status_code == 200:
+            # 下载节点保存到本地
             with open('config.yaml', 'w', encoding='utf-8') as f:
                 f.write(response.text)
                 print("YAML 文件已下载到本地: config.yaml")
-            return yaml.safe_load(response.text)
+            # 读取节点解析 YAML 文件
+            with open('config.yaml', 'r', encoding='utf-8') as file:
+                data = yaml.safe_load(file)
+                # 替换 cipher 配置 cipher: aes-128-gcm
+                replace_cipher(data)
+                # 删除重复节点
+                remove_duplicates(data)
+            # 处理几点后写入到本地文件
+            with open('config.yaml', 'w', encoding='utf-8') as file:
+                yaml.dump(data, file, default_flow_style=False)
+                return data
         else:
             raise Exception(f"无法下载 YAML 文件: {response.status_code}")
     except Exception as e:
@@ -147,15 +202,6 @@ def generate_sorted_yaml(config, sorted_proxies):
         # 过滤并重新排序 proxies
         proxies_dict = {proxy['name']: proxy for proxy in config['proxies']}
 
-        # 打印代理名称进行调试
-        print("YAML 文件中的代理名称:")
-        for name in proxies_dict.keys():
-            print(name)
-
-        print("从 Clash API 获取的排序后的代理名称:")
-        for name, delay in sorted_proxies:
-            print(name)
-
         # 重新生成排序后的代理列表
         sorted_proxy_list = []
         for name, delay in sorted_proxies:
@@ -167,10 +213,20 @@ def generate_sorted_yaml(config, sorted_proxies):
         # 将排序后的 proxies 更新到配置文件中
         config['proxies'] = sorted_proxy_list
 
-        # 写入到新的 config_sorted.yaml 文件
-        with open('config_sorted.yaml', 'w', encoding='utf-8') as f:
+        # 将排序后的 name 写入到 proxy-group 中
+        for group in config.get('proxy-groups', []):
+            if 'proxies' in group:
+                group['proxies'] = [proxy for proxy in group['proxies'] if proxy in dict(sorted_proxies).keys()]
+                for group in config.get('proxy-groups', []):
+                    if 'proxies' in group:
+                        group['proxies'] = [name for name, delay in sorted_proxies]
+
+        # 写入到新的 clash.yaml 文件
+        with open('clash.yaml', 'w', encoding='utf-8') as f:
             yaml.dump(config, f, allow_unicode=True)
-        print("新的排序后的配置文件已生成: config_sorted.yaml")
+        print("新的排序后的配置文件已生成: clash.yaml")
+        # with open('F:/共享/vpn节点/Superspeed.yaml', 'w', encoding='utf-8') as f:
+        #     yaml.dump(config, f, allow_unicode=True)
     except Exception as e:
         print(f"生成新的排序后的配置文件时出错: {e}")
 
@@ -200,7 +256,16 @@ if __name__ == '__main__':
     # 替换为你的订阅链接
     # yaml_url = 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Supprise0901/Fetch/main/Superspeed.yaml'
     # yaml_url = 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash'
-    yaml_url = 'http://10.35.26.42:25500/sub?target=clash&url=https%3A//mirror.ghproxy.com/raw.githubusercontent.com/mfuu/v2ray/master/merge/merge_clash.yaml'
+    # yaml_url = 'http://10.35.26.42:25500/sub?target=clash&url=https%3A%2F%2Fmirror.ghproxy.com%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2Fripaojiedian%2Ffreenode%2Fmain%2Fclash%7Chttps%3A%2F%2Fmirror.ghproxy.com%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2FSupprise0901%2FFetch%2Fmain%2FSuperspeed.yaml%7Chttps%3A%2F%2Fmirror.ghproxy.com%2Fraw.githubusercontent.com%2Faiboboxx%2Fv2rayfree%2Fmain%2Fv2%7Chttps%3A%2F%2Fmirror.ghproxy.com%2Fraw.githubusercontent.com%2Fmfuu%2Fv2ray%2Fmaster%2Fmerge%2Fmerge_clash.yaml%7Chttps%3A%2F%2Fmirror.ghproxy.com%2Fraw.githubusercontent.com%2Fpeasoft%2FNoMoreWalls%2Fmaster%2Flist.txt%7Chttps%3A%2F%2Fmirror.ghproxy.com%2Fraw.githubusercontent.com%2Faiboboxx%2Fv2rayfree%2Fmain%2Fv2%7C%7C%7C'
+    urls = []
+    with open('suburls', 'r') as f:
+        for url in f:
+            urls.append(url.strip())  # 去除行尾的换行符
+    # 使用 '|' 将多个URL连接
+    joined_urls = '|'.join(urls)
+    encode_url(joined_urls)
+    yaml_url = 'http://10.35.26.42:25500/sub?target=clash&url=' + encode_url(joined_urls)
+
     # 定义 Clash API 地址
     clash_api_url = 'http://127.0.0.1:9090'
     # 下载并解析 YAML 内容
@@ -209,22 +274,25 @@ if __name__ == '__main__':
     # 推送 YAML 到 Clash 内核
     kill_clash_process()
     time.sleep(2)
-    upload_yaml_to_clash(yaml_content)
+    upload_yaml_to_clash()
 
     # 获取所有代理节点并测试延迟
     proxies = get_proxies()
-
+    # 存储所有节点的延迟测试结果
     delay_results = []
-    # 单线程测试所有节点的延迟
-    # for proxy_name in proxies['proxies']:
-    #     delay = test_proxy_delay(proxy_name)
-    #     if delay != 'N/A':
-    #         delay_results.append((proxy_name, int(delay)))  # 保存代理名称和延迟
-
     # 超线程测试所有节点的延迟
     run_tests_in_parallel(proxies)
     time.sleep(2)
     # 按延迟从小到大排序
     sorted_delays = sorted(delay_results, key=lambda x: x[1])
+    # 要删除的元素列表（只检查第一个元素）
+    to_remove = ['🌍 国外媒体', '🔰 节点选择', '🍎 苹果服务', '🎥 NETFLIX', '🐟 漏网之鱼', '♻️ 自动选择', '🌏 国内媒体',
+                 '📲 电报信息', '🚫 运营劫持', '🛑 全球拦截', '⛔️ 广告拦截', '🎯 全球直连', '🔰 节点选择', 'Ⓜ️ 微软服务',
+                 'GLOBAL', 'DIRECT', 'REJECT']
+    # 使用列表推导式删除指定的元素
+    proxy_list = [item for item in sorted_delays if item[0] not in to_remove]
+    pprint(proxy_list)
     # 生成新的配置文件
-    generate_sorted_yaml(yaml_content, sorted_delays)
+    generate_sorted_yaml(yaml_content, proxy_list)
+    # 节点download测试
+    subprocess.run(['python', 'nodedownloadtest.py'])
