@@ -91,8 +91,6 @@ def switch_proxy(proxy_name):
 
 # 测试指定代理节点的下载速度（下载5秒后停止）
 def test_proxy_speed(proxy_name):
-    print(f"\nTesting proxy: {proxy_name}")
-
     # 切换到该代理节点
     switch_result = switch_proxy(proxy_name)
     if 'error' in switch_result:
@@ -108,27 +106,29 @@ def test_proxy_speed(proxy_name):
     # 开始下载并测量时间
     start_time = time.time()
     response = requests.get(test_url, stream=True, proxies=proxies)
-    # 10 MB 的限制
-    MAX_SIZE = 10 * 1024 * 1024  # 50MB 转换为字节
+
     total_length = 0
 
     # 逐块下载，直到达到5秒钟为止
-    # for data in response.iter_content(chunk_size=4096):
-    #   total_length += len(data)
-    #   elapsed_time = time.time() - start_time
-    #   if elapsed_time >= TEST_DURATION:
-    #      break
-    # 逐块下载，直到达到 10MB 为止
     for data in response.iter_content(chunk_size=4096):
         total_length += len(data)
-        # 检查是否已达到 10MB
-        if total_length >= MAX_SIZE:
+        elapsed_time = time.time() - start_time
+        if elapsed_time >= TEST_DURATION:
             break
+    # 逐块下载，直到达到 10MB 为止
+    # MAX_SIZE = 10 * 1024 * 1024  # 50MB 转换为字节
+    # for data in response.iter_content(chunk_size=4096):
+    #     total_length += len(data)
+    #     # 检查是否已达到 10MB
+    #     if total_length >= MAX_SIZE:
+    #         break
+
     # 计算速度：Bps -> MB/s
     elapsed_time = time.time() - start_time
     speed = total_length / elapsed_time if elapsed_time > 0 else 0
 
     # 返回下载速度（MB/s）
+    print(f"\nTesting proxy: {proxy_name}")
     print(f"Total downloaded: {total_length} bytes in {elapsed_time:.2f} seconds.")
     print(f"Average speed: {speed / 1024 / 1024:.2f} MB/s")
 
@@ -141,18 +141,7 @@ def test_all_proxies():
     proxies = get_proxies()
     proxy_names = proxies.get('proxies', {}).keys()
 
-    # 存储所有节点的速度测试结果
-    results = []
-
-    # 遍历每个代理节点并进行速度测试
-    # for proxy in proxy_names:
-    #     try:
-    #         speed = test_proxy_speed(proxy)
-    #         if speed > 0:
-    #             results.append((proxy, speed))  # 只记录速度大于0的节点
-    #     except Exception as e:
-    #         print(f"Failed to test proxy {proxy}: {str(e)}")
-
+    # 多线程节点速度下载测试
     try:
         with ThreadPoolExecutor(max_workers=5) as executor:
             # 提交所有任务
@@ -169,10 +158,6 @@ def test_all_proxies():
 
     # 输出排序结果
     print("\n=== Test Results (sorted by speed) ===")
-    for proxy, speed in results:
-        print(f"Proxy: {proxy}, Speed: {speed:.2f} MB/s")
-
-    return results
 
 
 # 生成新的 YAML 配置文件
