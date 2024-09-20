@@ -231,8 +231,7 @@ def generate_sorted_yaml(config, sorted_proxies):
         with open('clash.yaml', 'w', encoding='utf-8') as f:
             yaml.dump(config, f, allow_unicode=True)
         print("新的排序后的配置文件已生成: clash.yaml")
-        # with open('F:/共享/vpn节点/Superspeed.yaml', 'w', encoding='utf-8') as f:
-        #     yaml.dump(config, f, allow_unicode=True)
+
     except Exception as e:
         print(f"生成新的排序后的配置文件时出错: {e}")
 
