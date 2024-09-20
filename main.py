@@ -345,20 +345,28 @@ def test_all_proxies():
     proxies = get_proxies()
     proxy_names = proxies.get('proxies', {}).keys()
 
-    # 多线程节点速度下载测试
+    # 单线程节点速度下载测试
     try:
-        with ThreadPoolExecutor(max_workers=5) as executor:
-            # 提交所有任务
-            futures = [executor.submit(test_proxy_speed, proxy_name) for proxy_name in proxy_names]
-
-            # 等待所有任务完成
-            for future in as_completed(futures):
-                try:
-                    result = future.result()  # 获取任务结果
-                except Exception as e:
-                    print(f"任务发生异常: {e}")
+        for proxy_name in proxy_names:
+            result = test_proxy_speed(proxy_name)
+            # 处理结果，例如输出或存储
     except Exception as e:
-        print(f"并发测试节点延迟时出错: {e}")
+        print(f"测试节点延迟时出错: {e}")
+
+    # 多线程节点速度下载测试
+    # try:
+    #     with ThreadPoolExecutor(max_workers=5) as executor:
+    #         # 提交所有任务
+    #         futures = [executor.submit(test_proxy_speed, proxy_name) for proxy_name in proxy_names]
+    #
+    #         # 等待所有任务完成
+    #         for future in as_completed(futures):
+    #             try:
+    #                 result = future.result()  # 获取任务结果
+    #             except Exception as e:
+    #                 print(f"任务发生异常: {e}")
+    # except Exception as e:
+    #     print(f"并发测试节点延迟时出错: {e}")
 
     # 输出排序结果
     print("\n=== Test Results (sorted by speed) ===")
@@ -448,7 +456,7 @@ if __name__ == '__main__':
     # 存储所有节点的速度测试结果
     results_speed = []
     # 下载速度限制 单位 MB/s
-    speed_limit = 0.2
+    speed_limit = 0.3
     # 开始下载测试
     start_download_test(speed_limit)
     kill_clash_process()
