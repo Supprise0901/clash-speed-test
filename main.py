@@ -227,10 +227,10 @@ def generate_sorted_yaml(config, sorted_proxies):
                     if 'proxies' in group:
                         group['proxies'] = [name for name, delay in sorted_proxies]
 
-        # 写入到新的 clash.yaml 文件
-        with open('clash.yaml', 'w', encoding='utf-8') as f:
+        # 写入到新的 latency 文件
+        with open('latency', 'w', encoding='utf-8') as f:
             yaml.dump(config, f, allow_unicode=True)
-        print("新的排序后的配置文件已生成: clash.yaml")
+        print("新的排序后的配置文件已生成: latency")
 
     except Exception as e:
         print(f"生成新的排序后的配置文件时出错: {e}")
@@ -367,7 +367,7 @@ def test_all_proxies():
 # 生成新的 YAML 配置文件
 def generate_yaml(sorted_proxies):
     # 读取现有的 Clash 配置（假设已有初始配置文件）
-    with open("clash.yaml", "r", encoding="utf-8") as f:
+    with open("latency", "r", encoding="utf-8") as f:
         config = yaml.safe_load(f)
 
     # 获取现有的代理列表
@@ -408,7 +408,7 @@ def start_download_test(speed_limit):
     # 推送 YAML 到 Clash 内核
     kill_clash_process()
     time.sleep(2)
-    upload_yaml_to_clash(path='clash.yaml')
+    upload_yaml_to_clash(path='latency')
     time.sleep(2)
 
     # 第一步：测试所有节点的下载速度
@@ -448,6 +448,7 @@ if __name__ == '__main__':
     # 存储所有节点的速度测试结果
     results_speed = []
     # 下载速度限制 单位 MB/s
-    speed_limit = 0.5
+    speed_limit = 0.2
     # 开始下载测试
     start_download_test(speed_limit)
+    kill_clash_process()
