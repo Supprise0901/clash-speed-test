@@ -279,6 +279,7 @@ def start_latency_testing():
     # 使用列表推导式删除指定的元素
     proxy_list = [item for item in sorted_delays if item[0] not in to_remove]
     pprint(proxy_list)
+    print(f'收集下载有效节点{len(proxy_list)}个')
     # 生成新的配置文件
     generate_sorted_yaml(yaml_content, proxy_list)
 
@@ -291,3 +292,5 @@ if __name__ == '__main__':
     delay_results = []
     # 开始延迟测试
     start_latency_testing()
+    # 结束 Clash 进程
+    kill_clash_process()

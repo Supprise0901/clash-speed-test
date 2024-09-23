@@ -98,15 +98,9 @@ def download_yaml():
 
     # 替换 cipher 配置
     def replace_cipher(data):
-        if isinstance(data, dict):
-            for key, value in data.items():
-                if key == 'cipher' and value == 'ss':
-                    data[key] = 'aes-128-gcm'
-                elif isinstance(value, (dict, list)):
-                    replace_cipher(value)
-        elif isinstance(data, list):
-            for item in data:
-                replace_cipher(item)
+        for config in data.get('proxies', []):
+            if config.get('type') == 'ss':
+                config['cipher'] = 'aes-128-gcm'
 
     # 去重函数
     def remove_duplicates(data):
@@ -163,7 +157,7 @@ def test_proxy_delay(proxy_name):
         url = f"{clash_api_url}/proxies/{proxy_name}/delay"
         params = {
             "timeout": 5000,  # 5秒超时
-            "url": "http://www.google.com/generate_204"  # 更换为 Google 的测试 URL
+            "url": "http://www.google.com"  # 更换为 Google 的测试 URL
         }
         try:
             response = requests.get(url, params=params)
@@ -278,6 +272,7 @@ def start_latency_testing():
     # 使用列表推导式删除指定的元素
     proxy_list = [item for item in sorted_delays if item[0] not in to_remove]
     pprint(proxy_list)
+    # print(f'收集延迟有效节点{len(proxy_list)}个')
     # 生成新的配置文件
     generate_sorted_yaml(yaml_content, proxy_list)
 
@@ -308,16 +303,25 @@ def test_proxy_speed(proxy_name):
 
     # 开始下载并测量时间
     start_time = time.time()
-    response = requests.get(test_url, stream=True, proxies=proxies)
+    # response = requests.get(test_url, stream=True, proxies=proxies)
     # 计算总下载量
     total_length = 0
     # 测试下载时间（秒）
     test_duration = 5  # 逐块下载，直到达到5秒钟为止
-    for data in response.iter_content(chunk_size=4096):
-        total_length += len(data)
-        elapsed_time = time.time() - start_time
-        if elapsed_time >= test_duration:
-            break
+    # for data in response.iter_content(chunk_size=4096):
+    #     total_length += len(data)
+    #     elapsed_time = time.time() - start_time
+    #     if elapsed_time >= test_duration:
+    #         break
+
+    # 不断发起请求直到达到时间限制
+    while time.time() - start_time < test_duration:
+        response = requests.get(test_url, stream=True, proxies=proxies)
+        for data in response.iter_content(chunk_size=4096):
+            total_length += len(data)
+            if time.time() - start_time >= test_duration:
+                break
+        time.sleep(0.1)  # 引入短暂的延迟，防止过快完成
 
     # 逐块下载，直到达到 10MB 为止
     # max_size = 10 * 1024 * 1024  # 50MB 转换为字节
@@ -346,27 +350,27 @@ def test_all_proxies():
     proxy_names = proxies.get('proxies', {}).keys()
 
     # 单线程节点速度下载测试
-    try:
-        for proxy_name in proxy_names:
-            result = test_proxy_speed(proxy_name)
-            # 处理结果，例如输出或存储
-    except Exception as e:
-        print(f"测试节点延迟时出错: {e}")
+    # try:
+    #     for proxy_name in proxy_names:
+    #         result = test_proxy_speed(proxy_name)
+    #         # 处理结果，例如输出或存储
+    # except Exception as e:
+    #     print(f"测试节点延迟时出错: {e}")
 
     # 多线程节点速度下载测试
-    # try:
-    #     with ThreadPoolExecutor(max_workers=5) as executor:
-    #         # 提交所有任务
-    #         futures = [executor.submit(test_proxy_speed, proxy_name) for proxy_name in proxy_names]
-    #
-    #         # 等待所有任务完成
-    #         for future in as_completed(futures):
-    #             try:
-    #                 result = future.result()  # 获取任务结果
-    #             except Exception as e:
-    #                 print(f"任务发生异常: {e}")
-    # except Exception as e:
-    #     print(f"并发测试节点延迟时出错: {e}")
+    try:
+        with ThreadPoolExecutor(max_workers=5) as executor:
+            # 提交所有任务
+            futures = [executor.submit(test_proxy_speed, proxy_name) for proxy_name in proxy_names]
+
+            # 等待所有任务完成
+            for future in as_completed(futures):
+                try:
+                    result = future.result()  # 获取任务结果
+                except Exception as e:
+                    print(f"任务发生异常: {e}")
+    except Exception as e:
+        print(f"并发测试节点延迟时出错: {e}")
 
     # 输出排序结果
     print("\n=== Test Results (sorted by speed) ===")
@@ -435,6 +439,15 @@ def start_download_test(speed_limit):
     # 使用列表推导式删除指定的元素
     proxy_list = [item for item in sorted_list if item[0] not in to_remove]
     pprint(proxy_list)
+
+    # 读取延迟 latency文件
+    with open("latency", "r", encoding='utf-8') as file:
+        data = yaml.safe_load(file)
+
+    # 获取所有节点数量
+    node_count = len(data.get('proxies', []))
+    print(f'\n收集延迟有效节点{node_count}个')
+    print(f'收集下载有效节点{len(proxy_list)}个')
     # 第二步：生成新的 YAML 配置文件
     generate_yaml(proxy_list)
 

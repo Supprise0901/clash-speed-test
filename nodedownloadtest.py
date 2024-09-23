@@ -104,16 +104,25 @@ def test_proxy_speed(proxy_name):
 
     # 开始下载并测量时间
     start_time = time.time()
-    response = requests.get(test_url, stream=True, proxies=proxies)
+    # response = requests.get(test_url, stream=True, proxies=proxies)
     # 计算总下载量
     total_length = 0
     # 测试下载时间（秒）
     test_duration = 5  # 逐块下载，直到达到5秒钟为止
-    for data in response.iter_content(chunk_size=4096):
-        total_length += len(data)
-        elapsed_time = time.time() - start_time
-        if elapsed_time >= test_duration:
-            break
+    # for data in response.iter_content(chunk_size=4096):
+    #     total_length += len(data)
+    #     elapsed_time = time.time() - start_time
+    #     if elapsed_time >= test_duration:
+    #         break
+
+    # 不断发起请求直到达到时间限制
+    while time.time() - start_time < test_duration:
+        response = requests.get(test_url, stream=True, proxies=proxies)
+        for data in response.iter_content(chunk_size=4096):
+            total_length += len(data)
+            if time.time() - start_time >= test_duration:
+                break
+        time.sleep(0.1)  # 引入短暂的延迟，防止过快完成
 
     # 逐块下载，直到达到 10MB 为止
     # max_size = 10 * 1024 * 1024  # 50MB 转换为字节
@@ -210,8 +219,8 @@ def start_download_test():
     # 第一步：测试所有节点的下载速度
     test_all_proxies()
 
-    # 过滤出数值大于等于 0.2 的元素
-    filtered_list = [item for item in results_speed if float(item[1]) >= 0.2]
+    # 过滤出数值大于等于 0.5的元素
+    filtered_list = [item for item in results_speed if float(item[1]) >= 0.5]
 
     # 按下载速度从大到小排序
     sorted_list = sorted(filtered_list, key=lambda x: float(x[1]), reverse=True)
@@ -223,6 +232,14 @@ def start_download_test():
     # 使用列表推导式删除指定的元素
     proxy_list = [item for item in sorted_list if item[0] not in to_remove]
     pprint(proxy_list)
+    # 读取延迟 latency文件
+    with open("clash.yaml", "r", encoding='utf-8') as file:
+        data = yaml.safe_load(file)
+
+    # 获取所有节点数量
+    node_count = len(data.get('proxies', []))
+    print(f'\n收集延迟有效节点{node_count}个')
+    print(f'收集下载有效节点{len(proxy_list)}个')
     # 第二步：生成新的 YAML 配置文件
     generate_yaml(proxy_list)  #
 
@@ -238,3 +255,5 @@ if __name__ == "__main__":
     results_speed = []
     # 下载速度测试
     start_download_test()
+    # 结束 Clash 进程
+    kill_clash_process()
