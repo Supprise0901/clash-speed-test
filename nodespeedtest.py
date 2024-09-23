@@ -227,12 +227,10 @@ def generate_sorted_yaml(config, sorted_proxies):
                     if 'proxies' in group:
                         group['proxies'] = [name for name, delay in sorted_proxies]
 
-        # 写入到新的 clash.yaml 文件
-        with open('clash.yaml', 'w', encoding='utf-8') as f:
+        # 写入到新的 latency 文件
+        with open('latency', 'w', encoding='utf-8') as f:
             yaml.dump(config, f, allow_unicode=True)
-        print("新的排序后的配置文件已生成: clash.yaml")
-        # with open('F:/共享/vpn节点/Superspeed.yaml', 'w', encoding='utf-8') as f:
-        #     yaml.dump(config, f, allow_unicode=True)
+        print("新的排序后的配置文件已生成: latency")
     except Exception as e:
         print(f"生成新的排序后的配置文件时出错: {e}")
 

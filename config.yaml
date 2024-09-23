@@ -1,80 +1,75 @@
 {allow-lan: true, external-controller: ':9090', log-level: info, mode: Rule, port: 7890,
-  proxies: [{alterId: 0, cipher: auto, name: "\u9999\u6E2F|@ripaojiedian", port: 44801,
-      server: ambxxic01hk.dorabbb.top, skip-cert-verify: false, tls: false, type: vmess,
-      uuid: 2302fd7b-1b02-4b1b-8391-782f4c99b7b3}, {alterId: 0, cipher: auto, name: "\u9999\u6E2F\
-        2|@ripaojiedian", network: ws, port: 2052, server: cfcdn2.sanfencdn9.com,
-      skip-cert-verify: false, tls: false, type: vmess, uuid: cfa71038-632b-4a8f-859d-cce4d91c1082,
-      ws-opts: {headers: {Host: zTrUWkzLhk1.wzjwkqya.xyz}, path: /video/epGXsEeR}},
-    {cipher: chacha20-ietf-poly1305, name: "\u9999\u6E2F3|@ripaojiedian", password: a50b9ad6-20df-4a38-a75a-a04793355cf8,
-      port: 33107, server: cm.guguyun.pw, type: ss}, {name: "\u9999\u6E2F4|@ripaojiedian",
-      password: lNOcIAxy, port: 18821, server: 36.151.192.198, skip-cert-verify: true,
-      type: trojan}, {cipher: chacha20-ietf-poly1305, name: "\u9999\u6E2F5|@ripaojiedian",
-      password: 1404585b-fe61-4f4d-9680-f63d2002b429, port: 27466, server: gdyddx500.xiyunchen.cn,
-      type: ss}, {alterId: 64, cipher: auto, name: "\u9999\u6E2F6|@ripaojiedian",
-      port: 31778, server: 183.236.48.161, skip-cert-verify: false, tls: false, type: vmess,
-      uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}, {cipher: chacha20-ietf, name: "\u9999\u6E2F\
-        7|@ripaojiedian", password: asd123456, port: 8388, server: 103.36.91.23, type: ss},
-    {cipher: chacha20-ietf-poly1305, name: "\u9999\u6E2F8|@ripaojiedian", password: 1404585b-fe61-4f4d-9680-f63d2002b429,
-      port: 58774, server: gdyddx500.xiyunchen.cn, type: ss}, {cipher: aes-256-cfb,
-      name: "\u9999\u6E2FR|@ripaojiedian", password: hGkQ6915tD, port: 16088, server: 103.161.255.195,
-      type: ss}, {name: "\u65E5\u672C|@ripaojiedian", password: cf8c51d3-e692-46a6-b351-4c5ef0b5efc3,
-      port: 13018, server: naiu-jp.05vr9nyqg5.download, skip-cert-verify: false, sni: cloudflare.node-ssl.cdn-alibaba.com,
-      type: trojan}, {alterId: 0, cipher: auto, name: "\u65E5\u672C2|@ripaojiedian",
-      network: ws, port: 20002, server: yxvmjp02-1.naizi.vip, servername: yxvmjp02-1.naizi.vip,
-      skip-cert-verify: false, tls: true, type: vmess, uuid: 1404585b-fe61-4f4d-9680-f63d2002b429,
-      ws-opts: {headers: {Host: www.python.org}, path: /nishidashabi}}, {alterId: 0,
-      cipher: auto, name: "\u65E5\u672C3|@ripaojiedian", network: ws, port: 80, server: cfcdn3.sanfencdn9.com,
-      skip-cert-verify: false, tls: false, type: vmess, uuid: cfa71038-632b-4a8f-859d-cce4d91c1082,
-      ws-opts: {headers: {Host: zqWukzdtjp1.wzjwkqya.xyz}, path: /video/RPKZwKFW}},
-    {alterId: 0, cipher: auto, name: "\u65E5\u672C4|@ripaojiedian", network: ws, port: 10005,
-      server: jplux01-1.naizi.vip, servername: jplux01-1.naizi.vip, skip-cert-verify: false,
-      tls: true, type: vmess, uuid: 1404585b-fe61-4f4d-9680-f63d2002b429, ws-opts: {
-        headers: {Host: tv.cctv.com}, path: /nishidashabi}}, {cipher: aes-256-cfb,
-      name: "\u65E5\u672CR|@ripaojiedian", password: hGkQ6915tD, port: 15084, server: 103.161.255.195,
-      type: ss}, {cipher: chacha20-ietf-poly1305, name: "\u97E9\u56FD2|@ripaojiedian",
-      password: 9d8f1194-3798-49eb-99c0-cb3132b7591f, port: 59687, server: zf01.yydz.one,
-      type: ss}, {alterId: 0, cipher: auto, name: "\u65B0\u52A0\u5761|@ripaojiedian",
-      network: ws, port: 10002, server: yxvmsglux01.naizi.vip, servername: yxvmsglux01.naizi.vip,
-      skip-cert-verify: false, tls: true, type: vmess, uuid: 1404585b-fe61-4f4d-9680-f63d2002b429,
-      ws-opts: {headers: {Host: www.python.org}, path: /nishidashabi}}, {alterId: 0,
-      cipher: auto, name: "\u7F8E\u56FD2|@ripaojiedian", network: ws, port: 2086,
-      server: 104.26.0.56, skip-cert-verify: false, tls: false, type: vmess, uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339,
-      ws-opts: {headers: {Host: ip14.freegradely.xyz}, path: github.com/Alvin9999}},
-    {cipher: aes-256-cfb, name: "\u72EE\u57CE\u7279\u6B8A|@ripaojiedian", password: amazonskr05,
-      port: 443, server: 47.129.228.107, type: ss}, {cipher: aes-256-cfb, name: "\u65E5\u672C\
-        \u7279\u6B8A|@ripaojiedian", password: amazonskr05, port: 443, server: 3.1.202.81,
+  proxies: [{cipher: chacha20-ietf-poly1305, name: "\u9999\u6E2F|@ripaojiedian", password: 7efd4673-1d09-4be0-858b-7ee5d8b33dcd,
+      port: 41370, server: gdyddx500.xiyunchen.cn, type: ss}, {alterId: 0, cipher: auto,
+      name: "\u9999\u6E2F2|@ripaojiedian", port: 52919, server: 45.125.35.57, skip-cert-verify: false,
+      tls: false, type: vmess, uuid: a5b081ca-aaa2-4f46-ae19-f156ac5706ef}, {alterId: 0,
+      cipher: auto, name: "\u9999\u6E2F3|@ripaojiedian", port: 41046, server: 38.147.188.194,
+      skip-cert-verify: false, tls: false, type: vmess, uuid: decf7c94-f0fc-4028-a504-85a77d9c806a},
+    {cipher: chacha20-ietf-poly1305, name: "\u9999\u6E2F4|@ripaojiedian", password: 7efd4673-1d09-4be0-858b-7ee5d8b33dcd,
+      port: 13913, server: gdyddx500.xiyunchen.cn, type: ss}, {name: "\u9999\u6E2F\
+        5|@ripaojiedian", password: tYpcKbqz, port: 42395, server: 36.151.192.203,
+      skip-cert-verify: true, type: trojan}, {cipher: chacha20-ietf-poly1305, name: "\u9999\u6E2F\
+        6|@ripaojiedian", password: 0c721756-bad3-4dd6-973c-5c69ad9b3a38, port: 41794,
+      server: cm2.xcone.xyz, type: ss}, {cipher: chacha20-ietf-poly1305, name: "\u9999\u6E2F\
+        7|@ripaojiedian", password: 7efd4673-1d09-4be0-858b-7ee5d8b33dcd, port: 59096,
+      server: gdyddx500.xiyunchen.cn, type: ss}, {cipher: chacha20-ietf-poly1305,
+      name: "\u53F0\u6E7E|@ripaojiedian", password: 0c721756-bad3-4dd6-973c-5c69ad9b3a38,
+      port: 52430, server: ct2.xcone.xyz, type: ss}, {alterId: 0, cipher: auto, name: "\u65E5\u672C\
+        |@ripaojiedian", port: 28864, server: 45.159.50.219, skip-cert-verify: false,
+      tls: false, type: vmess, uuid: 780de3f3-5299-4edc-8ba7-3305d370090f}, {cipher: chacha20-ietf-poly1305,
+      name: "\u65E5\u672C2|@ripaojiedian", password: 0c721756-bad3-4dd6-973c-5c69ad9b3a38,
+      port: 33102, server: cm.guguyun.pw, type: ss}, {name: "\u65E5\u672C3|@ripaojiedian",
+      password: cf8c51d3-e692-46a6-b351-4c5ef0b5efc3, port: 13017, server: naiu-jp.05vr9nyqg5.download,
+      skip-cert-verify: false, sni: cloudflare.node-ssl.cdn-alibaba.com, type: trojan},
+    {name: "\u65B0\u52A0\u5761|@ripaojiedian", password: cf8c51d3-e692-46a6-b351-4c5ef0b5efc3,
+      port: 13033, server: naiu-sg.05vr9nyqg5.download, skip-cert-verify: false, sni: cloudflare.node-ssl.cdn-alibaba.com,
+      type: trojan}, {cipher: chacha20-ietf-poly1305, name: "\u65B0\u52A0\u57612|@ripaojiedian",
+      password: 0c721756-bad3-4dd6-973c-5c69ad9b3a38, port: 42162, server: cm2.xcone.xyz,
+      type: ss}, {name: "\u7F8E\u56FD|@ripaojiedian", password: cf8c51d3-e692-46a6-b351-4c5ef0b5efc3,
+      port: 13025, server: naiu-us.05vr9nyqg5.download, skip-cert-verify: false, sni: cloudflare.node-ssl.cdn-alibaba.com,
+      type: trojan}, {alterId: 0, cipher: auto, name: "\u7F8E\u56FD2|@ripaojiedian",
+      network: ws, port: 2086, server: 104.26.0.56, skip-cert-verify: false, tls: false,
+      type: vmess, uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339, ws-opts: {headers: {
+          Host: ip14.freegradely.xyz}, path: github.com/Alvin9999}}, {alterId: 0,
+      cipher: auto, name: "\u7F8E\u56FD3|@ripaojiedian", port: 14802, server: 38.76.151.235,
+      skip-cert-verify: false, tls: false, type: vmess, uuid: dccf6c2c-1daa-4000-bc2d-2c716c77bb1c},
+    {alterId: 0, cipher: auto, name: "\u7F8E\u56FD4|@ripaojiedian", port: 43484, server: 45.155.223.83,
+      skip-cert-verify: false, tls: false, type: vmess, uuid: 67ac2316-e6cf-4c56-91a9-6bcbcb3be4d9},
+    {cipher: aes-256-cfb, name: "\u65E5\u672C\u7279\u6B8A|@ripaojiedian", password: amazonskr05,
+      port: 443, server: 43.201.62.188, type: ss}, {cipher: aes-256-cfb, name: "\u72EE\u57CE\
+        \u7279\u6B8A|@ripaojiedian", password: amazonskr05, port: 443, server: 52.199.82.18,
       type: ss}, {cipher: aes-256-cfb, name: "\u97E9\u56FD\u7279\u6B8A|@ripaojiedian",
-      password: amazonskr05, port: 443, server: 54.255.148.85, type: ss}], proxy-groups: [
+      password: amazonskr05, port: 443, server: 13.124.182.43, type: ss}], proxy-groups: [
     {name: "\U0001F530 \u8282\u70B9\u9009\u62E9", proxies: ["\u267B\uFE0F \u81EA\u52A8\
           \u9009\u62E9", "\U0001F3AF \u5168\u7403\u76F4\u8FDE", "\u9999\u6E2F|@ripaojiedian",
         "\u9999\u6E2F2|@ripaojiedian", "\u9999\u6E2F3|@ripaojiedian", "\u9999\u6E2F\
           4|@ripaojiedian", "\u9999\u6E2F5|@ripaojiedian", "\u9999\u6E2F6|@ripaojiedian",
-        "\u9999\u6E2F7|@ripaojiedian", "\u9999\u6E2F8|@ripaojiedian", "\u9999\u6E2F\
-          R|@ripaojiedian", "\u65E5\u672C|@ripaojiedian", "\u65E5\u672C2|@ripaojiedian",
-        "\u65E5\u672C3|@ripaojiedian", "\u65E5\u672C4|@ripaojiedian", "\u65E5\u672C\
-          R|@ripaojiedian", "\u97E9\u56FD2|@ripaojiedian", "\u65B0\u52A0\u5761|@ripaojiedian",
-        "\u7F8E\u56FD2|@ripaojiedian", "\u72EE\u57CE\u7279\u6B8A|@ripaojiedian", "\u65E5\u672C\
+        "\u9999\u6E2F7|@ripaojiedian", "\u53F0\u6E7E|@ripaojiedian", "\u65E5\u672C\
+          |@ripaojiedian", "\u65E5\u672C2|@ripaojiedian", "\u65E5\u672C3|@ripaojiedian",
+        "\u65B0\u52A0\u5761|@ripaojiedian", "\u65B0\u52A0\u57612|@ripaojiedian", "\u7F8E\u56FD\
+          |@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian", "\u7F8E\u56FD3|@ripaojiedian",
+        "\u7F8E\u56FD4|@ripaojiedian", "\u65E5\u672C\u7279\u6B8A|@ripaojiedian", "\u72EE\u57CE\
           \u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\u7279\u6B8A|@ripaojiedian"],
       type: select}, {interval: 300, name: "\u267B\uFE0F \u81EA\u52A8\u9009\u62E9",
       proxies: ["\u9999\u6E2F|@ripaojiedian", "\u9999\u6E2F2|@ripaojiedian", "\u9999\u6E2F\
           3|@ripaojiedian", "\u9999\u6E2F4|@ripaojiedian", "\u9999\u6E2F5|@ripaojiedian",
-        "\u9999\u6E2F6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u9999\u6E2F\
-          8|@ripaojiedian", "\u9999\u6E2FR|@ripaojiedian", "\u65E5\u672C|@ripaojiedian",
-        "\u65E5\u672C2|@ripaojiedian", "\u65E5\u672C3|@ripaojiedian", "\u65E5\u672C\
-          4|@ripaojiedian", "\u65E5\u672CR|@ripaojiedian", "\u97E9\u56FD2|@ripaojiedian",
-        "\u65B0\u52A0\u5761|@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian", "\u72EE\u57CE\
-          \u7279\u6B8A|@ripaojiedian", "\u65E5\u672C\u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\
+        "\u9999\u6E2F6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u53F0\u6E7E\
+          |@ripaojiedian", "\u65E5\u672C|@ripaojiedian", "\u65E5\u672C2|@ripaojiedian",
+        "\u65E5\u672C3|@ripaojiedian", "\u65B0\u52A0\u5761|@ripaojiedian", "\u65B0\u52A0\
+          \u57612|@ripaojiedian", "\u7F8E\u56FD|@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian",
+        "\u7F8E\u56FD3|@ripaojiedian", "\u7F8E\u56FD4|@ripaojiedian", "\u65E5\u672C\
+          \u7279\u6B8A|@ripaojiedian", "\u72EE\u57CE\u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\
           \u7279\u6B8A|@ripaojiedian"], type: url-test, url: 'http://www.gstatic.com/generate_204'},
     {name: "\U0001F3A5 NETFLIX", proxies: ["\U0001F530 \u8282\u70B9\u9009\u62E9",
         "\u267B\uFE0F \u81EA\u52A8\u9009\u62E9", "\U0001F3AF \u5168\u7403\u76F4\u8FDE",
         "\u9999\u6E2F|@ripaojiedian", "\u9999\u6E2F2|@ripaojiedian", "\u9999\u6E2F\
           3|@ripaojiedian", "\u9999\u6E2F4|@ripaojiedian", "\u9999\u6E2F5|@ripaojiedian",
-        "\u9999\u6E2F6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u9999\u6E2F\
-          8|@ripaojiedian", "\u9999\u6E2FR|@ripaojiedian", "\u65E5\u672C|@ripaojiedian",
-        "\u65E5\u672C2|@ripaojiedian", "\u65E5\u672C3|@ripaojiedian", "\u65E5\u672C\
-          4|@ripaojiedian", "\u65E5\u672CR|@ripaojiedian", "\u97E9\u56FD2|@ripaojiedian",
-        "\u65B0\u52A0\u5761|@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian", "\u72EE\u57CE\
-          \u7279\u6B8A|@ripaojiedian", "\u65E5\u672C\u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\
+        "\u9999\u6E2F6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u53F0\u6E7E\
+          |@ripaojiedian", "\u65E5\u672C|@ripaojiedian", "\u65E5\u672C2|@ripaojiedian",
+        "\u65E5\u672C3|@ripaojiedian", "\u65B0\u52A0\u5761|@ripaojiedian", "\u65B0\u52A0\
+          \u57612|@ripaojiedian", "\u7F8E\u56FD|@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian",
+        "\u7F8E\u56FD3|@ripaojiedian", "\u7F8E\u56FD4|@ripaojiedian", "\u65E5\u672C\
+          \u7279\u6B8A|@ripaojiedian", "\u72EE\u57CE\u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\
           \u7279\u6B8A|@ripaojiedian"], type: select}, {name: "\u26D4\uFE0F \u5E7F\
         \u544A\u62E6\u622A", proxies: ["\U0001F6D1 \u5168\u7403\u62E6\u622A", "\U0001F3AF\
           \ \u5168\u7403\u76F4\u8FDE", "\U0001F530 \u8282\u70B9\u9009\u62E9"], type: select},
@@ -85,49 +80,49 @@
           \u52A8\u9009\u62E9", "\U0001F3AF \u5168\u7403\u76F4\u8FDE", "\u9999\u6E2F\
           |@ripaojiedian", "\u9999\u6E2F2|@ripaojiedian", "\u9999\u6E2F3|@ripaojiedian",
         "\u9999\u6E2F4|@ripaojiedian", "\u9999\u6E2F5|@ripaojiedian", "\u9999\u6E2F\
-          6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u9999\u6E2F8|@ripaojiedian",
-        "\u9999\u6E2FR|@ripaojiedian", "\u65E5\u672C|@ripaojiedian", "\u65E5\u672C\
-          2|@ripaojiedian", "\u65E5\u672C3|@ripaojiedian", "\u65E5\u672C4|@ripaojiedian",
-        "\u65E5\u672CR|@ripaojiedian", "\u97E9\u56FD2|@ripaojiedian", "\u65B0\u52A0\
-          \u5761|@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian", "\u72EE\u57CE\u7279\
-          \u6B8A|@ripaojiedian", "\u65E5\u672C\u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\
+          6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u53F0\u6E7E|@ripaojiedian",
+        "\u65E5\u672C|@ripaojiedian", "\u65E5\u672C2|@ripaojiedian", "\u65E5\u672C\
+          3|@ripaojiedian", "\u65B0\u52A0\u5761|@ripaojiedian", "\u65B0\u52A0\u5761\
+          2|@ripaojiedian", "\u7F8E\u56FD|@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian",
+        "\u7F8E\u56FD3|@ripaojiedian", "\u7F8E\u56FD4|@ripaojiedian", "\u65E5\u672C\
+          \u7279\u6B8A|@ripaojiedian", "\u72EE\u57CE\u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\
           \u7279\u6B8A|@ripaojiedian"], type: select}, {name: "\U0001F30F \u56FD\u5185\
         \u5A92\u4F53", proxies: ["\U0001F3AF \u5168\u7403\u76F4\u8FDE", "\u9999\u6E2F\
           |@ripaojiedian", "\u9999\u6E2F2|@ripaojiedian", "\u9999\u6E2F3|@ripaojiedian",
         "\u9999\u6E2F4|@ripaojiedian", "\u9999\u6E2F5|@ripaojiedian", "\u9999\u6E2F\
-          6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u9999\u6E2F8|@ripaojiedian",
-        "\u9999\u6E2FR|@ripaojiedian", "\U0001F530 \u8282\u70B9\u9009\u62E9"], type: select},
-    {name: "\u24C2\uFE0F \u5FAE\u8F6F\u670D\u52A1", proxies: ["\U0001F3AF \u5168\u7403\
-          \u76F4\u8FDE", "\U0001F530 \u8282\u70B9\u9009\u62E9", "\u9999\u6E2F|@ripaojiedian",
-        "\u9999\u6E2F2|@ripaojiedian", "\u9999\u6E2F3|@ripaojiedian", "\u9999\u6E2F\
-          4|@ripaojiedian", "\u9999\u6E2F5|@ripaojiedian", "\u9999\u6E2F6|@ripaojiedian",
-        "\u9999\u6E2F7|@ripaojiedian", "\u9999\u6E2F8|@ripaojiedian", "\u9999\u6E2F\
-          R|@ripaojiedian", "\u65E5\u672C|@ripaojiedian", "\u65E5\u672C2|@ripaojiedian",
-        "\u65E5\u672C3|@ripaojiedian", "\u65E5\u672C4|@ripaojiedian", "\u65E5\u672C\
-          R|@ripaojiedian", "\u97E9\u56FD2|@ripaojiedian", "\u65B0\u52A0\u5761|@ripaojiedian",
-        "\u7F8E\u56FD2|@ripaojiedian", "\u72EE\u57CE\u7279\u6B8A|@ripaojiedian", "\u65E5\u672C\
+          6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u53F0\u6E7E|@ripaojiedian",
+        "\U0001F530 \u8282\u70B9\u9009\u62E9"], type: select}, {name: "\u24C2\uFE0F\
+        \ \u5FAE\u8F6F\u670D\u52A1", proxies: ["\U0001F3AF \u5168\u7403\u76F4\u8FDE",
+        "\U0001F530 \u8282\u70B9\u9009\u62E9", "\u9999\u6E2F|@ripaojiedian", "\u9999\u6E2F\
+          2|@ripaojiedian", "\u9999\u6E2F3|@ripaojiedian", "\u9999\u6E2F4|@ripaojiedian",
+        "\u9999\u6E2F5|@ripaojiedian", "\u9999\u6E2F6|@ripaojiedian", "\u9999\u6E2F\
+          7|@ripaojiedian", "\u53F0\u6E7E|@ripaojiedian", "\u65E5\u672C|@ripaojiedian",
+        "\u65E5\u672C2|@ripaojiedian", "\u65E5\u672C3|@ripaojiedian", "\u65B0\u52A0\
+          \u5761|@ripaojiedian", "\u65B0\u52A0\u57612|@ripaojiedian", "\u7F8E\u56FD\
+          |@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian", "\u7F8E\u56FD3|@ripaojiedian",
+        "\u7F8E\u56FD4|@ripaojiedian", "\u65E5\u672C\u7279\u6B8A|@ripaojiedian", "\u72EE\u57CE\
           \u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\u7279\u6B8A|@ripaojiedian"],
       type: select}, {name: "\U0001F4F2 \u7535\u62A5\u4FE1\u606F", proxies: ["\U0001F530\
           \ \u8282\u70B9\u9009\u62E9", "\U0001F3AF \u5168\u7403\u76F4\u8FDE", "\u9999\u6E2F\
           |@ripaojiedian", "\u9999\u6E2F2|@ripaojiedian", "\u9999\u6E2F3|@ripaojiedian",
         "\u9999\u6E2F4|@ripaojiedian", "\u9999\u6E2F5|@ripaojiedian", "\u9999\u6E2F\
-          6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u9999\u6E2F8|@ripaojiedian",
-        "\u9999\u6E2FR|@ripaojiedian", "\u65E5\u672C|@ripaojiedian", "\u65E5\u672C\
-          2|@ripaojiedian", "\u65E5\u672C3|@ripaojiedian", "\u65E5\u672C4|@ripaojiedian",
-        "\u65E5\u672CR|@ripaojiedian", "\u97E9\u56FD2|@ripaojiedian", "\u65B0\u52A0\
-          \u5761|@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian", "\u72EE\u57CE\u7279\
-          \u6B8A|@ripaojiedian", "\u65E5\u672C\u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\
+          6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u53F0\u6E7E|@ripaojiedian",
+        "\u65E5\u672C|@ripaojiedian", "\u65E5\u672C2|@ripaojiedian", "\u65E5\u672C\
+          3|@ripaojiedian", "\u65B0\u52A0\u5761|@ripaojiedian", "\u65B0\u52A0\u5761\
+          2|@ripaojiedian", "\u7F8E\u56FD|@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian",
+        "\u7F8E\u56FD3|@ripaojiedian", "\u7F8E\u56FD4|@ripaojiedian", "\u65E5\u672C\
+          \u7279\u6B8A|@ripaojiedian", "\u72EE\u57CE\u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\
           \u7279\u6B8A|@ripaojiedian"], type: select}, {name: "\U0001F34E \u82F9\u679C\
         \u670D\u52A1", proxies: ["\U0001F530 \u8282\u70B9\u9009\u62E9", "\U0001F3AF\
           \ \u5168\u7403\u76F4\u8FDE", "\u267B\uFE0F \u81EA\u52A8\u9009\u62E9", "\u9999\u6E2F\
           |@ripaojiedian", "\u9999\u6E2F2|@ripaojiedian", "\u9999\u6E2F3|@ripaojiedian",
         "\u9999\u6E2F4|@ripaojiedian", "\u9999\u6E2F5|@ripaojiedian", "\u9999\u6E2F\
-          6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u9999\u6E2F8|@ripaojiedian",
-        "\u9999\u6E2FR|@ripaojiedian", "\u65E5\u672C|@ripaojiedian", "\u65E5\u672C\
-          2|@ripaojiedian", "\u65E5\u672C3|@ripaojiedian", "\u65E5\u672C4|@ripaojiedian",
-        "\u65E5\u672CR|@ripaojiedian", "\u97E9\u56FD2|@ripaojiedian", "\u65B0\u52A0\
-          \u5761|@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian", "\u72EE\u57CE\u7279\
-          \u6B8A|@ripaojiedian", "\u65E5\u672C\u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\
+          6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u53F0\u6E7E|@ripaojiedian",
+        "\u65E5\u672C|@ripaojiedian", "\u65E5\u672C2|@ripaojiedian", "\u65E5\u672C\
+          3|@ripaojiedian", "\u65B0\u52A0\u5761|@ripaojiedian", "\u65B0\u52A0\u5761\
+          2|@ripaojiedian", "\u7F8E\u56FD|@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian",
+        "\u7F8E\u56FD3|@ripaojiedian", "\u7F8E\u56FD4|@ripaojiedian", "\u65E5\u672C\
+          \u7279\u6B8A|@ripaojiedian", "\u72EE\u57CE\u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\
           \u7279\u6B8A|@ripaojiedian"], type: select}, {name: "\U0001F3AF \u5168\u7403\
         \u76F4\u8FDE", proxies: [DIRECT], type: select}, {name: "\U0001F6D1 \u5168\
         \u7403\u62E6\u622A", proxies: [REJECT, DIRECT], type: select}, {name: "\U0001F41F\
@@ -135,12 +130,12 @@
         "\U0001F3AF \u5168\u7403\u76F4\u8FDE", "\u267B\uFE0F \u81EA\u52A8\u9009\u62E9",
         "\u9999\u6E2F|@ripaojiedian", "\u9999\u6E2F2|@ripaojiedian", "\u9999\u6E2F\
           3|@ripaojiedian", "\u9999\u6E2F4|@ripaojiedian", "\u9999\u6E2F5|@ripaojiedian",
-        "\u9999\u6E2F6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u9999\u6E2F\
-          8|@ripaojiedian", "\u9999\u6E2FR|@ripaojiedian", "\u65E5\u672C|@ripaojiedian",
-        "\u65E5\u672C2|@ripaojiedian", "\u65E5\u672C3|@ripaojiedian", "\u65E5\u672C\
-          4|@ripaojiedian", "\u65E5\u672CR|@ripaojiedian", "\u97E9\u56FD2|@ripaojiedian",
-        "\u65B0\u52A0\u5761|@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian", "\u72EE\u57CE\
-          \u7279\u6B8A|@ripaojiedian", "\u65E5\u672C\u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\
+        "\u9999\u6E2F6|@ripaojiedian", "\u9999\u6E2F7|@ripaojiedian", "\u53F0\u6E7E\
+          |@ripaojiedian", "\u65E5\u672C|@ripaojiedian", "\u65E5\u672C2|@ripaojiedian",
+        "\u65E5\u672C3|@ripaojiedian", "\u65B0\u52A0\u5761|@ripaojiedian", "\u65B0\u52A0\
+          \u57612|@ripaojiedian", "\u7F8E\u56FD|@ripaojiedian", "\u7F8E\u56FD2|@ripaojiedian",
+        "\u7F8E\u56FD3|@ripaojiedian", "\u7F8E\u56FD4|@ripaojiedian", "\u65E5\u672C\
+          \u7279\u6B8A|@ripaojiedian", "\u72EE\u57CE\u7279\u6B8A|@ripaojiedian", "\u97E9\u56FD\
           \u7279\u6B8A|@ripaojiedian"], type: select}], rules: ["DOMAIN-SUFFIX,local,\U0001F3AF\
       \ \u5168\u7403\u76F4\u8FDE", "IP-CIDR,192.168.0.0/16,\U0001F3AF \u5168\u7403\
       \u76F4\u8FDE,no-resolve", "IP-CIDR,10.0.0.0/8,\U0001F3AF \u5168\u7403\u76F4\u8FDE\

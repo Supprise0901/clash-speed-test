@@ -426,7 +426,7 @@ def start_download_test(speed_limit):
     # 第一步：测试所有节点的下载速度
     test_all_proxies()
 
-    # 过滤出速度大于等于 0.2 的节点
+    # 过滤出速度大于等于 speed_limit 的节点
     filtered_list = [item for item in results_speed if float(item[1]) >= float(f'{speed_limit}')]
 
     # 按下载速度从大到小排序
@@ -469,7 +469,7 @@ if __name__ == '__main__':
     # 存储所有节点的速度测试结果
     results_speed = []
     # 下载速度限制 单位 MB/s
-    speed_limit = 0.3
+    speed_limit = 0.5
     # 开始下载测试
     start_download_test(speed_limit)
     kill_clash_process()

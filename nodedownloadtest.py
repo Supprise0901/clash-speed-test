@@ -172,7 +172,7 @@ def test_all_proxies():
 # 生成新的 YAML 配置文件
 def generate_yaml(sorted_proxies):
     # 读取现有的 Clash 配置（假设已有初始配置文件）
-    with open("clash.yaml", "r", encoding="utf-8") as f:
+    with open("latency", "r", encoding="utf-8") as f:
         config = yaml.safe_load(f)
 
     # 获取现有的代理列表
@@ -205,7 +205,7 @@ def generate_yaml(sorted_proxies):
 
 
 #
-def start_download_test():
+def start_download_test(speed_limit):
     """
     开始下载测试
 
@@ -213,14 +213,14 @@ def start_download_test():
     # 推送 YAML 到 Clash 内核
     kill_clash_process()
     time.sleep(2)
-    upload_yaml_to_clash(path='clash.yaml')
+    upload_yaml_to_clash(path='latency')
     time.sleep(2)
 
     # 第一步：测试所有节点的下载速度
     test_all_proxies()
 
     # 过滤出数值大于等于 0.5的元素
-    filtered_list = [item for item in results_speed if float(item[1]) >= 0.5]
+    filtered_list = [item for item in results_speed if float(item[1]) >= float(f'{speed_limit}')]
 
     # 按下载速度从大到小排序
     sorted_list = sorted(filtered_list, key=lambda x: float(x[1]), reverse=True)
@@ -233,7 +233,7 @@ def start_download_test():
     proxy_list = [item for item in sorted_list if item[0] not in to_remove]
     pprint(proxy_list)
     # 读取延迟 latency文件
-    with open("clash.yaml", "r", encoding='utf-8') as file:
+    with open("latency", "r", encoding='utf-8') as file:
         data = yaml.safe_load(file)
 
     # 获取所有节点数量
@@ -253,7 +253,9 @@ if __name__ == "__main__":
     test_url = "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
     # 存储所有节点的速度测试结果
     results_speed = []
+    # 下载速度限制 单位 MB/s
+    speed_limit = 0.5
     # 下载速度测试
-    start_download_test()
+    start_download_test(speed_limit)
     # 结束 Clash 进程
     kill_clash_process()

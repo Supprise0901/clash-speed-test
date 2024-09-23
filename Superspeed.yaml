@@ -3,48 +3,67 @@ external-controller: :9090
 log-level: info
 mode: Rule
 port: 7890
-proxies: []
+proxies:
+- cipher: chacha20-ietf-poly1305
+  name: 香港|@ripaojiedian
+  password: 7efd4673-1d09-4be0-858b-7ee5d8b33dcd
+  port: 41370
+  server: gdyddx500.xiyunchen.cn
+  type: ss
 proxy-groups:
 - name: 🔰 节点选择
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: select
 - interval: 300
   name: ♻️ 自动选择
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: url-test
   url: http://www.gstatic.com/generate_204
 - name: 🎥 NETFLIX
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: select
 - name: ⛔️ 广告拦截
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: select
 - name: 🚫 运营劫持
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: select
 - name: 🌍 国外媒体
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: select
 - name: 🌏 国内媒体
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: select
 - name: Ⓜ️ 微软服务
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: select
 - name: 📲 电报信息
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: select
 - name: 🍎 苹果服务
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: select
 - name: 🎯 全球直连
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: select
 - name: 🛑 全球拦截
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: select
 - name: 🐟 漏网之鱼
-  proxies: []
+  proxies:
+  - 香港|@ripaojiedian
   type: select
 rules:
 - DOMAIN-SUFFIX,local,🎯 全球直连
