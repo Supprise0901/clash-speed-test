@@ -138,7 +138,7 @@ def download_yaml():
                 remove_duplicates(data)
             # 处理几点后写入到本地文件
             with open('config.yaml', 'w', encoding='utf-8') as file:
-                yaml.dump(data, file, default_flow_style=True)
+                yaml.dump(data, file, allow_unicode=True, default_flow_style=False)
                 return data
         else:
             raise Exception(f"无法下载 YAML 文件: {response.status_code}")
@@ -157,7 +157,7 @@ def test_proxy_delay(proxy_name):
         url = f"{clash_api_url}/proxies/{proxy_name}/delay"
         params = {
             "timeout": 5000,  # 5秒超时
-            "url": "https://www.google.com"  # 更换为 Google 的测试 URL
+            "url": "http://www.google.com"  # 更换为 Google 的测试 URL
         }
         try:
             response = requests.get(url, params=params)
@@ -272,7 +272,7 @@ def start_latency_testing():
     # 使用列表推导式删除指定的元素
     proxy_list = [item for item in sorted_delays if item[0] not in to_remove]
     pprint(proxy_list)
-    # print(f'收集延迟有效节点{len(proxy_list)}个')
+    print(f'收集延迟有效节点{len(proxy_list)}个')
     # 生成新的配置文件
     generate_sorted_yaml(yaml_content, proxy_list)
 
@@ -321,7 +321,7 @@ def test_proxy_speed(proxy_name):
             total_length += len(data)
             if time.time() - start_time >= test_duration:
                 break
-        time.sleep(0.5)  # 引入短暂的延迟，防止过快完成
+        # time.sleep(0.5)  # 引入短暂的延迟，防止过快完成
 
     # 逐块下载，直到达到 10MB 为止
     # max_size = 10 * 1024 * 1024  # 50MB 转换为字节
@@ -452,6 +452,30 @@ def start_download_test(speed_limit):
     generate_yaml(proxy_list)
 
 
+def push_txt():
+    """
+    推送 txt 文件到 Github
+    :return:
+    """
+    update_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    subprocess.run(['git', 'add', 'Superspeed.yaml'])
+    subprocess.run(['git', 'commit', '-m', f'{update_time} update'])
+
+    while True:
+        result = subprocess.call(["git", "push", "origin", "main"])
+        print(result)
+
+        if result == 0:
+            print('推送成功')
+            break
+        else:
+            print("Push failed, attempting merge and retrying...")
+            subprocess.run(['git', 'reset', '--hard'])
+            subprocess.run(["git", "pull", "origin", "main", '--allow-unrelated-histories'])
+    # if subprocess.run(['git', 'push', '-u', 'origin', 'main']):
+    #     print('推送成功')
+
+
 if __name__ == '__main__':
     print('YAML 文件开始下载。。。。。')
     # 定义 Clash API 地址
@@ -472,4 +496,7 @@ if __name__ == '__main__':
     speed_limit = 0.5
     # 开始下载测试
     start_download_test(speed_limit)
+    time.sleep(5)
+    # 推送 txt 文件到 Github 仓库
+    push_txt()
     kill_clash_process()
