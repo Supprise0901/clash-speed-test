@@ -138,7 +138,7 @@ def download_yaml():
                 remove_duplicates(data)
             # 处理几点后写入到本地文件
             with open('config.yaml', 'w', encoding='utf-8') as file:
-                yaml.dump(data, file, allow_unicode=True, default_flow_style=False)
+                yaml.dump(data, file, default_flow_style=False, allow_unicode=True)
                 return data
         else:
             raise Exception(f"无法下载 YAML 文件: {response.status_code}")
@@ -157,7 +157,7 @@ def test_proxy_delay(proxy_name):
         url = f"{clash_api_url}/proxies/{proxy_name}/delay"
         params = {
             "timeout": 5000,  # 5秒超时
-            "url": "http://www.google.com"  # 更换为 Google 的测试 URL
+            "url": "https://www.google.com"  # 更换为 Google 的测试 URL
         }
         try:
             response = requests.get(url, params=params)
@@ -279,21 +279,46 @@ def start_latency_testing():
 
 # 切换到指定代理节点
 def switch_proxy(proxy_name):
-    url = f"{clash_api_url}/proxies/{proxy_name}"
+    # url = f"http://{clash_api_url}/proxies/%F0%9F%94%B0%20%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9"
+    # data = {
+    #     "name": proxy_name
+    # }
+    # response = requests.put(url, json=data)
+    # # return response.json()
+    """
+    切换 Clash 中策略组的代理节点。
+
+    :param selector_name: 策略组的名称
+    :param proxy_name: 要切换到的代理节点名称
+    :return: 返回切换结果或错误信息
+    """
+    url = f"http://{clash_api_url}/proxies/%F0%9F%94%B0%20%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9"
     data = {
         "name": proxy_name
     }
-    response = requests.put(url, json=data)
-    return response.json()
+
+    try:
+        response = requests.put(url, json=data)
+        # 检查响应状态
+        if response.status_code == 204:  # Clash API 切换成功返回 204 No Content
+            print(f"Switched to proxy '{proxy_name}' in selector '🔰 节点选择' successfully.")
+            return {"status": "success", "message": f"Switched to proxy '{proxy_name}'."}
+        else:
+            print(f"Failed to switch proxy. HTTP status code: {response.status_code}")
+            return response.json()
+    except Exception as e:
+        print(f"Error occurred: {e}")
+        return {"status": "error", "message": str(e)}
 
 
 # 测试指定代理节点的下载速度（下载5秒后停止）
 def test_proxy_speed(proxy_name):
     # 切换到该代理节点
-    switch_result = switch_proxy(proxy_name)
-    if 'error' in switch_result:
-        print(f"Failed to switch to proxy {proxy_name}: {switch_result['error']}")
-        return None
+    switch_proxy(proxy_name)
+    # switch_result = switch_proxy(proxy_name)
+    # if 'error' in switch_result:
+    #     print(f"Failed to switch to proxy {proxy_name}: {switch_result['error']}")
+    #     return None
 
     # 设置代理
     proxies = {
@@ -321,7 +346,7 @@ def test_proxy_speed(proxy_name):
             total_length += len(data)
             if time.time() - start_time >= test_duration:
                 break
-        # time.sleep(0.5)  # 引入短暂的延迟，防止过快完成
+        time.sleep(0.5)  # 引入短暂的延迟，防止过快完成
 
     # 逐块下载，直到达到 10MB 为止
     # max_size = 10 * 1024 * 1024  # 50MB 转换为字节
@@ -452,30 +477,6 @@ def start_download_test(speed_limit):
     generate_yaml(proxy_list)
 
 
-def push_txt():
-    """
-    推送 txt 文件到 Github
-    :return:
-    """
-    update_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-    subprocess.run(['git', 'add', 'Superspeed.yaml'])
-    subprocess.run(['git', 'commit', '-m', f'{update_time} update'])
-
-    while True:
-        result = subprocess.call(["git", "push", "origin", "main"])
-        print(result)
-
-        if result == 0:
-            print('推送成功')
-            break
-        else:
-            print("Push failed, attempting merge and retrying...")
-            subprocess.run(['git', 'reset', '--hard'])
-            subprocess.run(["git", "pull", "origin", "main", '--allow-unrelated-histories'])
-    # if subprocess.run(['git', 'push', '-u', 'origin', 'main']):
-    #     print('推送成功')
-
-
 if __name__ == '__main__':
     print('YAML 文件开始下载。。。。。')
     # 定义 Clash API 地址
@@ -493,10 +494,7 @@ if __name__ == '__main__':
     # 存储所有节点的速度测试结果
     results_speed = []
     # 下载速度限制 单位 MB/s
-    speed_limit = 0.5
+    speed_limit = 0.2
     # 开始下载测试
     start_download_test(speed_limit)
-    time.sleep(5)
-    # 推送 txt 文件到 Github 仓库
-    push_txt()
     kill_clash_process()
