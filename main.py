@@ -333,7 +333,7 @@ def test_proxy_speed(proxy_name):
 
     # 开始下载并测量时间
     start_time = time.time()
-    # response = requests.get(test_url, stream=True, proxies=proxies)
+    # response = requests.get(test_url, stream=True, proxies=proxies, timeout=test_duration)
     # 计算总下载量
     total_length = 0
     # 测试下载时间（秒）
@@ -346,12 +346,12 @@ def test_proxy_speed(proxy_name):
 
     # 不断发起请求直到达到时间限制
     while time.time() - start_time < test_duration:
-        response = requests.get(test_url, stream=True, proxies=proxies)
+        response = requests.get(test_url, stream=True, proxies=proxies, timeout=test_duration)
         for data in response.iter_content(chunk_size=524288):
             total_length += len(data)
             if time.time() - start_time >= test_duration:
                 break
-        time.sleep(0.5)  # 引入短暂的延迟，防止过快完成
+        # time.sleep(0.5)  # 引入短暂的延迟，防止过快完成
 
     # 逐块下载，直到达到 10MB 为止
     # max_size = 10 * 1024 * 1024  # 50MB 转换为字节

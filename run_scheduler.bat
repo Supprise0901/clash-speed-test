@@ -23,7 +23,7 @@ set start_time=%year%-%month%-%day% %hour%:%minute%:%second%
 echo 开始时间: %start_time%
 
 REM 切换到项目目录
-cd /d D:\pyproject\Fetch
+cd /d D:\pyproject\clash-speed-test
 
 REM 激活虚拟环境 (假设虚拟环境位于venv文件夹)
 call venv\Scripts\activate
