@@ -88,15 +88,6 @@ def download_yaml():
     """
     下载 YAML 文件
     """
-    urls = []
-    with open('suburls', 'r') as f:
-        for url in f:
-            urls.append(url.strip())  # 去除行尾的换行符
-    # 使用 '|' 将多个URL连接
-    joined_urls = '|'.join(urls)
-    encode_url(joined_urls)
-    yaml_url = 'http://10.35.26.42:25500/sub?target=clash&url=' + encode_url(joined_urls)
-
     # 替换 cipher 配置
     def replace_cipher(data):
         for config in data.get('proxies', []):
@@ -132,34 +123,40 @@ def download_yaml():
         yaml_content = re.sub(r'!<str>\s*', '', yaml_content)
 
         with open('config.yaml', 'w', encoding='utf-8') as f:
-            yaml.dump(yaml_content, f, allow_unicode=True, default_flow_style=False)
+            f.write(yaml_content)
 
-        return yaml_content
-
-    response = requests.get(yaml_url)
     try:
+        urls = []
+        with open('suburls', 'r') as f:
+            for url in f:
+                urls.append(url.strip())  # 去除行尾的换行符
+        # 使用 '|' 将多个URL连接
+        joined_urls = '|'.join(urls)
+        encode_url(joined_urls)
+        yaml_url = 'http://10.35.26.42:25500/sub?target=clash&url=' + encode_url(joined_urls)
+        response = requests.get(yaml_url)
         if response.status_code == 200:
             # 下载节点保存到本地
             with open('config.yaml', 'w', encoding='utf-8') as f:
                 f.write(response.text)
                 print("YAML 文件已下载到本地: config.yaml")
             # 读取节点解析 YAML 文件
-            # with open('config.yaml', 'r', encoding='utf-8') as file:
-            #     yaml_content = file.read()
-            #     # 修复 YAML 内容中的常见错误
-            #     fix_yaml_errors(yaml_content)
-            #     pprint('config.yaml')
+            with open('config.yaml', 'r', encoding='utf-8') as file:
+                yaml_content = file.read()
+                # 修复 YAML 内容中的常见错误
+                fix_yaml_errors(yaml_content)
+
             with open('config.yaml', 'r', encoding='utf-8') as file:
                 data = yaml.safe_load(file)
                 # 替换 cipher 配置 cipher: aes-128-gcm
+                # pprint(data)
                 replace_cipher(data)
                 # 删除重复节点
                 remove_duplicates(data)
-            # 处理几点后写入到本地文件
-            with open('config.yaml', 'w', encoding='utf-8') as file:
-                yaml.dump(data, file, default_flow_style=False, allow_unicode=True)
-                print("YAML 修正后保存: config.yaml")
-                return data
+                with open('config.yaml', 'w', encoding='utf-8') as file:
+                    yaml.dump(data, file, default_flow_style=False, allow_unicode=True)
+                    print("YAML 修正后保存: config.yaml")
+                    return data
         else:
             raise Exception(f"无法下载 YAML 文件: {response.status_code}")
     except Exception as e:
@@ -299,20 +296,12 @@ def start_latency_testing():
 
 # 切换到指定代理节点
 def switch_proxy(proxy_name):
-    # url = f"http://{clash_api_url}/proxies/%F0%9F%94%B0%20%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9"
-    # data = {
-    #     "name": proxy_name
-    # }
-    # response = requests.put(url, json=data)
-    # # return response.json()
     """
     切换 Clash 中策略组的代理节点。
-
-    :param selector_name: 策略组的名称
     :param proxy_name: 要切换到的代理节点名称
     :return: 返回切换结果或错误信息
     """
-    url = f"http://{clash_api_url}/proxies/%F0%9F%94%B0%20%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9"
+    url = f"{clash_api_url}/proxies/%F0%9F%94%B0%20%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9"
     data = {
         "name": proxy_name
     }
@@ -321,7 +310,7 @@ def switch_proxy(proxy_name):
         response = requests.put(url, json=data)
         # 检查响应状态
         if response.status_code == 204:  # Clash API 切换成功返回 204 No Content
-            print(f"Switched to proxy '{proxy_name}' in selector '🔰 节点选择' successfully.")
+            print(f"\nSwitched to proxy '{proxy_name}' in selector '🔰 节点选择' successfully.")
             return {"status": "success", "message": f"Switched to proxy '{proxy_name}'."}
         else:
             print(f"Failed to switch proxy. HTTP status code: {response.status_code}")
@@ -377,7 +366,7 @@ def test_proxy_speed(proxy_name):
     speed = total_length / elapsed_time if elapsed_time > 0 else 0
 
     # 返回下载速度（MB/s）
-    print(f"\nTesting proxy: {proxy_name}")
+    print(f"Testing proxy: {proxy_name}")
     print(f"Total downloaded: {total_length} bytes in {elapsed_time:.2f} seconds.")
     print(f"Average speed: {speed / 1024 / 1024:.2f} MB/s")
 
