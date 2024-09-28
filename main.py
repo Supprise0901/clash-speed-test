@@ -1,3 +1,4 @@
+import re
 from pprint import pprint
 import requests
 import yaml
@@ -122,6 +123,19 @@ def download_yaml():
             return unique_list
         return data
 
+    def fix_yaml_errors(yaml_content):
+        """
+        移除 YAML 文件中所有的 '!<str>' 标签，并将值保留为普通的字符串。
+        """
+        # 使用正则表达式移除 `!<str>` 标签
+        # 查找 password: !<str> value 并将其替换为 password: value
+        yaml_content = re.sub(r'!<str>\s*', '', yaml_content)
+
+        with open('config.yaml', 'w', encoding='utf-8') as f:
+            yaml.dump(yaml_content, f, allow_unicode=True, default_flow_style=False)
+
+        return yaml_content
+
     response = requests.get(yaml_url)
     try:
         if response.status_code == 200:
@@ -130,6 +144,11 @@ def download_yaml():
                 f.write(response.text)
                 print("YAML 文件已下载到本地: config.yaml")
             # 读取节点解析 YAML 文件
+            # with open('config.yaml', 'r', encoding='utf-8') as file:
+            #     yaml_content = file.read()
+            #     # 修复 YAML 内容中的常见错误
+            #     fix_yaml_errors(yaml_content)
+            #     pprint('config.yaml')
             with open('config.yaml', 'r', encoding='utf-8') as file:
                 data = yaml.safe_load(file)
                 # 替换 cipher 配置 cipher: aes-128-gcm
@@ -139,6 +158,7 @@ def download_yaml():
             # 处理几点后写入到本地文件
             with open('config.yaml', 'w', encoding='utf-8') as file:
                 yaml.dump(data, file, default_flow_style=False, allow_unicode=True)
+                print("YAML 修正后保存: config.yaml")
                 return data
         else:
             raise Exception(f"无法下载 YAML 文件: {response.status_code}")
@@ -315,10 +335,6 @@ def switch_proxy(proxy_name):
 def test_proxy_speed(proxy_name):
     # 切换到该代理节点
     switch_proxy(proxy_name)
-    # switch_result = switch_proxy(proxy_name)
-    # if 'error' in switch_result:
-    #     print(f"Failed to switch to proxy {proxy_name}: {switch_result['error']}")
-    #     return None
 
     # 设置代理
     proxies = {

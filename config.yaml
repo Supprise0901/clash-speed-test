@@ -1,18 +1,16 @@
 allow-lan: true
 external-controller: :9090
-log-level: error
+log-level: info
 mode: Rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  name: 香港|@ripaojiedian
-  port: 22201
-  server: 149.104.15.209
+- name: 香港|@ripaojiedian
+  password: 3672449442956713984
+  port: 443
+  server: immense-buzzard.mite885.beauty
   skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: f022200b-43e0-4e41-8e89-df369cf1d93b
+  sni: immense-buzzard.mite885.beauty
+  type: trojan
 - alterId: 0
   cipher: auto
   name: 香港2|@ripaojiedian
@@ -31,84 +29,51 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 0
+- alterId: 64
   cipher: auto
   name: 香港4|@ripaojiedian
-  port: 51194
-  server: 38.147.189.7
+  port: 35601
+  server: 120.232.153.40
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 11f686f6-77fb-4ba0-a7c2-70c5f11ca804
-- cipher: aes-128-gcm
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: 香港5|@ripaojiedian
+  network: ws
+  port: 16301
+  server: 220.246.57.32
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 6074a3b0-f2a0-4b05-b1c9-4066e8b876c2
+  ws-opts:
+    path: /
+- cipher: aes-256-cfb
   name: 香港R|@ripaojiedian
   password: hGkQ6915tD
   port: 16088
   server: 103.161.255.195
   type: ss
-- name: 台湾|@ripaojiedian
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13035
-  server: naiu-other.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- name: 日本|@ripaojiedian
-  network: ws
-  password: moist
-  port: 1443
-  server: 140.238.56.153
-  skip-cert-verify: false
-  sni: trojan.freenods.sbs
-  type: trojan
-  ws-opts:
-    headers:
-      Host: trojan.freenods.sbs
-    path: /?ed=2560
 - alterId: 0
   cipher: auto
-  name: 日本2|@ripaojiedian
-  port: 50577
-  server: 45.159.50.44
+  name: 台湾|@ripaojiedian
+  network: ws
+  port: 2052
+  server: cfcdn1.sanfencdn9.com
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: e5d19b57-2fb4-49c0-a141-a716572e1656
+  uuid: fde30ec9-149a-4bba-8dd0-75f374fabbed
+  ws-opts:
+    headers:
+      Host: tw1eskJpKcA.inivtrak.xyz
+    path: /video/WNMicnDh
 - name: 日本3|@ripaojiedian
   password: c471ef32-798d-40a0-a57c-acf3475a204e
   port: 13011
   server: naiu-jp.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- alterId: 64
-  cipher: auto
-  name: 日本4|@ripaojiedian
-  network: ws
-  port: 48888
-  server: 134.122.135.89
-  servername: www.79102825.xyz
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.79102825.xyz
-    path: /path/351212081517
-- alterId: 0
-  cipher: auto
-  name: 韩国|@ripaojiedian
-  port: 59449
-  server: 45.141.136.224
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: decd4069-dd5f-414d-8c2c-cf0f9da6fa72
-- name: 韩国2|@ripaojiedian
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13036
-  server: naiu-other.05vr9nyqg5.download
   skip-cert-verify: false
   sni: cloudflare.node-ssl.cdn-alibaba.com
   type: trojan
@@ -119,20 +84,36 @@ proxies:
   skip-cert-verify: false
   sni: cloudflare.node-ssl.cdn-alibaba.com
   type: trojan
-- alterId: 0
+- name: 新加坡2|@ripaojiedian
+  password: 3672449442956713984
+  port: 443
+  server: precise-piglet.mite885.beauty
+  skip-cert-verify: false
+  sni: precise-piglet.mite885.beauty
+  type: trojan
+- name: 韩国|@ripaojiedian
+  password: 3672449442956713984
+  port: 443
+  server: awaited-newt.mite885.beauty
+  skip-cert-verify: false
+  sni: awaited-newt.mite885.beauty
+  type: trojan
+- name: 韩国2|@ripaojiedian
+  password: c471ef32-798d-40a0-a57c-acf3475a204e
+  port: 13036
+  server: naiu-other.05vr9nyqg5.download
+  skip-cert-verify: false
+  sni: cloudflare.node-ssl.cdn-alibaba.com
+  type: trojan
+- alterId: 64
   cipher: auto
   name: 美国|@ripaojiedian
-  network: ws
-  port: 2086
-  server: 172.64.198.249
+  port: 52112
+  server: 183.236.51.23
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip1.1457230.xyz
-    path: github.com/Alvin9999
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 0
   cipher: auto
   name: 美国2|@ripaojiedian
@@ -186,137 +167,58 @@ proxies:
   skip-cert-verify: false
   sni: cloudflare.node-ssl.cdn-alibaba.com
   type: trojan
-- cipher: aes-128-gcm
+- cipher: aes-256-cfb
   name: 狮城特殊|@ripaojiedian
   password: amazonskr05
   port: 443
-  server: 52.78.116.186
+  server: 3.36.120.116
   type: ss
-- cipher: aes-128-gcm
+- cipher: aes-256-cfb
   name: 日本特殊|@ripaojiedian
   password: amazonskr05
   port: 443
-  server: 3.38.212.89
+  server: 54.180.240.137
   type: ss
-- cipher: aes-128-gcm
+- cipher: aes-256-cfb
   name: 韩国特殊|@ripaojiedian
   password: amazonskr05
   port: 443
-  server: 35.94.112.17
+  server: 13.212.1.95
   type: ss
-- alterId: 0
-  cipher: auto
-  name: 13,14|美国2|@ripaojiedian
-  network: ws
-  port: 2086
-  server: 104.26.0.56
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- name: 13|🇯🇵 日本|@ripaojiedian
-  network: ws
-  password: moist
-  port: 1443
-  server: 140.238.56.153
-  skip-cert-verify: false
-  sni: trojan.freenods.sbs
-  type: trojan
-  ws-opts:
-    headers:
-      Host: trojan.freenods.sbs
-    path: /?ed=2560
-- name: 13,14|美国6|@ripaojiedian
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13019
-  server: naiu-us.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- alterId: 64
-  cipher: auto
-  name: 13|🇺🇸 美国5|@ripaojiedian
-  port: 58831
-  server: 120.232.153.27
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 0
-  cipher: auto
-  name: 13|🇭🇰 香港2|@ripaojiedian
-  port: 44806
-  server: ambxxic01hk.dorabbb.top
-  tls: false
-  type: vmess
-  uuid: be263eac-a624-452b-89da-bb25190676fc
+- cipher: aes-128-gcm
+  name: 英国|@ripaojiedian
+  password: shadowsocks
+  port: 443
+  server: 212.102.53.81
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 德国|@ripaojiedian
+  password: 70747514-fb14-4f31-8390-e1f0453eff6d
+  port: 20024
+  server: sg1.mhw7e2.online
+  type: ss
 - cipher: aes-128-gcm
   name: 高性价比机场:https://kfyun.uk
   password: 6601fb90e9b3
   port: 443
   server: 127.0.0.1
   type: ss
-- cipher: aes-128-gcm
-  name: 0|-https://t.me/MrXbin-1
-  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
-  port: 2377
-  server: 95.174.71.29
-  type: ss
-- cipher: aes-128-gcm
-  name: 0|-https://t.me/MrXbin-7
-  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
-  port: 2377
-  server: 23.247.137.165
-  type: ss
-- cipher: aes-128-gcm
-  name: 0|-https://t.me/MrXbin-9
-  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
-  port: 2377
-  server: 54.64.148.82
-  type: ss
-- cipher: aes-128-gcm
-  name: 0|-https://t.me/MrXbin-10
-  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
-  port: 2377
-  server: 43.207.207.206
-  type: ss
-- cipher: aes-128-gcm
-  name: 0|-https://t.me/MrXbin-18
-  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
-  port: 2377
-  server: 95.174.71.28
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 0|-https://t.me/MrXbin-38
+  name: 0|-https://t.me/MrXbin-48
   network: ws
   port: 2086
-  server: 172.64.166.28
+  server: 172.64.198.249
   tls: false
   type: vmess
   uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
   ws-opts:
     headers:
-      Host: ip2.1457230.xyz
+      Host: ip1.1457230.xyz
     path: github.com/Alvin9999
 - alterId: 0
   cipher: auto
-  name: 0|-https://t.me/MrXbin-39
-  network: ws
-  port: 2086
-  server: 172.64.166.22
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip2.1457230.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 0|-https://t.me/MrXbin-41
+  name: 0|-https://t.me/MrXbin-61
   network: ws
   port: 2086
   server: japan.com
@@ -329,7 +231,33 @@ proxies:
     path: github.com/Alvin9999
 - alterId: 0
   cipher: auto
-  name: 0|-https://t.me/MrXbin-46
+  name: 0|-https://t.me/MrXbin-62
+  network: ws
+  port: 2086
+  server: 172.64.166.22
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-63
+  network: ws
+  port: 2086
+  server: 172.64.166.28
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-72
   network: ws
   port: 2086
   server: 172.64.175.213
@@ -342,20 +270,7 @@ proxies:
     path: github.com/Alvin9999
 - alterId: 0
   cipher: auto
-  name: 0|-https://t.me/MrXbin-47
-  network: ws
-  port: 2086
-  server: 172.64.167.5
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip2.1457230.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 0|-https://t.me/MrXbin-49
+  name: 0|-https://t.me/MrXbin-74
   network: ws
   port: 2086
   server: 23.227.38.3
@@ -368,16 +283,42 @@ proxies:
     path: github.com/Alvin9999
 - alterId: 0
   cipher: auto
-  name: 0,13,14|美国|@ripaojiedian
+  name: 0|-https://t.me/MrXbin-80
   network: ws
   port: 2086
-  server: 172.64.198.249
+  server: singapore.com
   tls: false
   type: vmess
   uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
   ws-opts:
     headers:
-      Host: ip1.1457230.xyz
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-82
+  network: ws
+  port: 80
+  server: 206.238.236.36
+  tls: false
+  type: vmess
+  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
+  ws-opts:
+    headers:
+      Host: mysan2.jaquay22.workers.dev
+    path: /gwdef.sbs/linkws
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-96
+  network: ws
+  port: 2086
+  server: 172.64.167.5
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
     path: github.com/Alvin9999
 - alterId: 0
   cipher: auto
@@ -547,407 +488,406 @@ proxies:
     headers:
       Host: ip005.3196772.xyz
     path: github.com/Alvin9999
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇭🇰 香港 01 | 1x HK
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36141
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇭🇰 香港 02 | 1x HK
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36143
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇭🇰 香港住宅IP 03 | 1x HK
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36145
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇹🇼 台湾 01 | 1x TW
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36241
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇹🇼 台湾 02 | 1x TW
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36243
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇹🇼 台湾 03 | 1x TW
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36245
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇯🇵 日本 01 | 1x JP
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36111
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇯🇵 日本 02 | 1x JP
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36113
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇯🇵 日本 03 | 1x JP
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36115
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇸🇬 新加坡 01 | 1x SG
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36171
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇸🇬 新加坡 02 | 1x SG
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36173
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇸🇬 新加坡 03 | 1x SG
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36175
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇰🇷 韩国 01 | 1x KR
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36311
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇰🇷 韩国 02 | 1x KR
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36313
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇰🇷 韩国 03 | 1x KR
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36315
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇵🇭 菲律宾 01 | 1x PH
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36341
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇺🇸 美国 01 | 1x US Los Angeles
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36211
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36213
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇺🇸 美国 03 | 1x US Washington
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36215
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇬🇧 英国住宅IP 01 | 1x UK
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36271
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇲🇾马来西亚 01 | 1x MY
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36721
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇮🇳西班牙 01 | 1x ES
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36741
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇹🇭泰国 01 | 1x TH
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36731
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇮🇳 印度 01 | 1x IN
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36371
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇦🇺 澳大利亚 01 | 1x AU
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36411
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇨🇦 加拿大 01 | 1x CA
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36441
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇩🇪 德国 01 | 1x DE
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36471
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇷🇺 俄罗斯 01 | 1x RU
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36511
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇹🇷 土耳其 01 | 1x TR
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36571
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇺🇦 乌克兰 01 | 1x UA
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36611
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇻🇳 越南 01 | 1x VN
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36641
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 9|🇧🇷 巴西 01 | 1x BR
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjcwZDg4OS1jYjVkLTRlZGMtOTg0OS1jMmZhM2ZmMTI5M2E
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
   port: 36671
   server: free.2weradf.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇭🇰香港 01 | 1x HK
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31141
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇭🇰香港 02 | 1x HK
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31143
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇭🇰香港家宽 03 | 1x HK
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31145
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇹🇼台湾 01 | 1x TW
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31241
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇹🇼台湾 02 | 1x TW
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31243
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇹🇼台湾 03 | 1x TW
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31245
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇯🇵日本 01 | 1x JP
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31111
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇯🇵日本 02 | 1x JP
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31113
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇯🇵日本 03 | 1x JP
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31115
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇸🇬新加坡 01 | 1x SG
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31171
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇸🇬新加坡 02 | 1x SG
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31173
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇸🇬新加坡 03 | 1x SG
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31175
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇰🇷韩国 01 | 1x KR
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31311
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇰🇷韩国 02 | 1x KR
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31313
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇰🇷韩国 03 | 1x KR
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31315
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇵🇭菲律宾 01 | 1x PH
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31341
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇺🇸美国 01 | 1x US Los Angeles
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31211
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇺🇸美国家宽 02 | 1x US Los Angeles
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31213
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇺🇸美国 03 | 1x US Washington
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31215
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇺🇸美国 04 | 1x US Honolulu
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31217
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇺🇸美国 05 | 1x US New Jersey
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31219
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇬🇧英国家宽 01 | 1x UK
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31271
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇹🇭泰国01  | 1x TH
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31741
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇲🇾马来西亚01 | 1x MY
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31721
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇮🇳印度 01 | 1x IN
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31371
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇦🇺澳大利亚 01 | 1x AU
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31411
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇨🇦加拿大 01 | 1x CA
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31441
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇩🇪德国 01 | 1x DE
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31471
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇷🇺俄罗斯 01 | 1x RU
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31511
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇹🇷土耳其 01 | 1x TR
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31571
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇺🇦乌克兰 01 | 1x UA
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31611
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇻🇳越南 01 | 1x VN
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31641
   server: free.2apzhfa.xyz
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 11|🇧🇷巴西 01 | 1x BR
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMGFhZjc1OS1kMzYxLTQzODktYTljNC02MzY4YjYzOTA2N2Y
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
   port: 31671
   server: free.2apzhfa.xyz
   type: ss
+- name: 13|🇭🇰 香港|@ripaojiedian
+  password: 3672449442956713984
+  port: 443
+  server: immense-buzzard.mite885.beauty
+  skip-cert-verify: false
+  sni: immense-buzzard.mite885.beauty
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 13|🇭🇰 香港|@ripaojiedian
-  port: 22201
-  server: 149.104.15.209
-  tls: false
-  type: vmess
-  uuid: f022200b-43e0-4e41-8e89-df369cf1d93b
-- alterId: 0
-  cipher: auto
-  name: 13|🇭🇰 香港2|@ripaojiedian 2
+  name: 13|🇭🇰 香港2|@ripaojiedian
   port: 44806
   server: ambxxic01hk.dorabbb.top
   tls: false
@@ -961,80 +901,48 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 0
+- alterId: 64
   cipher: auto
   name: 13|🇭🇰 香港4|@ripaojiedian
-  port: 51194
-  server: 38.147.189.7
+  port: 35601
+  server: 120.232.153.40
   tls: false
   type: vmess
-  uuid: 11f686f6-77fb-4ba0-a7c2-70c5f11ca804
-- cipher: aes-128-gcm
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: 13,14|香港5|@ripaojiedian
+  network: ws
+  port: 16301
+  server: 220.246.57.32
+  tls: false
+  type: vmess
+  uuid: 6074a3b0-f2a0-4b05-b1c9-4066e8b876c2
+  ws-opts:
+    path: /
+- cipher: aes-256-cfb
   name: 13|🇭🇰 香港R|@ripaojiedian
   password: hGkQ6915tD
   port: 16088
   server: 103.161.255.195
   type: ss
-- name: 13,14|台湾|@ripaojiedian
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13035
-  server: naiu-other.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- name: 13|🇯🇵 日本|@ripaojiedian 2
-  network: ws
-  password: moist
-  port: 1443
-  server: 140.238.56.153
-  skip-cert-verify: false
-  sni: trojan.freenods.sbs
-  type: trojan
-  ws-opts:
-    headers:
-      Host: trojan.freenods.sbs
-    path: /?ed=2560
 - alterId: 0
   cipher: auto
-  name: 13|🇯🇵 日本2|@ripaojiedian
-  port: 50577
-  server: 45.159.50.44
+  name: 13,14|台湾|@ripaojiedian
+  network: ws
+  port: 2052
+  server: cfcdn1.sanfencdn9.com
   tls: false
   type: vmess
-  uuid: e5d19b57-2fb4-49c0-a141-a716572e1656
+  uuid: fde30ec9-149a-4bba-8dd0-75f374fabbed
+  ws-opts:
+    headers:
+      Host: tw1eskJpKcA.inivtrak.xyz
+    path: /video/WNMicnDh
 - name: 13,14|日本3|@ripaojiedian
   password: c471ef32-798d-40a0-a57c-acf3475a204e
   port: 13011
   server: naiu-jp.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- alterId: 64
-  cipher: auto
-  name: 13,14|日本4|@ripaojiedian
-  network: ws
-  port: 48888
-  server: 134.122.135.89
-  servername: www.79102825.xyz
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.79102825.xyz
-    path: /path/351212081517
-- alterId: 0
-  cipher: auto
-  name: 13|🇰🇷 韩国|@ripaojiedian
-  port: 59449
-  server: 45.141.136.224
-  tls: false
-  type: vmess
-  uuid: decd4069-dd5f-414d-8c2c-cf0f9da6fa72
-- name: 13,14|韩国2|@ripaojiedian
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13036
-  server: naiu-other.05vr9nyqg5.download
   skip-cert-verify: false
   sni: cloudflare.node-ssl.cdn-alibaba.com
   type: trojan
@@ -1045,9 +953,38 @@ proxies:
   skip-cert-verify: false
   sni: cloudflare.node-ssl.cdn-alibaba.com
   type: trojan
+- name: 13|🇸🇬 新加坡2|@ripaojiedian
+  password: 3672449442956713984
+  port: 443
+  server: precise-piglet.mite885.beauty
+  skip-cert-verify: false
+  sni: precise-piglet.mite885.beauty
+  type: trojan
+- name: 13|🇰🇷 韩国|@ripaojiedian
+  password: 3672449442956713984
+  port: 443
+  server: awaited-newt.mite885.beauty
+  skip-cert-verify: false
+  sni: awaited-newt.mite885.beauty
+  type: trojan
+- name: 13,14|韩国2|@ripaojiedian
+  password: c471ef32-798d-40a0-a57c-acf3475a204e
+  port: 13036
+  server: naiu-other.05vr9nyqg5.download
+  skip-cert-verify: false
+  sni: cloudflare.node-ssl.cdn-alibaba.com
+  type: trojan
+- alterId: 64
+  cipher: auto
+  name: 13|🇺🇸 美国|@ripaojiedian
+  port: 52112
+  server: 183.236.51.23
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 0
   cipher: auto
-  name: 13,14|美国2|@ripaojiedian 2
+  name: 13,14|美国2|@ripaojiedian
   network: ws
   port: 2086
   server: 104.26.0.56
@@ -1081,45 +1018,54 @@ proxies:
     path: /video/RPKZwKFW
 - alterId: 64
   cipher: auto
-  name: 13|🇺🇸 美国5|@ripaojiedian 2
+  name: 13|🇺🇸 美国5|@ripaojiedian
   port: 58831
   server: 120.232.153.27
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: 13,14|美国6|@ripaojiedian 2
+- name: 13,14|美国6|@ripaojiedian
   password: c471ef32-798d-40a0-a57c-acf3475a204e
   port: 13019
   server: naiu-us.05vr9nyqg5.download
   skip-cert-verify: false
   sni: cloudflare.node-ssl.cdn-alibaba.com
   type: trojan
-- cipher: aes-128-gcm
+- cipher: aes-256-cfb
   name: 13|🇸🇬 狮城特殊|@ripaojiedian
   password: amazonskr05
   port: 443
-  server: 52.78.116.186
+  server: 3.36.120.116
   type: ss
-- cipher: aes-128-gcm
+- cipher: aes-256-cfb
   name: 13|🇯🇵 日本特殊|@ripaojiedian
   password: amazonskr05
   port: 443
-  server: 3.38.212.89
+  server: 54.180.240.137
   type: ss
-- cipher: aes-128-gcm
+- cipher: aes-256-cfb
   name: 13|🇰🇷 韩国特殊|@ripaojiedian
   password: amazonskr05
   port: 443
-  server: 35.94.112.17
+  server: 13.212.1.95
   type: ss
-- alterId: 0
-  cipher: auto
-  name: 14|香港|@ripaojiedian
-  port: 22201
-  server: 149.104.15.209
-  tls: false
-  type: vmess
-  uuid: f022200b-43e0-4e41-8e89-df369cf1d93b
+- cipher: aes-128-gcm
+  name: 13|🇬🇧 英国|@ripaojiedian
+  password: shadowsocks
+  port: 443
+  server: 212.102.53.81
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 13|🇩🇪 德国|@ripaojiedian
+  password: 70747514-fb14-4f31-8390-e1f0453eff6d
+  port: 20024
+  server: sg1.mhw7e2.online
+  type: ss
+- name: 14|香港|@ripaojiedian
+  password: 3672449442956713984
+  port: 443
+  server: immense-buzzard.mite885.beauty
+  type: trojan
 - alterId: 0
   cipher: auto
   name: 14|香港2|@ripaojiedian
@@ -1136,48 +1082,38 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 0
+- alterId: 64
   cipher: auto
   name: 14|香港4|@ripaojiedian
-  port: 51194
-  server: 38.147.189.7
+  port: 35601
+  server: 120.232.153.40
   tls: false
   type: vmess
-  uuid: 11f686f6-77fb-4ba0-a7c2-70c5f11ca804
-- cipher: aes-128-gcm
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- cipher: ss
   name: 14|香港R|@ripaojiedian
   password: //YWVzLTI1Ni1jZmI6aEdrUTY5MTV0RA
   port: 16088
   server: 103.161.255.195
   type: ss
-- name: 14|日本|@ripaojiedian
-  network: ws
-  password: moist
-  port: 1443
-  server: 140.238.56.153
-  skip-cert-verify: true
-  sni: trojan.freenods.sbs
+- name: 14|新加坡2|@ripaojiedian
+  password: 3672449442956713984
+  port: 443
+  server: precise-piglet.mite885.beauty
   type: trojan
-  ws-opts:
-    headers:
-      Host: trojan.freenods.sbs
-    path: /?ed=2560
-- alterId: 0
+- name: 14|韩国|@ripaojiedian
+  password: 3672449442956713984
+  port: 443
+  server: awaited-newt.mite885.beauty
+  type: trojan
+- alterId: 64
   cipher: auto
-  name: 14|日本2|@ripaojiedian
-  port: 50577
-  server: 45.159.50.44
+  name: 14|美国|@ripaojiedian
+  port: 52112
+  server: 183.236.51.23
   tls: false
   type: vmess
-  uuid: e5d19b57-2fb4-49c0-a141-a716572e1656
-- alterId: 0
-  cipher: auto
-  name: 14|韩国|@ripaojiedian
-  port: 59449
-  server: 45.141.136.224
-  tls: false
-  type: vmess
-  uuid: decd4069-dd5f-414d-8c2c-cf0f9da6fa72
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 0
   cipher: auto
   name: 14|美国3|@ripaojiedian
@@ -1194,25 +1130,37 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- cipher: aes-128-gcm
+- cipher: ss
   name: 14|狮城特殊|@ripaojiedian
   password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
   port: 443
-  server: 52.78.116.186
+  server: 3.36.120.116
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 14|日本特殊|@ripaojiedian
   password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
   port: 443
-  server: 3.38.212.89
+  server: 54.180.240.137
   type: ss
-- cipher: aes-128-gcm
+- cipher: ss
   name: 14|韩国特殊|@ripaojiedian
   password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
   port: 443
-  server: 35.94.112.17
+  server: 13.212.1.95
   type: ss
-- name: 15|HK_speednode_0209
+- cipher: ss
+  name: 14|英国|@ripaojiedian
+  password: //YWVzLTEyOC1nY206c2hhZG93c29ja3M
+  port: 443
+  server: 212.102.53.81
+  type: ss
+- cipher: ss
+  name: 14|德国|@ripaojiedian
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MDc0NzUxNC1mYjE0LTRmMzEtODM5MC1lMWYwNDUzZWZmNmQ
+  port: 20024
+  server: sg1.mhw7e2.online
+  type: ss
+- name: 15|HK_speednode_0179
   network: ws
   password: 95b
   port: 443
@@ -1224,7 +1172,7 @@ proxies:
     headers:
       Host: 30388d70-6f5c-4d7c-8daa-9d3df7c5c526.9150e878-8296-4798-a172-c3fe66b8dee5.ddnsgeek.com
     path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
-- name: 15|HK_speednode_0222
+- name: 15|HK_speednode_0180
   network: ws
   password: 95b
   port: 443
@@ -1236,7 +1184,7 @@ proxies:
     headers:
       Host: 68123106-3e43-4958-b75a-b06e81eabf79.50d88e28-a870-497d-bf87-c20fb6802871.camdvr.org
     path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
-- name: 15|US_speednode_0488
+- name: 15|US_speednode_0339
   network: ws
   password: 95b
   port: 443
@@ -1248,7 +1196,7 @@ proxies:
     headers:
       Host: 15212712-20f5-40a5-b9aa-8363e0130171.ee137666-1e0a-46db-bbd6-cc18f9841234.accesscam.org
     path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
-- name: 15|US_speednode_0491
+- name: 15|US_speednode_0343
   network: ws
   password: 95b
   port: 10511
@@ -1343,7 +1291,7 @@ proxies:
   cipher: auto
   name: 免费-日本1-Ver.6
   port: 21584
-  server: s8vh6-g04.jp01-0986-vm0.entry.fr0307a.art
+  server: hvdws-g04.jp01-0986-vm0.entry.fr0307a.art
   skip-cert-verify: false
   tls: true
   type: vmess
@@ -1353,7 +1301,7 @@ proxies:
   cipher: auto
   name: 免费-日本2-Ver.7
   port: 11776
-  server: sn3b1-g04.jp02-9a99-vm0.entry.fr0307a.art
+  server: eazig-g04.jp02-9a99-vm0.entry.fr0307a.art
   skip-cert-verify: false
   tls: false
   type: vmess
@@ -1363,7 +1311,7 @@ proxies:
   cipher: auto
   name: 免费-日本3-Ver.6
   port: 21584
-  server: xl7iz-g04.jp03-7d22-vm0.entry.fr0307a.art
+  server: hmy8r-g04.jp03-7d22-vm0.entry.fr0307a.art
   skip-cert-verify: false
   tls: true
   type: vmess
@@ -1373,7 +1321,7 @@ proxies:
   cipher: auto
   name: 免费-日本4-Ver.7
   port: 447
-  server: ttwfx-g04.jp04-3771-vm0.entry.fr0307a.art
+  server: v5gr4-g04.jp04-3771-vm0.entry.fr0307a.art
   skip-cert-verify: false
   tls: false
   type: vmess
@@ -1383,7 +1331,7 @@ proxies:
   cipher: auto
   name: 免费-日本5-Ver.8
   port: 46485
-  server: ndpd1-g04.jp05-6786-vm0.entry.fr0307a.art
+  server: itmiw-g04.jp05-6786-vm0.entry.fr0307a.art
   skip-cert-verify: false
   tls: false
   type: vmess
@@ -1393,7 +1341,7 @@ proxies:
   cipher: auto
   name: 免费-日本6-Ver.7
   port: 28786
-  server: 9pvi5-g04.jp06-7c5a-vm0.entry.fr0307a.art
+  server: i5gpg-g04.jp06-7c5a-vm0.entry.fr0307a.art
   skip-cert-verify: false
   tls: true
   type: vmess
@@ -1403,770 +1351,12 @@ proxies:
   cipher: auto
   name: 免费-日本7-Ver.1
   port: 28786
-  server: q6306-g04.jp07-1f28-vm0.entry.fr0307a.art
+  server: anm7p-g04.jp07-1f28-vm0.entry.fr0307a.art
   skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
   uuid: 95a96e37-9757-3ab1-bc90-f5e30427e9ce
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点
-  network: ws
-  port: 2095
-  server: 172.66.47.86
-  tls: false
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: sany0116.donovan-a79.workers.dev
-    path: /max.mankadmu.com/linkvws
-- alterId: 0
-  cipher: auto
-  name: 美国 Akamai科技公司CDN网络节点
-  network: ws
-  port: 443
-  server: tls.99.node-for-bigairport.win
-  tls: true
-  type: vmess
-  uuid: ef5fca10-41bc-4623-87a3-1170a7b51827
-  ws-opts:
-    headers:
-      Host: tls.99.node-for-bigairport.win
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 2
-  network: ws
-  port: 2052
-  server: 104.16.61.8
-  tls: false
-  type: vmess
-  uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-  ws-opts:
-    headers:
-      Host: free.fnet00.workers.dev
-    path: /glweidf.sbs/linkws
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 3
-  network: ws
-  port: 2086
-  server: 104.19.45.11
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip13.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 4
-  network: ws
-  port: 2095
-  server: 104.19.45.129
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 5
-  network: ws
-  port: 2086
-  server: skk.moe
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip1.1789034.xyz
-    path: github.com/Alvin9999
-- cipher: aes-128-gcm
-  name: 意大利 V2CROSS.COM
-  password: shadowsocks
-  port: 443
-  server: 212.102.53.196
-  type: ss
-- cipher: aes-128-gcm
-  name: 英国 V2CROSS.COM
-  password: f8f7aCzcPKbsF8p3
-  port: 990
-  server: 185.93.173.218
-  type: ss
-- name: 美国 CloudFlare节点 6
-  network: ws
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 104.19.171.8
-  sni: jobscareerforlawyers.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: jobscareerforlawyers.com
-    path: 6b777a91
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 7
-  network: ws
-  port: 2086
-  server: 104.19.45.90
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip13.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 8
-  network: ws
-  port: 8880
-  server: server31.beheshtbaneh.com
-  tls: false
-  type: vmess
-  uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
-  ws-opts:
-    headers:
-      Host: server31.beheshtbaneh.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 9
-  network: ws
-  port: 2095
-  server: 104.19.45.203
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 10
-  network: ws
-  port: 2095
-  server: 104.16.61.8
-  tls: false
-  type: vmess
-  uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
-  ws-opts:
-    headers:
-      Host: worker-lingering-fog-c021.gesofog870.workers.dev
-    path: /linde06.indiavideo.sbs/linkws
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 11
-  network: ws
-  port: 2086
-  server: 104.19.46.103
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 12
-  network: ws
-  port: 8080
-  server: 104.16.61.8
-  tls: false
-  type: vmess
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
-  ws-opts:
-    headers:
-      Host: hyfhhg.jadovah977.workers.dev
-    path: /jahfkjha.cfd/linkws
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 13
-  network: ws
-  port: 2086
-  server: 104.19.38.12
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 14
-  network: ws
-  port: 2086
-  server: 104.17.106.151
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 15
-  network: ws
-  port: 2086
-  server: 104.19.51.232
-  tls: false
-  type: vmess
-  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
-  ws-opts:
-    headers:
-      Host: ip006.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 16
-  network: ws
-  port: 2095
-  server: 104.19.45.13
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 17
-  network: ws
-  port: 2095
-  server: 104.19.45.237
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 18
-  network: ws
-  port: 2086
-  server: 172.64.166.9
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip2.1457230.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 19
-  network: ws
-  port: 2086
-  server: 104.26.5.88
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip1.1789034.xyz
-    path: github.com/Alvin9999
-- cipher: aes-128-gcm
-  name: 俄罗斯 V2CROSS.COM
-  password: 36ZCHeabUSfKjfQEvJ4HDV
-  port: 54170
-  server: 185.242.86.156
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 20
-  network: ws
-  port: 8080
-  server: 104.16.67.38
-  tls: false
-  type: vmess
-  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
-  ws-opts:
-    headers:
-      Host: 8bsibsh8wbbwihfhjskbbng-shape-3.mewivot154.workers.dev
-    path: /hms02.fxiaomi.sbs/link
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 21
-  network: ws
-  port: 2095
-  server: 104.19.45.144
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 22
-  network: ws
-  port: 2086
-  server: 104.19.46.39
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip13.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare公司CDN节点(shopify)
-  network: ws
-  port: 2086
-  server: 23.227.38.3
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 23
-  network: ws
-  port: 2086
-  server: 104.16.149.244
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip1.1789034.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 24
-  network: ws
-  port: 2086
-  server: 172.64.167.22
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip2.1457230.xyz
-    path: github.com/Alvin9999
-- name: 美国 V2CROSS.COM
-  password: telegram-id-directvpn
-  port: 22222
-  server: 98.84.88.38
-  sni: trojan.burgerip.co.uk
-  type: trojan
-- name: 美国 Amazon数据中心
-  password: telegram-id-directvpn
-  port: 22222
-  server: 18.157.89.234
-  sni: trojan.burgerip.co.uk
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 25
-  network: ws
-  port: 2086
-  server: 104.16.60.8
-  tls: false
-  type: vmess
-  uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
-  ws-opts:
-    headers:
-      Host: 82uple-bird-b087.pemed58443.workers.dev
-    path: /ivideos.sbs/linkws
-- cipher: aes-128-gcm
-  name: 美国 V2CROSS.COM 2
-  password: d3837224ed465f00
-  port: 57456
-  server: war.ssvpnapp.win
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 26
-  network: ws
-  port: 8880
-  server: 104.16.61.8
-  tls: false
-  type: vmess
-  uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
-  ws-opts:
-    headers:
-      Host: late-wave-1d0a.lesijo3430.workers.dev
-    path: /ivideos.sbs/linkws
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 27
-  network: ws
-  port: 2086
-  server: 104.19.42.49
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip11.freegradely.xyz
-    path: github.com/Alvin9999
-- cipher: aes-128-gcm
-  name: 美国科罗拉多州布隆菲尔德市 Level3
-  password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2
-  port: 20003
-  server: service.ouluyun9803.com
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 28
-  network: ws
-  port: 2095
-  server: 104.19.45.57
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 29
-  network: ws
-  port: 2086
-  server: 104.19.46.17
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip13.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 30
-  network: ws
-  port: 2086
-  server: 104.19.38.8
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- name: 美国 Amazon EC2服务器
-  password: telegram-id-directvpn
-  port: 22222
-  server: 3.14.234.211
-  sni: trojan.burgerip.co.uk
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 31
-  network: ws
-  port: 2086
-  server: 104.19.21.230
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip11.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 32
-  network: ws
-  port: 2086
-  server: 104.19.46.27
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 33
-  network: ws
-  port: 2086
-  server: 104.19.55.49
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip11.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 34
-  network: ws
-  port: 2095
-  server: 104.19.45.176
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 35
-  network: ws
-  port: 2086
-  server: 172.64.166.22
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip2.1457230.xyz
-    path: github.com/Alvin9999
-- cipher: aes-128-gcm
-  name: 北美地区 V2CROSS.COM
-  password: Y6R9pAtvxxzmGC
-  port: 5000
-  server: 23.157.40.5
-  type: ss
-- cipher: aes-128-gcm
-  name: 广东省江门市 移动
-  password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2
-  port: 26667
-  server: service.ouluyun9803.com
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 36
-  network: ws
-  port: 2086
-  server: 172.64.175.88
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip1.1457230.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 印度 V2CROSS.COM
-  network: ws
-  port: 443
-  server: 202.78.162.5
-  tls: true
-  type: vmess
-  uuid: 716eded6-2201-4dbd-9d63-1638c9e8e677
-  ws-opts:
-    headers:
-      Host: pendar.onthewifi.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 37
-  network: ws
-  port: 2095
-  server: 104.19.45.253
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 38
-  network: ws
-  port: 2086
-  server: 104.19.38.88
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip5-4.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 39
-  network: ws
-  port: 8880
-  server: 104.16.68.38
-  tls: false
-  type: vmess
-  uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
-  ws-opts:
-    headers:
-      Host: late-wave-1d0a.lesijo3430.workers.dev
-    path: /ivideos.sbs/linkws
-- alterId: 0
-  cipher: auto
-  name: 美国 Fastly全球Anycast节点
-  network: ws
-  port: 443
-  server: 151.101.66.219
-  tls: true
-  type: vmess
-  uuid: 65c931c9-7b8c-4a51-9600-26ea5e7144cc
-  ws-opts:
-    headers:
-      Host: Dbdjhiw72ebsu272hs519j.com
-    path: ws/?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 40
-  network: ws
-  port: 2095
-  server: 104.19.45.19
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 41
-  network: ws
-  port: 2095
-  server: 104.19.45.50
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- name: 美国 CloudFlare节点 42
-  network: ws
-  password: Trevely
-  port: 443
-  server: 172.64.33.110
-  sni: trojan.trevely.us.kg
-  type: trojan
-  ws-opts:
-    headers:
-      Host: trojan.trevely.us.kg
-    path: /?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 43
-  network: ws
-  port: 2086
-  server: 172.67.2.238
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip1.1789034.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 44
-  network: ws
-  port: 2086
-  server: 172.64.167.19
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip2.1457230.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 45
-  network: ws
-  port: 2086
-  server: 104.19.47.88
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- name: 英国 伦敦Amazon数据中心
-  password: telegram-id-privatevpns
-  port: 22222
-  server: 3.10.128.199
-  sni: trojan.burgerip.co.uk
-  type: trojan
-- cipher: aes-128-gcm
-  name: 美国 惠普HP
-  password: FoOiGlkAA9yPEGP
-  port: 7307
-  server: 15.204.87.225
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 46
-  network: ws
-  port: 2095
-  server: 104.19.45.84
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 47
-  network: ws
-  port: 2086
-  server: 104.19.45.42
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 48
-  network: ws
-  port: 2086
-  server: 104.20.25.146
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国 CloudFlare节点 49
-  network: ws
-  port: 2095
-  server: 104.19.45.220
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
 - alterId: 0
   cipher: auto
   name: ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms
@@ -2805,6 +1995,1020 @@ proxies:
     headers:
       Host: afrhms07.xfixedfloat.cfd
     path: /linkws
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-48 2
+  network: ws
+  port: 2086
+  server: 172.64.198.249
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip1.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-61 2
+  network: ws
+  port: 2086
+  server: japan.com
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-62 2
+  network: ws
+  port: 2086
+  server: 172.64.166.22
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-63 2
+  network: ws
+  port: 2086
+  server: 172.64.166.28
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-72 2
+  network: ws
+  port: 2086
+  server: 172.64.175.213
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-74 2
+  network: ws
+  port: 2086
+  server: 23.227.38.3
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-80 2
+  network: ws
+  port: 2086
+  server: singapore.com
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-82 2
+  network: ws
+  port: 80
+  server: 206.238.236.36
+  tls: false
+  type: vmess
+  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
+  ws-opts:
+    headers:
+      Host: mysan2.jaquay22.workers.dev
+    path: /gwdef.sbs/linkws
+- alterId: 0
+  cipher: auto
+  name: 0|-https://t.me/MrXbin-96 2
+  network: ws
+  port: 2086
+  server: 172.64.167.5
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 2|d*********g.com_0 2
+  network: ws
+  port: 2086
+  server: 104.19.51.232
+  servername: ip006.freegradely.xyz
+  tls: false
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+  ws-opts:
+    headers:
+      Host: ip006.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 2|d*********g.com_1 2
+  network: ws
+  port: 2086
+  server: 23.227.38.5
+  servername: ip006.freegradely.xyz
+  tls: false
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+  ws-opts:
+    headers:
+      Host: ip006.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 2|d*********g.com_2 2
+  network: ws
+  port: 2086
+  server: 104.16.148.244
+  servername: ip006.freegradely.xyz
+  tls: false
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+  ws-opts:
+    headers:
+      Host: ip006.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 2|d*********g.com_3 2
+  network: ws
+  port: 2086
+  server: 104.19.38.62
+  servername: ip006.freegradely.xyz
+  tls: false
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+  ws-opts:
+    headers:
+      Host: ip006.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: '3|d*********g.com_0 #1 2'
+  network: ws
+  port: 2086
+  server: 104.19.32.46
+  servername: ip006.3196772.xyz
+  tls: false
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+  ws-opts:
+    headers:
+      Host: ip006.3196772.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: '3|d*********g.com_1 #1 2'
+  network: ws
+  port: 2086
+  server: 23.227.38.6
+  servername: ip006.3196772.xyz
+  tls: false
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+  ws-opts:
+    headers:
+      Host: ip006.3196772.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: '3|d*********g.com_2 #1 2'
+  network: ws
+  port: 2086
+  server: 104.19.51.232
+  servername: ip006.3196772.xyz
+  tls: false
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+  ws-opts:
+    headers:
+      Host: ip006.3196772.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: '3|d*********g.com_3 #1 2'
+  network: ws
+  port: 2086
+  server: 104.19.38.62
+  servername: ip006.3196772.xyz
+  tls: false
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+  ws-opts:
+    headers:
+      Host: ip006.3196772.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: '4|d*********g.com_0 #2 2'
+  network: ws
+  port: 2086
+  server: 104.19.46.233
+  servername: ip005.3196772.xyz
+  tls: false
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+  ws-opts:
+    headers:
+      Host: ip005.3196772.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: '4|d*********g.com_1 #2 2'
+  network: ws
+  port: 2086
+  server: 23.227.38.6
+  servername: ip005.3196772.xyz
+  tls: false
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+  ws-opts:
+    headers:
+      Host: ip005.3196772.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: '4|d*********g.com_2 #2 2'
+  network: ws
+  port: 2086
+  server: 104.19.51.232
+  servername: ip005.3196772.xyz
+  tls: false
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+  ws-opts:
+    headers:
+      Host: ip005.3196772.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: '4|d*********g.com_3 #2 2'
+  network: ws
+  port: 2086
+  server: 104.19.38.62
+  servername: ip005.3196772.xyz
+  tls: false
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+  ws-opts:
+    headers:
+      Host: ip005.3196772.xyz
+    path: github.com/Alvin9999
+- cipher: ss
+  name: 9|🇭🇰 香港 01 | 1x HK 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36141
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇭🇰 香港 02 | 1x HK 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36143
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇭🇰 香港住宅IP 03 | 1x HK 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36145
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇹🇼 台湾 01 | 1x TW 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36241
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇹🇼 台湾 02 | 1x TW 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36243
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇹🇼 台湾 03 | 1x TW 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36245
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇯🇵 日本 01 | 1x JP 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36111
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇯🇵 日本 02 | 1x JP 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36113
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇯🇵 日本 03 | 1x JP 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36115
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇸🇬 新加坡 01 | 1x SG 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36171
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇸🇬 新加坡 02 | 1x SG 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36173
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇸🇬 新加坡 03 | 1x SG 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36175
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇰🇷 韩国 01 | 1x KR 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36311
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇰🇷 韩国 02 | 1x KR 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36313
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇰🇷 韩国 03 | 1x KR 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36315
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇵🇭 菲律宾 01 | 1x PH 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36341
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇺🇸 美国 01 | 1x US Los Angeles 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36211
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇺🇸 美国住宅IP 02 | 1x US Los Angel... 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36213
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇺🇸 美国 03 | 1x US Washington 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36215
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇬🇧 英国住宅IP 01 | 1x UK 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36271
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇲🇾马来西亚 01 | 1x MY 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36721
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇮🇳西班牙 01 | 1x ES 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36741
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇹🇭泰国 01 | 1x TH 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36731
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇮🇳 印度 01 | 1x IN 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36371
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇦🇺 澳大利亚 01 | 1x AU 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36411
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇨🇦 加拿大 01 | 1x CA 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36441
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇩🇪 德国 01 | 1x DE 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36471
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇷🇺 俄罗斯 01 | 1x RU 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36511
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇹🇷 土耳其 01 | 1x TR 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36571
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇺🇦 乌克兰 01 | 1x UA 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36611
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇻🇳 越南 01 | 1x VN 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36641
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 9|🇧🇷 巴西 01 | 1x BR 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiYzdkOWQ3ZS1iY2RkLTQ1ODEtOTJkOC1mMGIwNDg3NDcyOGI
+  port: 36671
+  server: free.2weradf.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇭🇰香港 01 | 1x HK 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31141
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇭🇰香港 02 | 1x HK 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31143
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇭🇰香港家宽 03 | 1x HK 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31145
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇹🇼台湾 01 | 1x TW 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31241
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇹🇼台湾 02 | 1x TW 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31243
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇹🇼台湾 03 | 1x TW 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31245
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇯🇵日本 01 | 1x JP 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31111
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇯🇵日本 02 | 1x JP 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31113
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇯🇵日本 03 | 1x JP 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31115
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇸🇬新加坡 01 | 1x SG 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31171
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇸🇬新加坡 02 | 1x SG 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31173
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇸🇬新加坡 03 | 1x SG 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31175
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇰🇷韩国 01 | 1x KR 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31311
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇰🇷韩国 02 | 1x KR 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31313
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇰🇷韩国 03 | 1x KR 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31315
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇵🇭菲律宾 01 | 1x PH 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31341
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇺🇸美国 01 | 1x US Los Angeles 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31211
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇺🇸美国家宽 02 | 1x US Los Angeles 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31213
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇺🇸美国 03 | 1x US Washington 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31215
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇺🇸美国 04 | 1x US Honolulu 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31217
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇺🇸美国 05 | 1x US New Jersey 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31219
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇬🇧英国家宽 01 | 1x UK 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31271
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇹🇭泰国01  | 1x TH 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31741
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇲🇾马来西亚01 | 1x MY 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31721
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇮🇳印度 01 | 1x IN 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31371
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇦🇺澳大利亚 01 | 1x AU 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31411
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇨🇦加拿大 01 | 1x CA 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31441
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇩🇪德国 01 | 1x DE 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31471
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇷🇺俄罗斯 01 | 1x RU 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31511
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇹🇷土耳其 01 | 1x TR 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31571
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇺🇦乌克兰 01 | 1x UA 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31611
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇻🇳越南 01 | 1x VN 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31641
+  server: free.2apzhfa.xyz
+  type: ss
+- cipher: ss
+  name: 11|🇧🇷巴西 01 | 1x BR 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGRhNzlmNS0yNzYxLTQ5ZjktOTliZC1jYzJmOGVkZGUyNjE
+  port: 31671
+  server: free.2apzhfa.xyz
+  type: ss
+- name: 13|🇭🇰 香港|@ripaojiedian 2
+  password: 3672449442956713984
+  port: 443
+  server: immense-buzzard.mite885.beauty
+  skip-cert-verify: false
+  sni: immense-buzzard.mite885.beauty
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 13|🇭🇰 香港2|@ripaojiedian 2
+  port: 44806
+  server: ambxxic01hk.dorabbb.top
+  tls: false
+  type: vmess
+  uuid: be263eac-a624-452b-89da-bb25190676fc
+- alterId: 64
+  cipher: auto
+  name: 13|🇭🇰 香港3|@ripaojiedian 2
+  port: 52908
+  server: 120.237.79.157
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 64
+  cipher: auto
+  name: 13|🇭🇰 香港4|@ripaojiedian 2
+  port: 35601
+  server: 120.232.153.40
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: 13,14|香港5|@ripaojiedian 2
+  network: ws
+  port: 16301
+  server: 220.246.57.32
+  tls: false
+  type: vmess
+  uuid: 6074a3b0-f2a0-4b05-b1c9-4066e8b876c2
+  ws-opts:
+    path: /
+- cipher: aes-256-cfb
+  name: 13|🇭🇰 香港R|@ripaojiedian 2
+  password: hGkQ6915tD
+  port: 16088
+  server: 103.161.255.195
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 13,14|台湾|@ripaojiedian 2
+  network: ws
+  port: 2052
+  server: cfcdn1.sanfencdn9.com
+  tls: false
+  type: vmess
+  uuid: fde30ec9-149a-4bba-8dd0-75f374fabbed
+  ws-opts:
+    headers:
+      Host: tw1eskJpKcA.inivtrak.xyz
+    path: /video/WNMicnDh
+- name: 13,14|日本3|@ripaojiedian 2
+  password: c471ef32-798d-40a0-a57c-acf3475a204e
+  port: 13011
+  server: naiu-jp.05vr9nyqg5.download
+  skip-cert-verify: false
+  sni: cloudflare.node-ssl.cdn-alibaba.com
+  type: trojan
+- name: 13,14|新加坡|@ripaojiedian 2
+  password: c471ef32-798d-40a0-a57c-acf3475a204e
+  port: 13027
+  server: naiu-sg.05vr9nyqg5.download
+  skip-cert-verify: false
+  sni: cloudflare.node-ssl.cdn-alibaba.com
+  type: trojan
+- name: 13|🇸🇬 新加坡2|@ripaojiedian 2
+  password: 3672449442956713984
+  port: 443
+  server: precise-piglet.mite885.beauty
+  skip-cert-verify: false
+  sni: precise-piglet.mite885.beauty
+  type: trojan
+- name: 13|🇰🇷 韩国|@ripaojiedian 2
+  password: 3672449442956713984
+  port: 443
+  server: awaited-newt.mite885.beauty
+  skip-cert-verify: false
+  sni: awaited-newt.mite885.beauty
+  type: trojan
+- name: 13,14|韩国2|@ripaojiedian 2
+  password: c471ef32-798d-40a0-a57c-acf3475a204e
+  port: 13036
+  server: naiu-other.05vr9nyqg5.download
+  skip-cert-verify: false
+  sni: cloudflare.node-ssl.cdn-alibaba.com
+  type: trojan
+- alterId: 64
+  cipher: auto
+  name: 13|🇺🇸 美国|@ripaojiedian 2
+  port: 52112
+  server: 183.236.51.23
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: 13,14|美国2|@ripaojiedian 2
+  network: ws
+  port: 2086
+  server: 104.26.0.56
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip14.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 13|🇺🇸 美国3|@ripaojiedian 2
+  port: 14802
+  server: 38.76.151.235
+  tls: false
+  type: vmess
+  uuid: dccf6c2c-1daa-4000-bc2d-2c716c77bb1c
+- alterId: 0
+  cipher: auto
+  name: 13,14|美国4|@ripaojiedian 2
+  network: ws
+  port: 80
+  server: cfcdn3.sanfencdn9.com
+  tls: false
+  type: vmess
+  uuid: 592d0884-c322-43a0-abbd-f3e421e420f5
+  ws-opts:
+    headers:
+      Host: zqWukzdtjp1.wzjwkqya.xyz
+    path: /video/RPKZwKFW
+- alterId: 64
+  cipher: auto
+  name: 13|🇺🇸 美国5|@ripaojiedian 2
+  port: 58831
+  server: 120.232.153.27
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- name: 13,14|美国6|@ripaojiedian 2
+  password: c471ef32-798d-40a0-a57c-acf3475a204e
+  port: 13019
+  server: naiu-us.05vr9nyqg5.download
+  skip-cert-verify: false
+  sni: cloudflare.node-ssl.cdn-alibaba.com
+  type: trojan
+- cipher: aes-256-cfb
+  name: 13|🇸🇬 狮城特殊|@ripaojiedian 2
+  password: amazonskr05
+  port: 443
+  server: 3.36.120.116
+  type: ss
+- cipher: aes-256-cfb
+  name: 13|🇯🇵 日本特殊|@ripaojiedian 2
+  password: amazonskr05
+  port: 443
+  server: 54.180.240.137
+  type: ss
+- cipher: aes-256-cfb
+  name: 13|🇰🇷 韩国特殊|@ripaojiedian 2
+  password: amazonskr05
+  port: 443
+  server: 13.212.1.95
+  type: ss
+- cipher: aes-128-gcm
+  name: 13|🇬🇧 英国|@ripaojiedian 2
+  password: shadowsocks
+  port: 443
+  server: 212.102.53.81
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 13|🇩🇪 德国|@ripaojiedian 2
+  password: 70747514-fb14-4f31-8390-e1f0453eff6d
+  port: 20024
+  server: sg1.mhw7e2.online
+  type: ss
+- name: 14|香港|@ripaojiedian 2
+  password: 3672449442956713984
+  port: 443
+  server: immense-buzzard.mite885.beauty
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 14|香港2|@ripaojiedian 2
+  port: 44806
+  server: ambxxic01hk.dorabbb.top
+  tls: false
+  type: vmess
+  uuid: be263eac-a624-452b-89da-bb25190676fc
+- alterId: 64
+  cipher: auto
+  name: 14|香港3|@ripaojiedian 2
+  port: 52908
+  server: 120.237.79.157
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 64
+  cipher: auto
+  name: 14|香港4|@ripaojiedian 2
+  port: 35601
+  server: 120.232.153.40
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- cipher: ss
+  name: 14|香港R|@ripaojiedian 2
+  password: //YWVzLTI1Ni1jZmI6aEdrUTY5MTV0RA
+  port: 16088
+  server: 103.161.255.195
+  type: ss
+- name: 14|新加坡2|@ripaojiedian 2
+  password: 3672449442956713984
+  port: 443
+  server: precise-piglet.mite885.beauty
+  type: trojan
+- name: 14|韩国|@ripaojiedian 2
+  password: 3672449442956713984
+  port: 443
+  server: awaited-newt.mite885.beauty
+  type: trojan
+- alterId: 64
+  cipher: auto
+  name: 14|美国|@ripaojiedian 2
+  port: 52112
+  server: 183.236.51.23
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: 14|美国3|@ripaojiedian 2
+  port: 14802
+  server: 38.76.151.235
+  tls: false
+  type: vmess
+  uuid: dccf6c2c-1daa-4000-bc2d-2c716c77bb1c
+- alterId: 64
+  cipher: auto
+  name: 14|美国5|@ripaojiedian 2
+  port: 58831
+  server: 120.232.153.27
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- cipher: ss
+  name: 14|狮城特殊|@ripaojiedian 2
+  password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
+  port: 443
+  server: 3.36.120.116
+  type: ss
+- cipher: ss
+  name: 14|日本特殊|@ripaojiedian 2
+  password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
+  port: 443
+  server: 54.180.240.137
+  type: ss
+- cipher: ss
+  name: 14|韩国特殊|@ripaojiedian 2
+  password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
+  port: 443
+  server: 13.212.1.95
+  type: ss
+- cipher: ss
+  name: 14|英国|@ripaojiedian 2
+  password: //YWVzLTEyOC1nY206c2hhZG93c29ja3M
+  port: 443
+  server: 212.102.53.81
+  type: ss
+- cipher: ss
+  name: 14|德国|@ripaojiedian 2
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MDc0NzUxNC1mYjE0LTRmMzEtODM5MC1lMWYwNDUzZWZmNmQ
+  port: 20024
+  server: sg1.mhw7e2.online
+  type: ss
+- name: 15|HK_speednode_0179 2
+  network: ws
+  password: 95b
+  port: 443
+  server: aliyun.2096.us.kg
+  skip-cert-verify: true
+  sni: 30388d70-6f5c-4d7c-8daa-9d3df7c5c526.9150e878-8296-4798-a172-c3fe66b8dee5.ddnsgeek.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 30388d70-6f5c-4d7c-8daa-9d3df7c5c526.9150e878-8296-4798-a172-c3fe66b8dee5.ddnsgeek.com
+    path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
+- name: 15|HK_speednode_0180 2
+  network: ws
+  password: 95b
+  port: 443
+  server: aliyun.2096.us.kg
+  skip-cert-verify: true
+  sni: 68123106-3e43-4958-b75a-b06e81eabf79.50d88e28-a870-497d-bf87-c20fb6802871.camdvr.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 68123106-3e43-4958-b75a-b06e81eabf79.50d88e28-a870-497d-bf87-c20fb6802871.camdvr.org
+    path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
+- name: 15|US_speednode_0339 2
+  network: ws
+  password: 95b
+  port: 443
+  server: 43.153.103.203
+  skip-cert-verify: true
+  sni: 15212712-20f5-40a5-b9aa-8363e0130171.ee137666-1e0a-46db-bbd6-cc18f9841234.accesscam.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 15212712-20f5-40a5-b9aa-8363e0130171.ee137666-1e0a-46db-bbd6-cc18f9841234.accesscam.org
+    path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
+- name: 15|US_speednode_0343 2
+  network: ws
+  password: 95b
+  port: 10511
+  server: 65.75.194.43
+  skip-cert-verify: true
+  sni: 2022585a-86a7-4231-b3a0-eeda14f77f4d.8f18237c-8e5f-4ffb-a434-1b2948c87be3.ddnsfree.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 2022585a-86a7-4231-b3a0-eeda14f77f4d.8f18237c-8e5f-4ffb-a434-1b2948c87be3.ddnsfree.com
+    path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
+- alterId: 0
+  cipher: auto
+  name: '16|d*********g.com_2 #3 2'
+  port: 443
+  server: 42.236.73.72
+  servername: www.zitian.cn
+  tls: true
+  type: vmess
+  uuid: 044f0177-0675-4dcf-89d4-804b6788e518
 proxy-groups:
 - name: 🔰 节点选择
   proxies:
@@ -2814,15 +3018,14 @@ proxy-groups:
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 香港R|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 日本|@ripaojiedian
-  - 日本2|@ripaojiedian
   - 日本3|@ripaojiedian
-  - 日本4|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 新加坡2|@ripaojiedian
   - 韩国|@ripaojiedian
   - 韩国2|@ripaojiedian
-  - 新加坡|@ripaojiedian
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -2832,24 +3035,18 @@ proxy-groups:
   - 狮城特殊|@ripaojiedian
   - 日本特殊|@ripaojiedian
   - 韩国特殊|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian
+  - 英国|@ripaojiedian
+  - 德国|@ripaojiedian
   - 高性价比机场:https://kfyun.uk
-  - 0|-https://t.me/MrXbin-1
-  - 0|-https://t.me/MrXbin-7
-  - 0|-https://t.me/MrXbin-9
-  - 0|-https://t.me/MrXbin-10
-  - 0|-https://t.me/MrXbin-18
-  - 0|-https://t.me/MrXbin-38
-  - 0|-https://t.me/MrXbin-39
-  - 0|-https://t.me/MrXbin-41
-  - 0|-https://t.me/MrXbin-46
-  - 0|-https://t.me/MrXbin-47
-  - 0|-https://t.me/MrXbin-49
-  - 0,13,14|美国|@ripaojiedian
+  - 0|-https://t.me/MrXbin-48
+  - 0|-https://t.me/MrXbin-61
+  - 0|-https://t.me/MrXbin-62
+  - 0|-https://t.me/MrXbin-63
+  - 0|-https://t.me/MrXbin-72
+  - 0|-https://t.me/MrXbin-74
+  - 0|-https://t.me/MrXbin-80
+  - 0|-https://t.me/MrXbin-82
+  - 0|-https://t.me/MrXbin-96
   - 2|d*********g.com_0
   - 2|d*********g.com_1
   - 2|d*********g.com_2
@@ -2928,43 +3125,47 @@ proxy-groups:
   - 11|🇻🇳越南 01 | 1x VN
   - 11|🇧🇷巴西 01 | 1x BR
   - 13|🇭🇰 香港|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian
   - 13|🇭🇰 香港3|@ripaojiedian
   - 13|🇭🇰 香港4|@ripaojiedian
+  - 13,14|香港5|@ripaojiedian
   - 13|🇭🇰 香港R|@ripaojiedian
   - 13,14|台湾|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian 2
-  - 13|🇯🇵 日本2|@ripaojiedian
   - 13,14|日本3|@ripaojiedian
-  - 13,14|日本4|@ripaojiedian
+  - 13,14|新加坡|@ripaojiedian
+  - 13|🇸🇬 新加坡2|@ripaojiedian
   - 13|🇰🇷 韩国|@ripaojiedian
   - 13,14|韩国2|@ripaojiedian
-  - 13,14|新加坡|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian
+  - 13,14|美国2|@ripaojiedian
   - 13|🇺🇸 美国3|@ripaojiedian
   - 13,14|美国4|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian 2
-  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian
+  - 13,14|美国6|@ripaojiedian
   - 13|🇸🇬 狮城特殊|@ripaojiedian
   - 13|🇯🇵 日本特殊|@ripaojiedian
   - 13|🇰🇷 韩国特殊|@ripaojiedian
+  - 13|🇬🇧 英国|@ripaojiedian
+  - 13|🇩🇪 德国|@ripaojiedian
   - 14|香港|@ripaojiedian
   - 14|香港2|@ripaojiedian
   - 14|香港3|@ripaojiedian
   - 14|香港4|@ripaojiedian
   - 14|香港R|@ripaojiedian
-  - 14|日本|@ripaojiedian
-  - 14|日本2|@ripaojiedian
+  - 14|新加坡2|@ripaojiedian
   - 14|韩国|@ripaojiedian
+  - 14|美国|@ripaojiedian
   - 14|美国3|@ripaojiedian
   - 14|美国5|@ripaojiedian
   - 14|狮城特殊|@ripaojiedian
   - 14|日本特殊|@ripaojiedian
   - 14|韩国特殊|@ripaojiedian
-  - 15|HK_speednode_0209
-  - 15|HK_speednode_0222
-  - 15|US_speednode_0488
-  - 15|US_speednode_0491
+  - 14|英国|@ripaojiedian
+  - 14|德国|@ripaojiedian
+  - 15|HK_speednode_0179
+  - 15|HK_speednode_0180
+  - 15|US_speednode_0339
+  - 15|US_speednode_0343
   - '16|d*********g.com_2 #3'
   - 香港核心 IEPL 01
   - 香港核心 IEPL 02
@@ -2983,71 +3184,6 @@ proxy-groups:
   - 免费-日本5-Ver.8
   - 免费-日本6-Ver.7
   - 免费-日本7-Ver.1
-  - 美国 CloudFlare节点
-  - 美国 Akamai科技公司CDN网络节点
-  - 美国 CloudFlare节点 2
-  - 美国 CloudFlare节点 3
-  - 美国 CloudFlare节点 4
-  - 美国 CloudFlare节点 5
-  - 意大利 V2CROSS.COM
-  - 英国 V2CROSS.COM
-  - 美国 CloudFlare节点 6
-  - 美国 CloudFlare节点 7
-  - 美国 CloudFlare节点 8
-  - 美国 CloudFlare节点 9
-  - 美国 CloudFlare节点 10
-  - 美国 CloudFlare节点 11
-  - 美国 CloudFlare节点 12
-  - 美国 CloudFlare节点 13
-  - 美国 CloudFlare节点 14
-  - 美国 CloudFlare节点 15
-  - 美国 CloudFlare节点 16
-  - 美国 CloudFlare节点 17
-  - 美国 CloudFlare节点 18
-  - 美国 CloudFlare节点 19
-  - 俄罗斯 V2CROSS.COM
-  - 美国 CloudFlare节点 20
-  - 美国 CloudFlare节点 21
-  - 美国 CloudFlare节点 22
-  - 美国 CloudFlare公司CDN节点(shopify)
-  - 美国 CloudFlare节点 23
-  - 美国 CloudFlare节点 24
-  - 美国 V2CROSS.COM
-  - 美国 Amazon数据中心
-  - 美国 CloudFlare节点 25
-  - 美国 V2CROSS.COM 2
-  - 美国 CloudFlare节点 26
-  - 美国 CloudFlare节点 27
-  - 美国科罗拉多州布隆菲尔德市 Level3
-  - 美国 CloudFlare节点 28
-  - 美国 CloudFlare节点 29
-  - 美国 CloudFlare节点 30
-  - 美国 Amazon EC2服务器
-  - 美国 CloudFlare节点 31
-  - 美国 CloudFlare节点 32
-  - 美国 CloudFlare节点 33
-  - 美国 CloudFlare节点 34
-  - 美国 CloudFlare节点 35
-  - 北美地区 V2CROSS.COM
-  - 广东省江门市 移动
-  - 美国 CloudFlare节点 36
-  - 印度 V2CROSS.COM
-  - 美国 CloudFlare节点 37
-  - 美国 CloudFlare节点 38
-  - 美国 CloudFlare节点 39
-  - 美国 Fastly全球Anycast节点
-  - 美国 CloudFlare节点 40
-  - 美国 CloudFlare节点 41
-  - 美国 CloudFlare节点 42
-  - 美国 CloudFlare节点 43
-  - 美国 CloudFlare节点 44
-  - 美国 CloudFlare节点 45
-  - 英国 伦敦Amazon数据中心
-  - 美国 惠普HP
-  - 美国 CloudFlare节点 46
-  - 美国 CloudFlare节点 47
-  - 美国 CloudFlare节点 48
-  - 美国 CloudFlare节点 49
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf 🔓 VM-WS-N/A 🇨🇦 CA 5ms
@@ -3095,6 +3231,135 @@ proxy-groups:
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 3
+  - 0|-https://t.me/MrXbin-48 2
+  - 0|-https://t.me/MrXbin-61 2
+  - 0|-https://t.me/MrXbin-62 2
+  - 0|-https://t.me/MrXbin-63 2
+  - 0|-https://t.me/MrXbin-72 2
+  - 0|-https://t.me/MrXbin-74 2
+  - 0|-https://t.me/MrXbin-80 2
+  - 0|-https://t.me/MrXbin-82 2
+  - 0|-https://t.me/MrXbin-96 2
+  - 2|d*********g.com_0 2
+  - 2|d*********g.com_1 2
+  - 2|d*********g.com_2 2
+  - 2|d*********g.com_3 2
+  - '3|d*********g.com_0 #1 2'
+  - '3|d*********g.com_1 #1 2'
+  - '3|d*********g.com_2 #1 2'
+  - '3|d*********g.com_3 #1 2'
+  - '4|d*********g.com_0 #2 2'
+  - '4|d*********g.com_1 #2 2'
+  - '4|d*********g.com_2 #2 2'
+  - '4|d*********g.com_3 #2 2'
+  - 9|🇭🇰 香港 01 | 1x HK 2
+  - 9|🇭🇰 香港 02 | 1x HK 2
+  - 9|🇭🇰 香港住宅IP 03 | 1x HK 2
+  - 9|🇹🇼 台湾 01 | 1x TW 2
+  - 9|🇹🇼 台湾 02 | 1x TW 2
+  - 9|🇹🇼 台湾 03 | 1x TW 2
+  - 9|🇯🇵 日本 01 | 1x JP 2
+  - 9|🇯🇵 日本 02 | 1x JP 2
+  - 9|🇯🇵 日本 03 | 1x JP 2
+  - 9|🇸🇬 新加坡 01 | 1x SG 2
+  - 9|🇸🇬 新加坡 02 | 1x SG 2
+  - 9|🇸🇬 新加坡 03 | 1x SG 2
+  - 9|🇰🇷 韩国 01 | 1x KR 2
+  - 9|🇰🇷 韩国 02 | 1x KR 2
+  - 9|🇰🇷 韩国 03 | 1x KR 2
+  - 9|🇵🇭 菲律宾 01 | 1x PH 2
+  - 9|🇺🇸 美国 01 | 1x US Los Angeles 2
+  - 9|🇺🇸 美国住宅IP 02 | 1x US Los Angel... 2
+  - 9|🇺🇸 美国 03 | 1x US Washington 2
+  - 9|🇬🇧 英国住宅IP 01 | 1x UK 2
+  - 9|🇲🇾马来西亚 01 | 1x MY 2
+  - 9|🇮🇳西班牙 01 | 1x ES 2
+  - 9|🇹🇭泰国 01 | 1x TH 2
+  - 9|🇮🇳 印度 01 | 1x IN 2
+  - 9|🇦🇺 澳大利亚 01 | 1x AU 2
+  - 9|🇨🇦 加拿大 01 | 1x CA 2
+  - 9|🇩🇪 德国 01 | 1x DE 2
+  - 9|🇷🇺 俄罗斯 01 | 1x RU 2
+  - 9|🇹🇷 土耳其 01 | 1x TR 2
+  - 9|🇺🇦 乌克兰 01 | 1x UA 2
+  - 9|🇻🇳 越南 01 | 1x VN 2
+  - 9|🇧🇷 巴西 01 | 1x BR 2
+  - 11|🇭🇰香港 01 | 1x HK 2
+  - 11|🇭🇰香港 02 | 1x HK 2
+  - 11|🇭🇰香港家宽 03 | 1x HK 2
+  - 11|🇹🇼台湾 01 | 1x TW 2
+  - 11|🇹🇼台湾 02 | 1x TW 2
+  - 11|🇹🇼台湾 03 | 1x TW 2
+  - 11|🇯🇵日本 01 | 1x JP 2
+  - 11|🇯🇵日本 02 | 1x JP 2
+  - 11|🇯🇵日本 03 | 1x JP 2
+  - 11|🇸🇬新加坡 01 | 1x SG 2
+  - 11|🇸🇬新加坡 02 | 1x SG 2
+  - 11|🇸🇬新加坡 03 | 1x SG 2
+  - 11|🇰🇷韩国 01 | 1x KR 2
+  - 11|🇰🇷韩国 02 | 1x KR 2
+  - 11|🇰🇷韩国 03 | 1x KR 2
+  - 11|🇵🇭菲律宾 01 | 1x PH 2
+  - 11|🇺🇸美国 01 | 1x US Los Angeles 2
+  - 11|🇺🇸美国家宽 02 | 1x US Los Angeles 2
+  - 11|🇺🇸美国 03 | 1x US Washington 2
+  - 11|🇺🇸美国 04 | 1x US Honolulu 2
+  - 11|🇺🇸美国 05 | 1x US New Jersey 2
+  - 11|🇬🇧英国家宽 01 | 1x UK 2
+  - 11|🇹🇭泰国01  | 1x TH 2
+  - 11|🇲🇾马来西亚01 | 1x MY 2
+  - 11|🇮🇳印度 01 | 1x IN 2
+  - 11|🇦🇺澳大利亚 01 | 1x AU 2
+  - 11|🇨🇦加拿大 01 | 1x CA 2
+  - 11|🇩🇪德国 01 | 1x DE 2
+  - 11|🇷🇺俄罗斯 01 | 1x RU 2
+  - 11|🇹🇷土耳其 01 | 1x TR 2
+  - 11|🇺🇦乌克兰 01 | 1x UA 2
+  - 11|🇻🇳越南 01 | 1x VN 2
+  - 11|🇧🇷巴西 01 | 1x BR 2
+  - 13|🇭🇰 香港|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港3|@ripaojiedian 2
+  - 13|🇭🇰 香港4|@ripaojiedian 2
+  - 13,14|香港5|@ripaojiedian 2
+  - 13|🇭🇰 香港R|@ripaojiedian 2
+  - 13,14|台湾|@ripaojiedian 2
+  - 13,14|日本3|@ripaojiedian 2
+  - 13,14|新加坡|@ripaojiedian 2
+  - 13|🇸🇬 新加坡2|@ripaojiedian 2
+  - 13|🇰🇷 韩国|@ripaojiedian 2
+  - 13,14|韩国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian 2
+  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国3|@ripaojiedian 2
+  - 13,14|美国4|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian 2
+  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇸🇬 狮城特殊|@ripaojiedian 2
+  - 13|🇯🇵 日本特殊|@ripaojiedian 2
+  - 13|🇰🇷 韩国特殊|@ripaojiedian 2
+  - 13|🇬🇧 英国|@ripaojiedian 2
+  - 13|🇩🇪 德国|@ripaojiedian 2
+  - 14|香港|@ripaojiedian 2
+  - 14|香港2|@ripaojiedian 2
+  - 14|香港3|@ripaojiedian 2
+  - 14|香港4|@ripaojiedian 2
+  - 14|香港R|@ripaojiedian 2
+  - 14|新加坡2|@ripaojiedian 2
+  - 14|韩国|@ripaojiedian 2
+  - 14|美国|@ripaojiedian 2
+  - 14|美国3|@ripaojiedian 2
+  - 14|美国5|@ripaojiedian 2
+  - 14|狮城特殊|@ripaojiedian 2
+  - 14|日本特殊|@ripaojiedian 2
+  - 14|韩国特殊|@ripaojiedian 2
+  - 14|英国|@ripaojiedian 2
+  - 14|德国|@ripaojiedian 2
+  - 15|HK_speednode_0179 2
+  - 15|HK_speednode_0180 2
+  - 15|US_speednode_0339 2
+  - 15|US_speednode_0343 2
+  - '16|d*********g.com_2 #3 2'
   type: select
 - interval: 300
   name: ♻️ 自动选择
@@ -3103,15 +3368,14 @@ proxy-groups:
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 香港R|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 日本|@ripaojiedian
-  - 日本2|@ripaojiedian
   - 日本3|@ripaojiedian
-  - 日本4|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 新加坡2|@ripaojiedian
   - 韩国|@ripaojiedian
   - 韩国2|@ripaojiedian
-  - 新加坡|@ripaojiedian
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -3121,24 +3385,18 @@ proxy-groups:
   - 狮城特殊|@ripaojiedian
   - 日本特殊|@ripaojiedian
   - 韩国特殊|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian
+  - 英国|@ripaojiedian
+  - 德国|@ripaojiedian
   - 高性价比机场:https://kfyun.uk
-  - 0|-https://t.me/MrXbin-1
-  - 0|-https://t.me/MrXbin-7
-  - 0|-https://t.me/MrXbin-9
-  - 0|-https://t.me/MrXbin-10
-  - 0|-https://t.me/MrXbin-18
-  - 0|-https://t.me/MrXbin-38
-  - 0|-https://t.me/MrXbin-39
-  - 0|-https://t.me/MrXbin-41
-  - 0|-https://t.me/MrXbin-46
-  - 0|-https://t.me/MrXbin-47
-  - 0|-https://t.me/MrXbin-49
-  - 0,13,14|美国|@ripaojiedian
+  - 0|-https://t.me/MrXbin-48
+  - 0|-https://t.me/MrXbin-61
+  - 0|-https://t.me/MrXbin-62
+  - 0|-https://t.me/MrXbin-63
+  - 0|-https://t.me/MrXbin-72
+  - 0|-https://t.me/MrXbin-74
+  - 0|-https://t.me/MrXbin-80
+  - 0|-https://t.me/MrXbin-82
+  - 0|-https://t.me/MrXbin-96
   - 2|d*********g.com_0
   - 2|d*********g.com_1
   - 2|d*********g.com_2
@@ -3217,43 +3475,47 @@ proxy-groups:
   - 11|🇻🇳越南 01 | 1x VN
   - 11|🇧🇷巴西 01 | 1x BR
   - 13|🇭🇰 香港|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian
   - 13|🇭🇰 香港3|@ripaojiedian
   - 13|🇭🇰 香港4|@ripaojiedian
+  - 13,14|香港5|@ripaojiedian
   - 13|🇭🇰 香港R|@ripaojiedian
   - 13,14|台湾|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian 2
-  - 13|🇯🇵 日本2|@ripaojiedian
   - 13,14|日本3|@ripaojiedian
-  - 13,14|日本4|@ripaojiedian
+  - 13,14|新加坡|@ripaojiedian
+  - 13|🇸🇬 新加坡2|@ripaojiedian
   - 13|🇰🇷 韩国|@ripaojiedian
   - 13,14|韩国2|@ripaojiedian
-  - 13,14|新加坡|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian
+  - 13,14|美国2|@ripaojiedian
   - 13|🇺🇸 美国3|@ripaojiedian
   - 13,14|美国4|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian 2
-  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian
+  - 13,14|美国6|@ripaojiedian
   - 13|🇸🇬 狮城特殊|@ripaojiedian
   - 13|🇯🇵 日本特殊|@ripaojiedian
   - 13|🇰🇷 韩国特殊|@ripaojiedian
+  - 13|🇬🇧 英国|@ripaojiedian
+  - 13|🇩🇪 德国|@ripaojiedian
   - 14|香港|@ripaojiedian
   - 14|香港2|@ripaojiedian
   - 14|香港3|@ripaojiedian
   - 14|香港4|@ripaojiedian
   - 14|香港R|@ripaojiedian
-  - 14|日本|@ripaojiedian
-  - 14|日本2|@ripaojiedian
+  - 14|新加坡2|@ripaojiedian
   - 14|韩国|@ripaojiedian
+  - 14|美国|@ripaojiedian
   - 14|美国3|@ripaojiedian
   - 14|美国5|@ripaojiedian
   - 14|狮城特殊|@ripaojiedian
   - 14|日本特殊|@ripaojiedian
   - 14|韩国特殊|@ripaojiedian
-  - 15|HK_speednode_0209
-  - 15|HK_speednode_0222
-  - 15|US_speednode_0488
-  - 15|US_speednode_0491
+  - 14|英国|@ripaojiedian
+  - 14|德国|@ripaojiedian
+  - 15|HK_speednode_0179
+  - 15|HK_speednode_0180
+  - 15|US_speednode_0339
+  - 15|US_speednode_0343
   - '16|d*********g.com_2 #3'
   - 香港核心 IEPL 01
   - 香港核心 IEPL 02
@@ -3272,71 +3534,6 @@ proxy-groups:
   - 免费-日本5-Ver.8
   - 免费-日本6-Ver.7
   - 免费-日本7-Ver.1
-  - 美国 CloudFlare节点
-  - 美国 Akamai科技公司CDN网络节点
-  - 美国 CloudFlare节点 2
-  - 美国 CloudFlare节点 3
-  - 美国 CloudFlare节点 4
-  - 美国 CloudFlare节点 5
-  - 意大利 V2CROSS.COM
-  - 英国 V2CROSS.COM
-  - 美国 CloudFlare节点 6
-  - 美国 CloudFlare节点 7
-  - 美国 CloudFlare节点 8
-  - 美国 CloudFlare节点 9
-  - 美国 CloudFlare节点 10
-  - 美国 CloudFlare节点 11
-  - 美国 CloudFlare节点 12
-  - 美国 CloudFlare节点 13
-  - 美国 CloudFlare节点 14
-  - 美国 CloudFlare节点 15
-  - 美国 CloudFlare节点 16
-  - 美国 CloudFlare节点 17
-  - 美国 CloudFlare节点 18
-  - 美国 CloudFlare节点 19
-  - 俄罗斯 V2CROSS.COM
-  - 美国 CloudFlare节点 20
-  - 美国 CloudFlare节点 21
-  - 美国 CloudFlare节点 22
-  - 美国 CloudFlare公司CDN节点(shopify)
-  - 美国 CloudFlare节点 23
-  - 美国 CloudFlare节点 24
-  - 美国 V2CROSS.COM
-  - 美国 Amazon数据中心
-  - 美国 CloudFlare节点 25
-  - 美国 V2CROSS.COM 2
-  - 美国 CloudFlare节点 26
-  - 美国 CloudFlare节点 27
-  - 美国科罗拉多州布隆菲尔德市 Level3
-  - 美国 CloudFlare节点 28
-  - 美国 CloudFlare节点 29
-  - 美国 CloudFlare节点 30
-  - 美国 Amazon EC2服务器
-  - 美国 CloudFlare节点 31
-  - 美国 CloudFlare节点 32
-  - 美国 CloudFlare节点 33
-  - 美国 CloudFlare节点 34
-  - 美国 CloudFlare节点 35
-  - 北美地区 V2CROSS.COM
-  - 广东省江门市 移动
-  - 美国 CloudFlare节点 36
-  - 印度 V2CROSS.COM
-  - 美国 CloudFlare节点 37
-  - 美国 CloudFlare节点 38
-  - 美国 CloudFlare节点 39
-  - 美国 Fastly全球Anycast节点
-  - 美国 CloudFlare节点 40
-  - 美国 CloudFlare节点 41
-  - 美国 CloudFlare节点 42
-  - 美国 CloudFlare节点 43
-  - 美国 CloudFlare节点 44
-  - 美国 CloudFlare节点 45
-  - 英国 伦敦Amazon数据中心
-  - 美国 惠普HP
-  - 美国 CloudFlare节点 46
-  - 美国 CloudFlare节点 47
-  - 美国 CloudFlare节点 48
-  - 美国 CloudFlare节点 49
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf 🔓 VM-WS-N/A 🇨🇦 CA 5ms
@@ -3384,6 +3581,135 @@ proxy-groups:
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 3
+  - 0|-https://t.me/MrXbin-48 2
+  - 0|-https://t.me/MrXbin-61 2
+  - 0|-https://t.me/MrXbin-62 2
+  - 0|-https://t.me/MrXbin-63 2
+  - 0|-https://t.me/MrXbin-72 2
+  - 0|-https://t.me/MrXbin-74 2
+  - 0|-https://t.me/MrXbin-80 2
+  - 0|-https://t.me/MrXbin-82 2
+  - 0|-https://t.me/MrXbin-96 2
+  - 2|d*********g.com_0 2
+  - 2|d*********g.com_1 2
+  - 2|d*********g.com_2 2
+  - 2|d*********g.com_3 2
+  - '3|d*********g.com_0 #1 2'
+  - '3|d*********g.com_1 #1 2'
+  - '3|d*********g.com_2 #1 2'
+  - '3|d*********g.com_3 #1 2'
+  - '4|d*********g.com_0 #2 2'
+  - '4|d*********g.com_1 #2 2'
+  - '4|d*********g.com_2 #2 2'
+  - '4|d*********g.com_3 #2 2'
+  - 9|🇭🇰 香港 01 | 1x HK 2
+  - 9|🇭🇰 香港 02 | 1x HK 2
+  - 9|🇭🇰 香港住宅IP 03 | 1x HK 2
+  - 9|🇹🇼 台湾 01 | 1x TW 2
+  - 9|🇹🇼 台湾 02 | 1x TW 2
+  - 9|🇹🇼 台湾 03 | 1x TW 2
+  - 9|🇯🇵 日本 01 | 1x JP 2
+  - 9|🇯🇵 日本 02 | 1x JP 2
+  - 9|🇯🇵 日本 03 | 1x JP 2
+  - 9|🇸🇬 新加坡 01 | 1x SG 2
+  - 9|🇸🇬 新加坡 02 | 1x SG 2
+  - 9|🇸🇬 新加坡 03 | 1x SG 2
+  - 9|🇰🇷 韩国 01 | 1x KR 2
+  - 9|🇰🇷 韩国 02 | 1x KR 2
+  - 9|🇰🇷 韩国 03 | 1x KR 2
+  - 9|🇵🇭 菲律宾 01 | 1x PH 2
+  - 9|🇺🇸 美国 01 | 1x US Los Angeles 2
+  - 9|🇺🇸 美国住宅IP 02 | 1x US Los Angel... 2
+  - 9|🇺🇸 美国 03 | 1x US Washington 2
+  - 9|🇬🇧 英国住宅IP 01 | 1x UK 2
+  - 9|🇲🇾马来西亚 01 | 1x MY 2
+  - 9|🇮🇳西班牙 01 | 1x ES 2
+  - 9|🇹🇭泰国 01 | 1x TH 2
+  - 9|🇮🇳 印度 01 | 1x IN 2
+  - 9|🇦🇺 澳大利亚 01 | 1x AU 2
+  - 9|🇨🇦 加拿大 01 | 1x CA 2
+  - 9|🇩🇪 德国 01 | 1x DE 2
+  - 9|🇷🇺 俄罗斯 01 | 1x RU 2
+  - 9|🇹🇷 土耳其 01 | 1x TR 2
+  - 9|🇺🇦 乌克兰 01 | 1x UA 2
+  - 9|🇻🇳 越南 01 | 1x VN 2
+  - 9|🇧🇷 巴西 01 | 1x BR 2
+  - 11|🇭🇰香港 01 | 1x HK 2
+  - 11|🇭🇰香港 02 | 1x HK 2
+  - 11|🇭🇰香港家宽 03 | 1x HK 2
+  - 11|🇹🇼台湾 01 | 1x TW 2
+  - 11|🇹🇼台湾 02 | 1x TW 2
+  - 11|🇹🇼台湾 03 | 1x TW 2
+  - 11|🇯🇵日本 01 | 1x JP 2
+  - 11|🇯🇵日本 02 | 1x JP 2
+  - 11|🇯🇵日本 03 | 1x JP 2
+  - 11|🇸🇬新加坡 01 | 1x SG 2
+  - 11|🇸🇬新加坡 02 | 1x SG 2
+  - 11|🇸🇬新加坡 03 | 1x SG 2
+  - 11|🇰🇷韩国 01 | 1x KR 2
+  - 11|🇰🇷韩国 02 | 1x KR 2
+  - 11|🇰🇷韩国 03 | 1x KR 2
+  - 11|🇵🇭菲律宾 01 | 1x PH 2
+  - 11|🇺🇸美国 01 | 1x US Los Angeles 2
+  - 11|🇺🇸美国家宽 02 | 1x US Los Angeles 2
+  - 11|🇺🇸美国 03 | 1x US Washington 2
+  - 11|🇺🇸美国 04 | 1x US Honolulu 2
+  - 11|🇺🇸美国 05 | 1x US New Jersey 2
+  - 11|🇬🇧英国家宽 01 | 1x UK 2
+  - 11|🇹🇭泰国01  | 1x TH 2
+  - 11|🇲🇾马来西亚01 | 1x MY 2
+  - 11|🇮🇳印度 01 | 1x IN 2
+  - 11|🇦🇺澳大利亚 01 | 1x AU 2
+  - 11|🇨🇦加拿大 01 | 1x CA 2
+  - 11|🇩🇪德国 01 | 1x DE 2
+  - 11|🇷🇺俄罗斯 01 | 1x RU 2
+  - 11|🇹🇷土耳其 01 | 1x TR 2
+  - 11|🇺🇦乌克兰 01 | 1x UA 2
+  - 11|🇻🇳越南 01 | 1x VN 2
+  - 11|🇧🇷巴西 01 | 1x BR 2
+  - 13|🇭🇰 香港|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港3|@ripaojiedian 2
+  - 13|🇭🇰 香港4|@ripaojiedian 2
+  - 13,14|香港5|@ripaojiedian 2
+  - 13|🇭🇰 香港R|@ripaojiedian 2
+  - 13,14|台湾|@ripaojiedian 2
+  - 13,14|日本3|@ripaojiedian 2
+  - 13,14|新加坡|@ripaojiedian 2
+  - 13|🇸🇬 新加坡2|@ripaojiedian 2
+  - 13|🇰🇷 韩国|@ripaojiedian 2
+  - 13,14|韩国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian 2
+  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国3|@ripaojiedian 2
+  - 13,14|美国4|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian 2
+  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇸🇬 狮城特殊|@ripaojiedian 2
+  - 13|🇯🇵 日本特殊|@ripaojiedian 2
+  - 13|🇰🇷 韩国特殊|@ripaojiedian 2
+  - 13|🇬🇧 英国|@ripaojiedian 2
+  - 13|🇩🇪 德国|@ripaojiedian 2
+  - 14|香港|@ripaojiedian 2
+  - 14|香港2|@ripaojiedian 2
+  - 14|香港3|@ripaojiedian 2
+  - 14|香港4|@ripaojiedian 2
+  - 14|香港R|@ripaojiedian 2
+  - 14|新加坡2|@ripaojiedian 2
+  - 14|韩国|@ripaojiedian 2
+  - 14|美国|@ripaojiedian 2
+  - 14|美国3|@ripaojiedian 2
+  - 14|美国5|@ripaojiedian 2
+  - 14|狮城特殊|@ripaojiedian 2
+  - 14|日本特殊|@ripaojiedian 2
+  - 14|韩国特殊|@ripaojiedian 2
+  - 14|英国|@ripaojiedian 2
+  - 14|德国|@ripaojiedian 2
+  - 15|HK_speednode_0179 2
+  - 15|HK_speednode_0180 2
+  - 15|US_speednode_0339 2
+  - 15|US_speednode_0343 2
+  - '16|d*********g.com_2 #3 2'
   type: url-test
   url: http://www.gstatic.com/generate_204
 - name: 🎥 NETFLIX
@@ -3395,15 +3721,14 @@ proxy-groups:
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 香港R|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 日本|@ripaojiedian
-  - 日本2|@ripaojiedian
   - 日本3|@ripaojiedian
-  - 日本4|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 新加坡2|@ripaojiedian
   - 韩国|@ripaojiedian
   - 韩国2|@ripaojiedian
-  - 新加坡|@ripaojiedian
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -3413,24 +3738,18 @@ proxy-groups:
   - 狮城特殊|@ripaojiedian
   - 日本特殊|@ripaojiedian
   - 韩国特殊|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian
+  - 英国|@ripaojiedian
+  - 德国|@ripaojiedian
   - 高性价比机场:https://kfyun.uk
-  - 0|-https://t.me/MrXbin-1
-  - 0|-https://t.me/MrXbin-7
-  - 0|-https://t.me/MrXbin-9
-  - 0|-https://t.me/MrXbin-10
-  - 0|-https://t.me/MrXbin-18
-  - 0|-https://t.me/MrXbin-38
-  - 0|-https://t.me/MrXbin-39
-  - 0|-https://t.me/MrXbin-41
-  - 0|-https://t.me/MrXbin-46
-  - 0|-https://t.me/MrXbin-47
-  - 0|-https://t.me/MrXbin-49
-  - 0,13,14|美国|@ripaojiedian
+  - 0|-https://t.me/MrXbin-48
+  - 0|-https://t.me/MrXbin-61
+  - 0|-https://t.me/MrXbin-62
+  - 0|-https://t.me/MrXbin-63
+  - 0|-https://t.me/MrXbin-72
+  - 0|-https://t.me/MrXbin-74
+  - 0|-https://t.me/MrXbin-80
+  - 0|-https://t.me/MrXbin-82
+  - 0|-https://t.me/MrXbin-96
   - 2|d*********g.com_0
   - 2|d*********g.com_1
   - 2|d*********g.com_2
@@ -3509,43 +3828,47 @@ proxy-groups:
   - 11|🇻🇳越南 01 | 1x VN
   - 11|🇧🇷巴西 01 | 1x BR
   - 13|🇭🇰 香港|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian
   - 13|🇭🇰 香港3|@ripaojiedian
   - 13|🇭🇰 香港4|@ripaojiedian
+  - 13,14|香港5|@ripaojiedian
   - 13|🇭🇰 香港R|@ripaojiedian
   - 13,14|台湾|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian 2
-  - 13|🇯🇵 日本2|@ripaojiedian
   - 13,14|日本3|@ripaojiedian
-  - 13,14|日本4|@ripaojiedian
+  - 13,14|新加坡|@ripaojiedian
+  - 13|🇸🇬 新加坡2|@ripaojiedian
   - 13|🇰🇷 韩国|@ripaojiedian
   - 13,14|韩国2|@ripaojiedian
-  - 13,14|新加坡|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian
+  - 13,14|美国2|@ripaojiedian
   - 13|🇺🇸 美国3|@ripaojiedian
   - 13,14|美国4|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian 2
-  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian
+  - 13,14|美国6|@ripaojiedian
   - 13|🇸🇬 狮城特殊|@ripaojiedian
   - 13|🇯🇵 日本特殊|@ripaojiedian
   - 13|🇰🇷 韩国特殊|@ripaojiedian
+  - 13|🇬🇧 英国|@ripaojiedian
+  - 13|🇩🇪 德国|@ripaojiedian
   - 14|香港|@ripaojiedian
   - 14|香港2|@ripaojiedian
   - 14|香港3|@ripaojiedian
   - 14|香港4|@ripaojiedian
   - 14|香港R|@ripaojiedian
-  - 14|日本|@ripaojiedian
-  - 14|日本2|@ripaojiedian
+  - 14|新加坡2|@ripaojiedian
   - 14|韩国|@ripaojiedian
+  - 14|美国|@ripaojiedian
   - 14|美国3|@ripaojiedian
   - 14|美国5|@ripaojiedian
   - 14|狮城特殊|@ripaojiedian
   - 14|日本特殊|@ripaojiedian
   - 14|韩国特殊|@ripaojiedian
-  - 15|HK_speednode_0209
-  - 15|HK_speednode_0222
-  - 15|US_speednode_0488
-  - 15|US_speednode_0491
+  - 14|英国|@ripaojiedian
+  - 14|德国|@ripaojiedian
+  - 15|HK_speednode_0179
+  - 15|HK_speednode_0180
+  - 15|US_speednode_0339
+  - 15|US_speednode_0343
   - '16|d*********g.com_2 #3'
   - 香港核心 IEPL 01
   - 香港核心 IEPL 02
@@ -3564,71 +3887,6 @@ proxy-groups:
   - 免费-日本5-Ver.8
   - 免费-日本6-Ver.7
   - 免费-日本7-Ver.1
-  - 美国 CloudFlare节点
-  - 美国 Akamai科技公司CDN网络节点
-  - 美国 CloudFlare节点 2
-  - 美国 CloudFlare节点 3
-  - 美国 CloudFlare节点 4
-  - 美国 CloudFlare节点 5
-  - 意大利 V2CROSS.COM
-  - 英国 V2CROSS.COM
-  - 美国 CloudFlare节点 6
-  - 美国 CloudFlare节点 7
-  - 美国 CloudFlare节点 8
-  - 美国 CloudFlare节点 9
-  - 美国 CloudFlare节点 10
-  - 美国 CloudFlare节点 11
-  - 美国 CloudFlare节点 12
-  - 美国 CloudFlare节点 13
-  - 美国 CloudFlare节点 14
-  - 美国 CloudFlare节点 15
-  - 美国 CloudFlare节点 16
-  - 美国 CloudFlare节点 17
-  - 美国 CloudFlare节点 18
-  - 美国 CloudFlare节点 19
-  - 俄罗斯 V2CROSS.COM
-  - 美国 CloudFlare节点 20
-  - 美国 CloudFlare节点 21
-  - 美国 CloudFlare节点 22
-  - 美国 CloudFlare公司CDN节点(shopify)
-  - 美国 CloudFlare节点 23
-  - 美国 CloudFlare节点 24
-  - 美国 V2CROSS.COM
-  - 美国 Amazon数据中心
-  - 美国 CloudFlare节点 25
-  - 美国 V2CROSS.COM 2
-  - 美国 CloudFlare节点 26
-  - 美国 CloudFlare节点 27
-  - 美国科罗拉多州布隆菲尔德市 Level3
-  - 美国 CloudFlare节点 28
-  - 美国 CloudFlare节点 29
-  - 美国 CloudFlare节点 30
-  - 美国 Amazon EC2服务器
-  - 美国 CloudFlare节点 31
-  - 美国 CloudFlare节点 32
-  - 美国 CloudFlare节点 33
-  - 美国 CloudFlare节点 34
-  - 美国 CloudFlare节点 35
-  - 北美地区 V2CROSS.COM
-  - 广东省江门市 移动
-  - 美国 CloudFlare节点 36
-  - 印度 V2CROSS.COM
-  - 美国 CloudFlare节点 37
-  - 美国 CloudFlare节点 38
-  - 美国 CloudFlare节点 39
-  - 美国 Fastly全球Anycast节点
-  - 美国 CloudFlare节点 40
-  - 美国 CloudFlare节点 41
-  - 美国 CloudFlare节点 42
-  - 美国 CloudFlare节点 43
-  - 美国 CloudFlare节点 44
-  - 美国 CloudFlare节点 45
-  - 英国 伦敦Amazon数据中心
-  - 美国 惠普HP
-  - 美国 CloudFlare节点 46
-  - 美国 CloudFlare节点 47
-  - 美国 CloudFlare节点 48
-  - 美国 CloudFlare节点 49
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf 🔓 VM-WS-N/A 🇨🇦 CA 5ms
@@ -3676,6 +3934,135 @@ proxy-groups:
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 3
+  - 0|-https://t.me/MrXbin-48 2
+  - 0|-https://t.me/MrXbin-61 2
+  - 0|-https://t.me/MrXbin-62 2
+  - 0|-https://t.me/MrXbin-63 2
+  - 0|-https://t.me/MrXbin-72 2
+  - 0|-https://t.me/MrXbin-74 2
+  - 0|-https://t.me/MrXbin-80 2
+  - 0|-https://t.me/MrXbin-82 2
+  - 0|-https://t.me/MrXbin-96 2
+  - 2|d*********g.com_0 2
+  - 2|d*********g.com_1 2
+  - 2|d*********g.com_2 2
+  - 2|d*********g.com_3 2
+  - '3|d*********g.com_0 #1 2'
+  - '3|d*********g.com_1 #1 2'
+  - '3|d*********g.com_2 #1 2'
+  - '3|d*********g.com_3 #1 2'
+  - '4|d*********g.com_0 #2 2'
+  - '4|d*********g.com_1 #2 2'
+  - '4|d*********g.com_2 #2 2'
+  - '4|d*********g.com_3 #2 2'
+  - 9|🇭🇰 香港 01 | 1x HK 2
+  - 9|🇭🇰 香港 02 | 1x HK 2
+  - 9|🇭🇰 香港住宅IP 03 | 1x HK 2
+  - 9|🇹🇼 台湾 01 | 1x TW 2
+  - 9|🇹🇼 台湾 02 | 1x TW 2
+  - 9|🇹🇼 台湾 03 | 1x TW 2
+  - 9|🇯🇵 日本 01 | 1x JP 2
+  - 9|🇯🇵 日本 02 | 1x JP 2
+  - 9|🇯🇵 日本 03 | 1x JP 2
+  - 9|🇸🇬 新加坡 01 | 1x SG 2
+  - 9|🇸🇬 新加坡 02 | 1x SG 2
+  - 9|🇸🇬 新加坡 03 | 1x SG 2
+  - 9|🇰🇷 韩国 01 | 1x KR 2
+  - 9|🇰🇷 韩国 02 | 1x KR 2
+  - 9|🇰🇷 韩国 03 | 1x KR 2
+  - 9|🇵🇭 菲律宾 01 | 1x PH 2
+  - 9|🇺🇸 美国 01 | 1x US Los Angeles 2
+  - 9|🇺🇸 美国住宅IP 02 | 1x US Los Angel... 2
+  - 9|🇺🇸 美国 03 | 1x US Washington 2
+  - 9|🇬🇧 英国住宅IP 01 | 1x UK 2
+  - 9|🇲🇾马来西亚 01 | 1x MY 2
+  - 9|🇮🇳西班牙 01 | 1x ES 2
+  - 9|🇹🇭泰国 01 | 1x TH 2
+  - 9|🇮🇳 印度 01 | 1x IN 2
+  - 9|🇦🇺 澳大利亚 01 | 1x AU 2
+  - 9|🇨🇦 加拿大 01 | 1x CA 2
+  - 9|🇩🇪 德国 01 | 1x DE 2
+  - 9|🇷🇺 俄罗斯 01 | 1x RU 2
+  - 9|🇹🇷 土耳其 01 | 1x TR 2
+  - 9|🇺🇦 乌克兰 01 | 1x UA 2
+  - 9|🇻🇳 越南 01 | 1x VN 2
+  - 9|🇧🇷 巴西 01 | 1x BR 2
+  - 11|🇭🇰香港 01 | 1x HK 2
+  - 11|🇭🇰香港 02 | 1x HK 2
+  - 11|🇭🇰香港家宽 03 | 1x HK 2
+  - 11|🇹🇼台湾 01 | 1x TW 2
+  - 11|🇹🇼台湾 02 | 1x TW 2
+  - 11|🇹🇼台湾 03 | 1x TW 2
+  - 11|🇯🇵日本 01 | 1x JP 2
+  - 11|🇯🇵日本 02 | 1x JP 2
+  - 11|🇯🇵日本 03 | 1x JP 2
+  - 11|🇸🇬新加坡 01 | 1x SG 2
+  - 11|🇸🇬新加坡 02 | 1x SG 2
+  - 11|🇸🇬新加坡 03 | 1x SG 2
+  - 11|🇰🇷韩国 01 | 1x KR 2
+  - 11|🇰🇷韩国 02 | 1x KR 2
+  - 11|🇰🇷韩国 03 | 1x KR 2
+  - 11|🇵🇭菲律宾 01 | 1x PH 2
+  - 11|🇺🇸美国 01 | 1x US Los Angeles 2
+  - 11|🇺🇸美国家宽 02 | 1x US Los Angeles 2
+  - 11|🇺🇸美国 03 | 1x US Washington 2
+  - 11|🇺🇸美国 04 | 1x US Honolulu 2
+  - 11|🇺🇸美国 05 | 1x US New Jersey 2
+  - 11|🇬🇧英国家宽 01 | 1x UK 2
+  - 11|🇹🇭泰国01  | 1x TH 2
+  - 11|🇲🇾马来西亚01 | 1x MY 2
+  - 11|🇮🇳印度 01 | 1x IN 2
+  - 11|🇦🇺澳大利亚 01 | 1x AU 2
+  - 11|🇨🇦加拿大 01 | 1x CA 2
+  - 11|🇩🇪德国 01 | 1x DE 2
+  - 11|🇷🇺俄罗斯 01 | 1x RU 2
+  - 11|🇹🇷土耳其 01 | 1x TR 2
+  - 11|🇺🇦乌克兰 01 | 1x UA 2
+  - 11|🇻🇳越南 01 | 1x VN 2
+  - 11|🇧🇷巴西 01 | 1x BR 2
+  - 13|🇭🇰 香港|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港3|@ripaojiedian 2
+  - 13|🇭🇰 香港4|@ripaojiedian 2
+  - 13,14|香港5|@ripaojiedian 2
+  - 13|🇭🇰 香港R|@ripaojiedian 2
+  - 13,14|台湾|@ripaojiedian 2
+  - 13,14|日本3|@ripaojiedian 2
+  - 13,14|新加坡|@ripaojiedian 2
+  - 13|🇸🇬 新加坡2|@ripaojiedian 2
+  - 13|🇰🇷 韩国|@ripaojiedian 2
+  - 13,14|韩国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian 2
+  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国3|@ripaojiedian 2
+  - 13,14|美国4|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian 2
+  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇸🇬 狮城特殊|@ripaojiedian 2
+  - 13|🇯🇵 日本特殊|@ripaojiedian 2
+  - 13|🇰🇷 韩国特殊|@ripaojiedian 2
+  - 13|🇬🇧 英国|@ripaojiedian 2
+  - 13|🇩🇪 德国|@ripaojiedian 2
+  - 14|香港|@ripaojiedian 2
+  - 14|香港2|@ripaojiedian 2
+  - 14|香港3|@ripaojiedian 2
+  - 14|香港4|@ripaojiedian 2
+  - 14|香港R|@ripaojiedian 2
+  - 14|新加坡2|@ripaojiedian 2
+  - 14|韩国|@ripaojiedian 2
+  - 14|美国|@ripaojiedian 2
+  - 14|美国3|@ripaojiedian 2
+  - 14|美国5|@ripaojiedian 2
+  - 14|狮城特殊|@ripaojiedian 2
+  - 14|日本特殊|@ripaojiedian 2
+  - 14|韩国特殊|@ripaojiedian 2
+  - 14|英国|@ripaojiedian 2
+  - 14|德国|@ripaojiedian 2
+  - 15|HK_speednode_0179 2
+  - 15|HK_speednode_0180 2
+  - 15|US_speednode_0339 2
+  - 15|US_speednode_0343 2
+  - '16|d*********g.com_2 #3 2'
   type: select
 - name: ⛔️ 广告拦截
   proxies:
@@ -3698,15 +4085,14 @@ proxy-groups:
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 香港R|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 日本|@ripaojiedian
-  - 日本2|@ripaojiedian
   - 日本3|@ripaojiedian
-  - 日本4|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 新加坡2|@ripaojiedian
   - 韩国|@ripaojiedian
   - 韩国2|@ripaojiedian
-  - 新加坡|@ripaojiedian
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -3716,24 +4102,18 @@ proxy-groups:
   - 狮城特殊|@ripaojiedian
   - 日本特殊|@ripaojiedian
   - 韩国特殊|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian
+  - 英国|@ripaojiedian
+  - 德国|@ripaojiedian
   - 高性价比机场:https://kfyun.uk
-  - 0|-https://t.me/MrXbin-1
-  - 0|-https://t.me/MrXbin-7
-  - 0|-https://t.me/MrXbin-9
-  - 0|-https://t.me/MrXbin-10
-  - 0|-https://t.me/MrXbin-18
-  - 0|-https://t.me/MrXbin-38
-  - 0|-https://t.me/MrXbin-39
-  - 0|-https://t.me/MrXbin-41
-  - 0|-https://t.me/MrXbin-46
-  - 0|-https://t.me/MrXbin-47
-  - 0|-https://t.me/MrXbin-49
-  - 0,13,14|美国|@ripaojiedian
+  - 0|-https://t.me/MrXbin-48
+  - 0|-https://t.me/MrXbin-61
+  - 0|-https://t.me/MrXbin-62
+  - 0|-https://t.me/MrXbin-63
+  - 0|-https://t.me/MrXbin-72
+  - 0|-https://t.me/MrXbin-74
+  - 0|-https://t.me/MrXbin-80
+  - 0|-https://t.me/MrXbin-82
+  - 0|-https://t.me/MrXbin-96
   - 2|d*********g.com_0
   - 2|d*********g.com_1
   - 2|d*********g.com_2
@@ -3812,43 +4192,47 @@ proxy-groups:
   - 11|🇻🇳越南 01 | 1x VN
   - 11|🇧🇷巴西 01 | 1x BR
   - 13|🇭🇰 香港|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian
   - 13|🇭🇰 香港3|@ripaojiedian
   - 13|🇭🇰 香港4|@ripaojiedian
+  - 13,14|香港5|@ripaojiedian
   - 13|🇭🇰 香港R|@ripaojiedian
   - 13,14|台湾|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian 2
-  - 13|🇯🇵 日本2|@ripaojiedian
   - 13,14|日本3|@ripaojiedian
-  - 13,14|日本4|@ripaojiedian
+  - 13,14|新加坡|@ripaojiedian
+  - 13|🇸🇬 新加坡2|@ripaojiedian
   - 13|🇰🇷 韩国|@ripaojiedian
   - 13,14|韩国2|@ripaojiedian
-  - 13,14|新加坡|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian
+  - 13,14|美国2|@ripaojiedian
   - 13|🇺🇸 美国3|@ripaojiedian
   - 13,14|美国4|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian 2
-  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian
+  - 13,14|美国6|@ripaojiedian
   - 13|🇸🇬 狮城特殊|@ripaojiedian
   - 13|🇯🇵 日本特殊|@ripaojiedian
   - 13|🇰🇷 韩国特殊|@ripaojiedian
+  - 13|🇬🇧 英国|@ripaojiedian
+  - 13|🇩🇪 德国|@ripaojiedian
   - 14|香港|@ripaojiedian
   - 14|香港2|@ripaojiedian
   - 14|香港3|@ripaojiedian
   - 14|香港4|@ripaojiedian
   - 14|香港R|@ripaojiedian
-  - 14|日本|@ripaojiedian
-  - 14|日本2|@ripaojiedian
+  - 14|新加坡2|@ripaojiedian
   - 14|韩国|@ripaojiedian
+  - 14|美国|@ripaojiedian
   - 14|美国3|@ripaojiedian
   - 14|美国5|@ripaojiedian
   - 14|狮城特殊|@ripaojiedian
   - 14|日本特殊|@ripaojiedian
   - 14|韩国特殊|@ripaojiedian
-  - 15|HK_speednode_0209
-  - 15|HK_speednode_0222
-  - 15|US_speednode_0488
-  - 15|US_speednode_0491
+  - 14|英国|@ripaojiedian
+  - 14|德国|@ripaojiedian
+  - 15|HK_speednode_0179
+  - 15|HK_speednode_0180
+  - 15|US_speednode_0339
+  - 15|US_speednode_0343
   - '16|d*********g.com_2 #3'
   - 香港核心 IEPL 01
   - 香港核心 IEPL 02
@@ -3867,71 +4251,6 @@ proxy-groups:
   - 免费-日本5-Ver.8
   - 免费-日本6-Ver.7
   - 免费-日本7-Ver.1
-  - 美国 CloudFlare节点
-  - 美国 Akamai科技公司CDN网络节点
-  - 美国 CloudFlare节点 2
-  - 美国 CloudFlare节点 3
-  - 美国 CloudFlare节点 4
-  - 美国 CloudFlare节点 5
-  - 意大利 V2CROSS.COM
-  - 英国 V2CROSS.COM
-  - 美国 CloudFlare节点 6
-  - 美国 CloudFlare节点 7
-  - 美国 CloudFlare节点 8
-  - 美国 CloudFlare节点 9
-  - 美国 CloudFlare节点 10
-  - 美国 CloudFlare节点 11
-  - 美国 CloudFlare节点 12
-  - 美国 CloudFlare节点 13
-  - 美国 CloudFlare节点 14
-  - 美国 CloudFlare节点 15
-  - 美国 CloudFlare节点 16
-  - 美国 CloudFlare节点 17
-  - 美国 CloudFlare节点 18
-  - 美国 CloudFlare节点 19
-  - 俄罗斯 V2CROSS.COM
-  - 美国 CloudFlare节点 20
-  - 美国 CloudFlare节点 21
-  - 美国 CloudFlare节点 22
-  - 美国 CloudFlare公司CDN节点(shopify)
-  - 美国 CloudFlare节点 23
-  - 美国 CloudFlare节点 24
-  - 美国 V2CROSS.COM
-  - 美国 Amazon数据中心
-  - 美国 CloudFlare节点 25
-  - 美国 V2CROSS.COM 2
-  - 美国 CloudFlare节点 26
-  - 美国 CloudFlare节点 27
-  - 美国科罗拉多州布隆菲尔德市 Level3
-  - 美国 CloudFlare节点 28
-  - 美国 CloudFlare节点 29
-  - 美国 CloudFlare节点 30
-  - 美国 Amazon EC2服务器
-  - 美国 CloudFlare节点 31
-  - 美国 CloudFlare节点 32
-  - 美国 CloudFlare节点 33
-  - 美国 CloudFlare节点 34
-  - 美国 CloudFlare节点 35
-  - 北美地区 V2CROSS.COM
-  - 广东省江门市 移动
-  - 美国 CloudFlare节点 36
-  - 印度 V2CROSS.COM
-  - 美国 CloudFlare节点 37
-  - 美国 CloudFlare节点 38
-  - 美国 CloudFlare节点 39
-  - 美国 Fastly全球Anycast节点
-  - 美国 CloudFlare节点 40
-  - 美国 CloudFlare节点 41
-  - 美国 CloudFlare节点 42
-  - 美国 CloudFlare节点 43
-  - 美国 CloudFlare节点 44
-  - 美国 CloudFlare节点 45
-  - 英国 伦敦Amazon数据中心
-  - 美国 惠普HP
-  - 美国 CloudFlare节点 46
-  - 美国 CloudFlare节点 47
-  - 美国 CloudFlare节点 48
-  - 美国 CloudFlare节点 49
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf 🔓 VM-WS-N/A 🇨🇦 CA 5ms
@@ -3979,6 +4298,135 @@ proxy-groups:
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 3
+  - 0|-https://t.me/MrXbin-48 2
+  - 0|-https://t.me/MrXbin-61 2
+  - 0|-https://t.me/MrXbin-62 2
+  - 0|-https://t.me/MrXbin-63 2
+  - 0|-https://t.me/MrXbin-72 2
+  - 0|-https://t.me/MrXbin-74 2
+  - 0|-https://t.me/MrXbin-80 2
+  - 0|-https://t.me/MrXbin-82 2
+  - 0|-https://t.me/MrXbin-96 2
+  - 2|d*********g.com_0 2
+  - 2|d*********g.com_1 2
+  - 2|d*********g.com_2 2
+  - 2|d*********g.com_3 2
+  - '3|d*********g.com_0 #1 2'
+  - '3|d*********g.com_1 #1 2'
+  - '3|d*********g.com_2 #1 2'
+  - '3|d*********g.com_3 #1 2'
+  - '4|d*********g.com_0 #2 2'
+  - '4|d*********g.com_1 #2 2'
+  - '4|d*********g.com_2 #2 2'
+  - '4|d*********g.com_3 #2 2'
+  - 9|🇭🇰 香港 01 | 1x HK 2
+  - 9|🇭🇰 香港 02 | 1x HK 2
+  - 9|🇭🇰 香港住宅IP 03 | 1x HK 2
+  - 9|🇹🇼 台湾 01 | 1x TW 2
+  - 9|🇹🇼 台湾 02 | 1x TW 2
+  - 9|🇹🇼 台湾 03 | 1x TW 2
+  - 9|🇯🇵 日本 01 | 1x JP 2
+  - 9|🇯🇵 日本 02 | 1x JP 2
+  - 9|🇯🇵 日本 03 | 1x JP 2
+  - 9|🇸🇬 新加坡 01 | 1x SG 2
+  - 9|🇸🇬 新加坡 02 | 1x SG 2
+  - 9|🇸🇬 新加坡 03 | 1x SG 2
+  - 9|🇰🇷 韩国 01 | 1x KR 2
+  - 9|🇰🇷 韩国 02 | 1x KR 2
+  - 9|🇰🇷 韩国 03 | 1x KR 2
+  - 9|🇵🇭 菲律宾 01 | 1x PH 2
+  - 9|🇺🇸 美国 01 | 1x US Los Angeles 2
+  - 9|🇺🇸 美国住宅IP 02 | 1x US Los Angel... 2
+  - 9|🇺🇸 美国 03 | 1x US Washington 2
+  - 9|🇬🇧 英国住宅IP 01 | 1x UK 2
+  - 9|🇲🇾马来西亚 01 | 1x MY 2
+  - 9|🇮🇳西班牙 01 | 1x ES 2
+  - 9|🇹🇭泰国 01 | 1x TH 2
+  - 9|🇮🇳 印度 01 | 1x IN 2
+  - 9|🇦🇺 澳大利亚 01 | 1x AU 2
+  - 9|🇨🇦 加拿大 01 | 1x CA 2
+  - 9|🇩🇪 德国 01 | 1x DE 2
+  - 9|🇷🇺 俄罗斯 01 | 1x RU 2
+  - 9|🇹🇷 土耳其 01 | 1x TR 2
+  - 9|🇺🇦 乌克兰 01 | 1x UA 2
+  - 9|🇻🇳 越南 01 | 1x VN 2
+  - 9|🇧🇷 巴西 01 | 1x BR 2
+  - 11|🇭🇰香港 01 | 1x HK 2
+  - 11|🇭🇰香港 02 | 1x HK 2
+  - 11|🇭🇰香港家宽 03 | 1x HK 2
+  - 11|🇹🇼台湾 01 | 1x TW 2
+  - 11|🇹🇼台湾 02 | 1x TW 2
+  - 11|🇹🇼台湾 03 | 1x TW 2
+  - 11|🇯🇵日本 01 | 1x JP 2
+  - 11|🇯🇵日本 02 | 1x JP 2
+  - 11|🇯🇵日本 03 | 1x JP 2
+  - 11|🇸🇬新加坡 01 | 1x SG 2
+  - 11|🇸🇬新加坡 02 | 1x SG 2
+  - 11|🇸🇬新加坡 03 | 1x SG 2
+  - 11|🇰🇷韩国 01 | 1x KR 2
+  - 11|🇰🇷韩国 02 | 1x KR 2
+  - 11|🇰🇷韩国 03 | 1x KR 2
+  - 11|🇵🇭菲律宾 01 | 1x PH 2
+  - 11|🇺🇸美国 01 | 1x US Los Angeles 2
+  - 11|🇺🇸美国家宽 02 | 1x US Los Angeles 2
+  - 11|🇺🇸美国 03 | 1x US Washington 2
+  - 11|🇺🇸美国 04 | 1x US Honolulu 2
+  - 11|🇺🇸美国 05 | 1x US New Jersey 2
+  - 11|🇬🇧英国家宽 01 | 1x UK 2
+  - 11|🇹🇭泰国01  | 1x TH 2
+  - 11|🇲🇾马来西亚01 | 1x MY 2
+  - 11|🇮🇳印度 01 | 1x IN 2
+  - 11|🇦🇺澳大利亚 01 | 1x AU 2
+  - 11|🇨🇦加拿大 01 | 1x CA 2
+  - 11|🇩🇪德国 01 | 1x DE 2
+  - 11|🇷🇺俄罗斯 01 | 1x RU 2
+  - 11|🇹🇷土耳其 01 | 1x TR 2
+  - 11|🇺🇦乌克兰 01 | 1x UA 2
+  - 11|🇻🇳越南 01 | 1x VN 2
+  - 11|🇧🇷巴西 01 | 1x BR 2
+  - 13|🇭🇰 香港|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港3|@ripaojiedian 2
+  - 13|🇭🇰 香港4|@ripaojiedian 2
+  - 13,14|香港5|@ripaojiedian 2
+  - 13|🇭🇰 香港R|@ripaojiedian 2
+  - 13,14|台湾|@ripaojiedian 2
+  - 13,14|日本3|@ripaojiedian 2
+  - 13,14|新加坡|@ripaojiedian 2
+  - 13|🇸🇬 新加坡2|@ripaojiedian 2
+  - 13|🇰🇷 韩国|@ripaojiedian 2
+  - 13,14|韩国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian 2
+  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国3|@ripaojiedian 2
+  - 13,14|美国4|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian 2
+  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇸🇬 狮城特殊|@ripaojiedian 2
+  - 13|🇯🇵 日本特殊|@ripaojiedian 2
+  - 13|🇰🇷 韩国特殊|@ripaojiedian 2
+  - 13|🇬🇧 英国|@ripaojiedian 2
+  - 13|🇩🇪 德国|@ripaojiedian 2
+  - 14|香港|@ripaojiedian 2
+  - 14|香港2|@ripaojiedian 2
+  - 14|香港3|@ripaojiedian 2
+  - 14|香港4|@ripaojiedian 2
+  - 14|香港R|@ripaojiedian 2
+  - 14|新加坡2|@ripaojiedian 2
+  - 14|韩国|@ripaojiedian 2
+  - 14|美国|@ripaojiedian 2
+  - 14|美国3|@ripaojiedian 2
+  - 14|美国5|@ripaojiedian 2
+  - 14|狮城特殊|@ripaojiedian 2
+  - 14|日本特殊|@ripaojiedian 2
+  - 14|韩国特殊|@ripaojiedian 2
+  - 14|英国|@ripaojiedian 2
+  - 14|德国|@ripaojiedian 2
+  - 15|HK_speednode_0179 2
+  - 15|HK_speednode_0180 2
+  - 15|US_speednode_0339 2
+  - 15|US_speednode_0343 2
+  - '16|d*********g.com_2 #3 2'
   type: select
 - name: 🌏 国内媒体
   proxies:
@@ -3987,9 +4435,9 @@ proxy-groups:
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 香港R|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian
   - 9|🇭🇰 香港 01 | 1x HK
   - 9|🇭🇰 香港 02 | 1x HK
   - 9|🇭🇰 香港住宅IP 03 | 1x HK
@@ -4003,9 +4451,10 @@ proxy-groups:
   - 11|🇹🇼台湾 02 | 1x TW
   - 11|🇹🇼台湾 03 | 1x TW
   - 13|🇭🇰 香港|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian
   - 13|🇭🇰 香港3|@ripaojiedian
   - 13|🇭🇰 香港4|@ripaojiedian
+  - 13,14|香港5|@ripaojiedian
   - 13|🇭🇰 香港R|@ripaojiedian
   - 13,14|台湾|@ripaojiedian
   - 14|香港|@ripaojiedian
@@ -4017,6 +4466,30 @@ proxy-groups:
   - 香港核心 IEPL 02
   - 香港核心 IEPL 03
   - 香港核心 IEPL 04
+  - 9|🇭🇰 香港 01 | 1x HK 2
+  - 9|🇭🇰 香港 02 | 1x HK 2
+  - 9|🇭🇰 香港住宅IP 03 | 1x HK 2
+  - 9|🇹🇼 台湾 01 | 1x TW 2
+  - 9|🇹🇼 台湾 02 | 1x TW 2
+  - 9|🇹🇼 台湾 03 | 1x TW 2
+  - 11|🇭🇰香港 01 | 1x HK 2
+  - 11|🇭🇰香港 02 | 1x HK 2
+  - 11|🇭🇰香港家宽 03 | 1x HK 2
+  - 11|🇹🇼台湾 01 | 1x TW 2
+  - 11|🇹🇼台湾 02 | 1x TW 2
+  - 11|🇹🇼台湾 03 | 1x TW 2
+  - 13|🇭🇰 香港|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港3|@ripaojiedian 2
+  - 13|🇭🇰 香港4|@ripaojiedian 2
+  - 13,14|香港5|@ripaojiedian 2
+  - 13|🇭🇰 香港R|@ripaojiedian 2
+  - 13,14|台湾|@ripaojiedian 2
+  - 14|香港|@ripaojiedian 2
+  - 14|香港2|@ripaojiedian 2
+  - 14|香港3|@ripaojiedian 2
+  - 14|香港4|@ripaojiedian 2
+  - 14|香港R|@ripaojiedian 2
   - 🔰 节点选择
   type: select
 - name: Ⓜ️ 微软服务
@@ -4027,15 +4500,14 @@ proxy-groups:
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 香港R|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 日本|@ripaojiedian
-  - 日本2|@ripaojiedian
   - 日本3|@ripaojiedian
-  - 日本4|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 新加坡2|@ripaojiedian
   - 韩国|@ripaojiedian
   - 韩国2|@ripaojiedian
-  - 新加坡|@ripaojiedian
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -4045,24 +4517,18 @@ proxy-groups:
   - 狮城特殊|@ripaojiedian
   - 日本特殊|@ripaojiedian
   - 韩国特殊|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian
+  - 英国|@ripaojiedian
+  - 德国|@ripaojiedian
   - 高性价比机场:https://kfyun.uk
-  - 0|-https://t.me/MrXbin-1
-  - 0|-https://t.me/MrXbin-7
-  - 0|-https://t.me/MrXbin-9
-  - 0|-https://t.me/MrXbin-10
-  - 0|-https://t.me/MrXbin-18
-  - 0|-https://t.me/MrXbin-38
-  - 0|-https://t.me/MrXbin-39
-  - 0|-https://t.me/MrXbin-41
-  - 0|-https://t.me/MrXbin-46
-  - 0|-https://t.me/MrXbin-47
-  - 0|-https://t.me/MrXbin-49
-  - 0,13,14|美国|@ripaojiedian
+  - 0|-https://t.me/MrXbin-48
+  - 0|-https://t.me/MrXbin-61
+  - 0|-https://t.me/MrXbin-62
+  - 0|-https://t.me/MrXbin-63
+  - 0|-https://t.me/MrXbin-72
+  - 0|-https://t.me/MrXbin-74
+  - 0|-https://t.me/MrXbin-80
+  - 0|-https://t.me/MrXbin-82
+  - 0|-https://t.me/MrXbin-96
   - 2|d*********g.com_0
   - 2|d*********g.com_1
   - 2|d*********g.com_2
@@ -4141,43 +4607,47 @@ proxy-groups:
   - 11|🇻🇳越南 01 | 1x VN
   - 11|🇧🇷巴西 01 | 1x BR
   - 13|🇭🇰 香港|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian
   - 13|🇭🇰 香港3|@ripaojiedian
   - 13|🇭🇰 香港4|@ripaojiedian
+  - 13,14|香港5|@ripaojiedian
   - 13|🇭🇰 香港R|@ripaojiedian
   - 13,14|台湾|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian 2
-  - 13|🇯🇵 日本2|@ripaojiedian
   - 13,14|日本3|@ripaojiedian
-  - 13,14|日本4|@ripaojiedian
+  - 13,14|新加坡|@ripaojiedian
+  - 13|🇸🇬 新加坡2|@ripaojiedian
   - 13|🇰🇷 韩国|@ripaojiedian
   - 13,14|韩国2|@ripaojiedian
-  - 13,14|新加坡|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian
+  - 13,14|美国2|@ripaojiedian
   - 13|🇺🇸 美国3|@ripaojiedian
   - 13,14|美国4|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian 2
-  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian
+  - 13,14|美国6|@ripaojiedian
   - 13|🇸🇬 狮城特殊|@ripaojiedian
   - 13|🇯🇵 日本特殊|@ripaojiedian
   - 13|🇰🇷 韩国特殊|@ripaojiedian
+  - 13|🇬🇧 英国|@ripaojiedian
+  - 13|🇩🇪 德国|@ripaojiedian
   - 14|香港|@ripaojiedian
   - 14|香港2|@ripaojiedian
   - 14|香港3|@ripaojiedian
   - 14|香港4|@ripaojiedian
   - 14|香港R|@ripaojiedian
-  - 14|日本|@ripaojiedian
-  - 14|日本2|@ripaojiedian
+  - 14|新加坡2|@ripaojiedian
   - 14|韩国|@ripaojiedian
+  - 14|美国|@ripaojiedian
   - 14|美国3|@ripaojiedian
   - 14|美国5|@ripaojiedian
   - 14|狮城特殊|@ripaojiedian
   - 14|日本特殊|@ripaojiedian
   - 14|韩国特殊|@ripaojiedian
-  - 15|HK_speednode_0209
-  - 15|HK_speednode_0222
-  - 15|US_speednode_0488
-  - 15|US_speednode_0491
+  - 14|英国|@ripaojiedian
+  - 14|德国|@ripaojiedian
+  - 15|HK_speednode_0179
+  - 15|HK_speednode_0180
+  - 15|US_speednode_0339
+  - 15|US_speednode_0343
   - '16|d*********g.com_2 #3'
   - 香港核心 IEPL 01
   - 香港核心 IEPL 02
@@ -4196,71 +4666,6 @@ proxy-groups:
   - 免费-日本5-Ver.8
   - 免费-日本6-Ver.7
   - 免费-日本7-Ver.1
-  - 美国 CloudFlare节点
-  - 美国 Akamai科技公司CDN网络节点
-  - 美国 CloudFlare节点 2
-  - 美国 CloudFlare节点 3
-  - 美国 CloudFlare节点 4
-  - 美国 CloudFlare节点 5
-  - 意大利 V2CROSS.COM
-  - 英国 V2CROSS.COM
-  - 美国 CloudFlare节点 6
-  - 美国 CloudFlare节点 7
-  - 美国 CloudFlare节点 8
-  - 美国 CloudFlare节点 9
-  - 美国 CloudFlare节点 10
-  - 美国 CloudFlare节点 11
-  - 美国 CloudFlare节点 12
-  - 美国 CloudFlare节点 13
-  - 美国 CloudFlare节点 14
-  - 美国 CloudFlare节点 15
-  - 美国 CloudFlare节点 16
-  - 美国 CloudFlare节点 17
-  - 美国 CloudFlare节点 18
-  - 美国 CloudFlare节点 19
-  - 俄罗斯 V2CROSS.COM
-  - 美国 CloudFlare节点 20
-  - 美国 CloudFlare节点 21
-  - 美国 CloudFlare节点 22
-  - 美国 CloudFlare公司CDN节点(shopify)
-  - 美国 CloudFlare节点 23
-  - 美国 CloudFlare节点 24
-  - 美国 V2CROSS.COM
-  - 美国 Amazon数据中心
-  - 美国 CloudFlare节点 25
-  - 美国 V2CROSS.COM 2
-  - 美国 CloudFlare节点 26
-  - 美国 CloudFlare节点 27
-  - 美国科罗拉多州布隆菲尔德市 Level3
-  - 美国 CloudFlare节点 28
-  - 美国 CloudFlare节点 29
-  - 美国 CloudFlare节点 30
-  - 美国 Amazon EC2服务器
-  - 美国 CloudFlare节点 31
-  - 美国 CloudFlare节点 32
-  - 美国 CloudFlare节点 33
-  - 美国 CloudFlare节点 34
-  - 美国 CloudFlare节点 35
-  - 北美地区 V2CROSS.COM
-  - 广东省江门市 移动
-  - 美国 CloudFlare节点 36
-  - 印度 V2CROSS.COM
-  - 美国 CloudFlare节点 37
-  - 美国 CloudFlare节点 38
-  - 美国 CloudFlare节点 39
-  - 美国 Fastly全球Anycast节点
-  - 美国 CloudFlare节点 40
-  - 美国 CloudFlare节点 41
-  - 美国 CloudFlare节点 42
-  - 美国 CloudFlare节点 43
-  - 美国 CloudFlare节点 44
-  - 美国 CloudFlare节点 45
-  - 英国 伦敦Amazon数据中心
-  - 美国 惠普HP
-  - 美国 CloudFlare节点 46
-  - 美国 CloudFlare节点 47
-  - 美国 CloudFlare节点 48
-  - 美国 CloudFlare节点 49
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf 🔓 VM-WS-N/A 🇨🇦 CA 5ms
@@ -4308,6 +4713,135 @@ proxy-groups:
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 3
+  - 0|-https://t.me/MrXbin-48 2
+  - 0|-https://t.me/MrXbin-61 2
+  - 0|-https://t.me/MrXbin-62 2
+  - 0|-https://t.me/MrXbin-63 2
+  - 0|-https://t.me/MrXbin-72 2
+  - 0|-https://t.me/MrXbin-74 2
+  - 0|-https://t.me/MrXbin-80 2
+  - 0|-https://t.me/MrXbin-82 2
+  - 0|-https://t.me/MrXbin-96 2
+  - 2|d*********g.com_0 2
+  - 2|d*********g.com_1 2
+  - 2|d*********g.com_2 2
+  - 2|d*********g.com_3 2
+  - '3|d*********g.com_0 #1 2'
+  - '3|d*********g.com_1 #1 2'
+  - '3|d*********g.com_2 #1 2'
+  - '3|d*********g.com_3 #1 2'
+  - '4|d*********g.com_0 #2 2'
+  - '4|d*********g.com_1 #2 2'
+  - '4|d*********g.com_2 #2 2'
+  - '4|d*********g.com_3 #2 2'
+  - 9|🇭🇰 香港 01 | 1x HK 2
+  - 9|🇭🇰 香港 02 | 1x HK 2
+  - 9|🇭🇰 香港住宅IP 03 | 1x HK 2
+  - 9|🇹🇼 台湾 01 | 1x TW 2
+  - 9|🇹🇼 台湾 02 | 1x TW 2
+  - 9|🇹🇼 台湾 03 | 1x TW 2
+  - 9|🇯🇵 日本 01 | 1x JP 2
+  - 9|🇯🇵 日本 02 | 1x JP 2
+  - 9|🇯🇵 日本 03 | 1x JP 2
+  - 9|🇸🇬 新加坡 01 | 1x SG 2
+  - 9|🇸🇬 新加坡 02 | 1x SG 2
+  - 9|🇸🇬 新加坡 03 | 1x SG 2
+  - 9|🇰🇷 韩国 01 | 1x KR 2
+  - 9|🇰🇷 韩国 02 | 1x KR 2
+  - 9|🇰🇷 韩国 03 | 1x KR 2
+  - 9|🇵🇭 菲律宾 01 | 1x PH 2
+  - 9|🇺🇸 美国 01 | 1x US Los Angeles 2
+  - 9|🇺🇸 美国住宅IP 02 | 1x US Los Angel... 2
+  - 9|🇺🇸 美国 03 | 1x US Washington 2
+  - 9|🇬🇧 英国住宅IP 01 | 1x UK 2
+  - 9|🇲🇾马来西亚 01 | 1x MY 2
+  - 9|🇮🇳西班牙 01 | 1x ES 2
+  - 9|🇹🇭泰国 01 | 1x TH 2
+  - 9|🇮🇳 印度 01 | 1x IN 2
+  - 9|🇦🇺 澳大利亚 01 | 1x AU 2
+  - 9|🇨🇦 加拿大 01 | 1x CA 2
+  - 9|🇩🇪 德国 01 | 1x DE 2
+  - 9|🇷🇺 俄罗斯 01 | 1x RU 2
+  - 9|🇹🇷 土耳其 01 | 1x TR 2
+  - 9|🇺🇦 乌克兰 01 | 1x UA 2
+  - 9|🇻🇳 越南 01 | 1x VN 2
+  - 9|🇧🇷 巴西 01 | 1x BR 2
+  - 11|🇭🇰香港 01 | 1x HK 2
+  - 11|🇭🇰香港 02 | 1x HK 2
+  - 11|🇭🇰香港家宽 03 | 1x HK 2
+  - 11|🇹🇼台湾 01 | 1x TW 2
+  - 11|🇹🇼台湾 02 | 1x TW 2
+  - 11|🇹🇼台湾 03 | 1x TW 2
+  - 11|🇯🇵日本 01 | 1x JP 2
+  - 11|🇯🇵日本 02 | 1x JP 2
+  - 11|🇯🇵日本 03 | 1x JP 2
+  - 11|🇸🇬新加坡 01 | 1x SG 2
+  - 11|🇸🇬新加坡 02 | 1x SG 2
+  - 11|🇸🇬新加坡 03 | 1x SG 2
+  - 11|🇰🇷韩国 01 | 1x KR 2
+  - 11|🇰🇷韩国 02 | 1x KR 2
+  - 11|🇰🇷韩国 03 | 1x KR 2
+  - 11|🇵🇭菲律宾 01 | 1x PH 2
+  - 11|🇺🇸美国 01 | 1x US Los Angeles 2
+  - 11|🇺🇸美国家宽 02 | 1x US Los Angeles 2
+  - 11|🇺🇸美国 03 | 1x US Washington 2
+  - 11|🇺🇸美国 04 | 1x US Honolulu 2
+  - 11|🇺🇸美国 05 | 1x US New Jersey 2
+  - 11|🇬🇧英国家宽 01 | 1x UK 2
+  - 11|🇹🇭泰国01  | 1x TH 2
+  - 11|🇲🇾马来西亚01 | 1x MY 2
+  - 11|🇮🇳印度 01 | 1x IN 2
+  - 11|🇦🇺澳大利亚 01 | 1x AU 2
+  - 11|🇨🇦加拿大 01 | 1x CA 2
+  - 11|🇩🇪德国 01 | 1x DE 2
+  - 11|🇷🇺俄罗斯 01 | 1x RU 2
+  - 11|🇹🇷土耳其 01 | 1x TR 2
+  - 11|🇺🇦乌克兰 01 | 1x UA 2
+  - 11|🇻🇳越南 01 | 1x VN 2
+  - 11|🇧🇷巴西 01 | 1x BR 2
+  - 13|🇭🇰 香港|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港3|@ripaojiedian 2
+  - 13|🇭🇰 香港4|@ripaojiedian 2
+  - 13,14|香港5|@ripaojiedian 2
+  - 13|🇭🇰 香港R|@ripaojiedian 2
+  - 13,14|台湾|@ripaojiedian 2
+  - 13,14|日本3|@ripaojiedian 2
+  - 13,14|新加坡|@ripaojiedian 2
+  - 13|🇸🇬 新加坡2|@ripaojiedian 2
+  - 13|🇰🇷 韩国|@ripaojiedian 2
+  - 13,14|韩国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian 2
+  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国3|@ripaojiedian 2
+  - 13,14|美国4|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian 2
+  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇸🇬 狮城特殊|@ripaojiedian 2
+  - 13|🇯🇵 日本特殊|@ripaojiedian 2
+  - 13|🇰🇷 韩国特殊|@ripaojiedian 2
+  - 13|🇬🇧 英国|@ripaojiedian 2
+  - 13|🇩🇪 德国|@ripaojiedian 2
+  - 14|香港|@ripaojiedian 2
+  - 14|香港2|@ripaojiedian 2
+  - 14|香港3|@ripaojiedian 2
+  - 14|香港4|@ripaojiedian 2
+  - 14|香港R|@ripaojiedian 2
+  - 14|新加坡2|@ripaojiedian 2
+  - 14|韩国|@ripaojiedian 2
+  - 14|美国|@ripaojiedian 2
+  - 14|美国3|@ripaojiedian 2
+  - 14|美国5|@ripaojiedian 2
+  - 14|狮城特殊|@ripaojiedian 2
+  - 14|日本特殊|@ripaojiedian 2
+  - 14|韩国特殊|@ripaojiedian 2
+  - 14|英国|@ripaojiedian 2
+  - 14|德国|@ripaojiedian 2
+  - 15|HK_speednode_0179 2
+  - 15|HK_speednode_0180 2
+  - 15|US_speednode_0339 2
+  - 15|US_speednode_0343 2
+  - '16|d*********g.com_2 #3 2'
   type: select
 - name: 📲 电报信息
   proxies:
@@ -4317,15 +4851,14 @@ proxy-groups:
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 香港R|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 日本|@ripaojiedian
-  - 日本2|@ripaojiedian
   - 日本3|@ripaojiedian
-  - 日本4|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 新加坡2|@ripaojiedian
   - 韩国|@ripaojiedian
   - 韩国2|@ripaojiedian
-  - 新加坡|@ripaojiedian
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -4335,24 +4868,18 @@ proxy-groups:
   - 狮城特殊|@ripaojiedian
   - 日本特殊|@ripaojiedian
   - 韩国特殊|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian
+  - 英国|@ripaojiedian
+  - 德国|@ripaojiedian
   - 高性价比机场:https://kfyun.uk
-  - 0|-https://t.me/MrXbin-1
-  - 0|-https://t.me/MrXbin-7
-  - 0|-https://t.me/MrXbin-9
-  - 0|-https://t.me/MrXbin-10
-  - 0|-https://t.me/MrXbin-18
-  - 0|-https://t.me/MrXbin-38
-  - 0|-https://t.me/MrXbin-39
-  - 0|-https://t.me/MrXbin-41
-  - 0|-https://t.me/MrXbin-46
-  - 0|-https://t.me/MrXbin-47
-  - 0|-https://t.me/MrXbin-49
-  - 0,13,14|美国|@ripaojiedian
+  - 0|-https://t.me/MrXbin-48
+  - 0|-https://t.me/MrXbin-61
+  - 0|-https://t.me/MrXbin-62
+  - 0|-https://t.me/MrXbin-63
+  - 0|-https://t.me/MrXbin-72
+  - 0|-https://t.me/MrXbin-74
+  - 0|-https://t.me/MrXbin-80
+  - 0|-https://t.me/MrXbin-82
+  - 0|-https://t.me/MrXbin-96
   - 2|d*********g.com_0
   - 2|d*********g.com_1
   - 2|d*********g.com_2
@@ -4431,43 +4958,47 @@ proxy-groups:
   - 11|🇻🇳越南 01 | 1x VN
   - 11|🇧🇷巴西 01 | 1x BR
   - 13|🇭🇰 香港|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian
   - 13|🇭🇰 香港3|@ripaojiedian
   - 13|🇭🇰 香港4|@ripaojiedian
+  - 13,14|香港5|@ripaojiedian
   - 13|🇭🇰 香港R|@ripaojiedian
   - 13,14|台湾|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian 2
-  - 13|🇯🇵 日本2|@ripaojiedian
   - 13,14|日本3|@ripaojiedian
-  - 13,14|日本4|@ripaojiedian
+  - 13,14|新加坡|@ripaojiedian
+  - 13|🇸🇬 新加坡2|@ripaojiedian
   - 13|🇰🇷 韩国|@ripaojiedian
   - 13,14|韩国2|@ripaojiedian
-  - 13,14|新加坡|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian
+  - 13,14|美国2|@ripaojiedian
   - 13|🇺🇸 美国3|@ripaojiedian
   - 13,14|美国4|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian 2
-  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian
+  - 13,14|美国6|@ripaojiedian
   - 13|🇸🇬 狮城特殊|@ripaojiedian
   - 13|🇯🇵 日本特殊|@ripaojiedian
   - 13|🇰🇷 韩国特殊|@ripaojiedian
+  - 13|🇬🇧 英国|@ripaojiedian
+  - 13|🇩🇪 德国|@ripaojiedian
   - 14|香港|@ripaojiedian
   - 14|香港2|@ripaojiedian
   - 14|香港3|@ripaojiedian
   - 14|香港4|@ripaojiedian
   - 14|香港R|@ripaojiedian
-  - 14|日本|@ripaojiedian
-  - 14|日本2|@ripaojiedian
+  - 14|新加坡2|@ripaojiedian
   - 14|韩国|@ripaojiedian
+  - 14|美国|@ripaojiedian
   - 14|美国3|@ripaojiedian
   - 14|美国5|@ripaojiedian
   - 14|狮城特殊|@ripaojiedian
   - 14|日本特殊|@ripaojiedian
   - 14|韩国特殊|@ripaojiedian
-  - 15|HK_speednode_0209
-  - 15|HK_speednode_0222
-  - 15|US_speednode_0488
-  - 15|US_speednode_0491
+  - 14|英国|@ripaojiedian
+  - 14|德国|@ripaojiedian
+  - 15|HK_speednode_0179
+  - 15|HK_speednode_0180
+  - 15|US_speednode_0339
+  - 15|US_speednode_0343
   - '16|d*********g.com_2 #3'
   - 香港核心 IEPL 01
   - 香港核心 IEPL 02
@@ -4486,71 +5017,6 @@ proxy-groups:
   - 免费-日本5-Ver.8
   - 免费-日本6-Ver.7
   - 免费-日本7-Ver.1
-  - 美国 CloudFlare节点
-  - 美国 Akamai科技公司CDN网络节点
-  - 美国 CloudFlare节点 2
-  - 美国 CloudFlare节点 3
-  - 美国 CloudFlare节点 4
-  - 美国 CloudFlare节点 5
-  - 意大利 V2CROSS.COM
-  - 英国 V2CROSS.COM
-  - 美国 CloudFlare节点 6
-  - 美国 CloudFlare节点 7
-  - 美国 CloudFlare节点 8
-  - 美国 CloudFlare节点 9
-  - 美国 CloudFlare节点 10
-  - 美国 CloudFlare节点 11
-  - 美国 CloudFlare节点 12
-  - 美国 CloudFlare节点 13
-  - 美国 CloudFlare节点 14
-  - 美国 CloudFlare节点 15
-  - 美国 CloudFlare节点 16
-  - 美国 CloudFlare节点 17
-  - 美国 CloudFlare节点 18
-  - 美国 CloudFlare节点 19
-  - 俄罗斯 V2CROSS.COM
-  - 美国 CloudFlare节点 20
-  - 美国 CloudFlare节点 21
-  - 美国 CloudFlare节点 22
-  - 美国 CloudFlare公司CDN节点(shopify)
-  - 美国 CloudFlare节点 23
-  - 美国 CloudFlare节点 24
-  - 美国 V2CROSS.COM
-  - 美国 Amazon数据中心
-  - 美国 CloudFlare节点 25
-  - 美国 V2CROSS.COM 2
-  - 美国 CloudFlare节点 26
-  - 美国 CloudFlare节点 27
-  - 美国科罗拉多州布隆菲尔德市 Level3
-  - 美国 CloudFlare节点 28
-  - 美国 CloudFlare节点 29
-  - 美国 CloudFlare节点 30
-  - 美国 Amazon EC2服务器
-  - 美国 CloudFlare节点 31
-  - 美国 CloudFlare节点 32
-  - 美国 CloudFlare节点 33
-  - 美国 CloudFlare节点 34
-  - 美国 CloudFlare节点 35
-  - 北美地区 V2CROSS.COM
-  - 广东省江门市 移动
-  - 美国 CloudFlare节点 36
-  - 印度 V2CROSS.COM
-  - 美国 CloudFlare节点 37
-  - 美国 CloudFlare节点 38
-  - 美国 CloudFlare节点 39
-  - 美国 Fastly全球Anycast节点
-  - 美国 CloudFlare节点 40
-  - 美国 CloudFlare节点 41
-  - 美国 CloudFlare节点 42
-  - 美国 CloudFlare节点 43
-  - 美国 CloudFlare节点 44
-  - 美国 CloudFlare节点 45
-  - 英国 伦敦Amazon数据中心
-  - 美国 惠普HP
-  - 美国 CloudFlare节点 46
-  - 美国 CloudFlare节点 47
-  - 美国 CloudFlare节点 48
-  - 美国 CloudFlare节点 49
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf 🔓 VM-WS-N/A 🇨🇦 CA 5ms
@@ -4598,6 +5064,135 @@ proxy-groups:
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 3
+  - 0|-https://t.me/MrXbin-48 2
+  - 0|-https://t.me/MrXbin-61 2
+  - 0|-https://t.me/MrXbin-62 2
+  - 0|-https://t.me/MrXbin-63 2
+  - 0|-https://t.me/MrXbin-72 2
+  - 0|-https://t.me/MrXbin-74 2
+  - 0|-https://t.me/MrXbin-80 2
+  - 0|-https://t.me/MrXbin-82 2
+  - 0|-https://t.me/MrXbin-96 2
+  - 2|d*********g.com_0 2
+  - 2|d*********g.com_1 2
+  - 2|d*********g.com_2 2
+  - 2|d*********g.com_3 2
+  - '3|d*********g.com_0 #1 2'
+  - '3|d*********g.com_1 #1 2'
+  - '3|d*********g.com_2 #1 2'
+  - '3|d*********g.com_3 #1 2'
+  - '4|d*********g.com_0 #2 2'
+  - '4|d*********g.com_1 #2 2'
+  - '4|d*********g.com_2 #2 2'
+  - '4|d*********g.com_3 #2 2'
+  - 9|🇭🇰 香港 01 | 1x HK 2
+  - 9|🇭🇰 香港 02 | 1x HK 2
+  - 9|🇭🇰 香港住宅IP 03 | 1x HK 2
+  - 9|🇹🇼 台湾 01 | 1x TW 2
+  - 9|🇹🇼 台湾 02 | 1x TW 2
+  - 9|🇹🇼 台湾 03 | 1x TW 2
+  - 9|🇯🇵 日本 01 | 1x JP 2
+  - 9|🇯🇵 日本 02 | 1x JP 2
+  - 9|🇯🇵 日本 03 | 1x JP 2
+  - 9|🇸🇬 新加坡 01 | 1x SG 2
+  - 9|🇸🇬 新加坡 02 | 1x SG 2
+  - 9|🇸🇬 新加坡 03 | 1x SG 2
+  - 9|🇰🇷 韩国 01 | 1x KR 2
+  - 9|🇰🇷 韩国 02 | 1x KR 2
+  - 9|🇰🇷 韩国 03 | 1x KR 2
+  - 9|🇵🇭 菲律宾 01 | 1x PH 2
+  - 9|🇺🇸 美国 01 | 1x US Los Angeles 2
+  - 9|🇺🇸 美国住宅IP 02 | 1x US Los Angel... 2
+  - 9|🇺🇸 美国 03 | 1x US Washington 2
+  - 9|🇬🇧 英国住宅IP 01 | 1x UK 2
+  - 9|🇲🇾马来西亚 01 | 1x MY 2
+  - 9|🇮🇳西班牙 01 | 1x ES 2
+  - 9|🇹🇭泰国 01 | 1x TH 2
+  - 9|🇮🇳 印度 01 | 1x IN 2
+  - 9|🇦🇺 澳大利亚 01 | 1x AU 2
+  - 9|🇨🇦 加拿大 01 | 1x CA 2
+  - 9|🇩🇪 德国 01 | 1x DE 2
+  - 9|🇷🇺 俄罗斯 01 | 1x RU 2
+  - 9|🇹🇷 土耳其 01 | 1x TR 2
+  - 9|🇺🇦 乌克兰 01 | 1x UA 2
+  - 9|🇻🇳 越南 01 | 1x VN 2
+  - 9|🇧🇷 巴西 01 | 1x BR 2
+  - 11|🇭🇰香港 01 | 1x HK 2
+  - 11|🇭🇰香港 02 | 1x HK 2
+  - 11|🇭🇰香港家宽 03 | 1x HK 2
+  - 11|🇹🇼台湾 01 | 1x TW 2
+  - 11|🇹🇼台湾 02 | 1x TW 2
+  - 11|🇹🇼台湾 03 | 1x TW 2
+  - 11|🇯🇵日本 01 | 1x JP 2
+  - 11|🇯🇵日本 02 | 1x JP 2
+  - 11|🇯🇵日本 03 | 1x JP 2
+  - 11|🇸🇬新加坡 01 | 1x SG 2
+  - 11|🇸🇬新加坡 02 | 1x SG 2
+  - 11|🇸🇬新加坡 03 | 1x SG 2
+  - 11|🇰🇷韩国 01 | 1x KR 2
+  - 11|🇰🇷韩国 02 | 1x KR 2
+  - 11|🇰🇷韩国 03 | 1x KR 2
+  - 11|🇵🇭菲律宾 01 | 1x PH 2
+  - 11|🇺🇸美国 01 | 1x US Los Angeles 2
+  - 11|🇺🇸美国家宽 02 | 1x US Los Angeles 2
+  - 11|🇺🇸美国 03 | 1x US Washington 2
+  - 11|🇺🇸美国 04 | 1x US Honolulu 2
+  - 11|🇺🇸美国 05 | 1x US New Jersey 2
+  - 11|🇬🇧英国家宽 01 | 1x UK 2
+  - 11|🇹🇭泰国01  | 1x TH 2
+  - 11|🇲🇾马来西亚01 | 1x MY 2
+  - 11|🇮🇳印度 01 | 1x IN 2
+  - 11|🇦🇺澳大利亚 01 | 1x AU 2
+  - 11|🇨🇦加拿大 01 | 1x CA 2
+  - 11|🇩🇪德国 01 | 1x DE 2
+  - 11|🇷🇺俄罗斯 01 | 1x RU 2
+  - 11|🇹🇷土耳其 01 | 1x TR 2
+  - 11|🇺🇦乌克兰 01 | 1x UA 2
+  - 11|🇻🇳越南 01 | 1x VN 2
+  - 11|🇧🇷巴西 01 | 1x BR 2
+  - 13|🇭🇰 香港|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港3|@ripaojiedian 2
+  - 13|🇭🇰 香港4|@ripaojiedian 2
+  - 13,14|香港5|@ripaojiedian 2
+  - 13|🇭🇰 香港R|@ripaojiedian 2
+  - 13,14|台湾|@ripaojiedian 2
+  - 13,14|日本3|@ripaojiedian 2
+  - 13,14|新加坡|@ripaojiedian 2
+  - 13|🇸🇬 新加坡2|@ripaojiedian 2
+  - 13|🇰🇷 韩国|@ripaojiedian 2
+  - 13,14|韩国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian 2
+  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国3|@ripaojiedian 2
+  - 13,14|美国4|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian 2
+  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇸🇬 狮城特殊|@ripaojiedian 2
+  - 13|🇯🇵 日本特殊|@ripaojiedian 2
+  - 13|🇰🇷 韩国特殊|@ripaojiedian 2
+  - 13|🇬🇧 英国|@ripaojiedian 2
+  - 13|🇩🇪 德国|@ripaojiedian 2
+  - 14|香港|@ripaojiedian 2
+  - 14|香港2|@ripaojiedian 2
+  - 14|香港3|@ripaojiedian 2
+  - 14|香港4|@ripaojiedian 2
+  - 14|香港R|@ripaojiedian 2
+  - 14|新加坡2|@ripaojiedian 2
+  - 14|韩国|@ripaojiedian 2
+  - 14|美国|@ripaojiedian 2
+  - 14|美国3|@ripaojiedian 2
+  - 14|美国5|@ripaojiedian 2
+  - 14|狮城特殊|@ripaojiedian 2
+  - 14|日本特殊|@ripaojiedian 2
+  - 14|韩国特殊|@ripaojiedian 2
+  - 14|英国|@ripaojiedian 2
+  - 14|德国|@ripaojiedian 2
+  - 15|HK_speednode_0179 2
+  - 15|HK_speednode_0180 2
+  - 15|US_speednode_0339 2
+  - 15|US_speednode_0343 2
+  - '16|d*********g.com_2 #3 2'
   type: select
 - name: 🍎 苹果服务
   proxies:
@@ -4608,15 +5203,14 @@ proxy-groups:
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 香港R|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 日本|@ripaojiedian
-  - 日本2|@ripaojiedian
   - 日本3|@ripaojiedian
-  - 日本4|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 新加坡2|@ripaojiedian
   - 韩国|@ripaojiedian
   - 韩国2|@ripaojiedian
-  - 新加坡|@ripaojiedian
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -4626,24 +5220,18 @@ proxy-groups:
   - 狮城特殊|@ripaojiedian
   - 日本特殊|@ripaojiedian
   - 韩国特殊|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian
+  - 英国|@ripaojiedian
+  - 德国|@ripaojiedian
   - 高性价比机场:https://kfyun.uk
-  - 0|-https://t.me/MrXbin-1
-  - 0|-https://t.me/MrXbin-7
-  - 0|-https://t.me/MrXbin-9
-  - 0|-https://t.me/MrXbin-10
-  - 0|-https://t.me/MrXbin-18
-  - 0|-https://t.me/MrXbin-38
-  - 0|-https://t.me/MrXbin-39
-  - 0|-https://t.me/MrXbin-41
-  - 0|-https://t.me/MrXbin-46
-  - 0|-https://t.me/MrXbin-47
-  - 0|-https://t.me/MrXbin-49
-  - 0,13,14|美国|@ripaojiedian
+  - 0|-https://t.me/MrXbin-48
+  - 0|-https://t.me/MrXbin-61
+  - 0|-https://t.me/MrXbin-62
+  - 0|-https://t.me/MrXbin-63
+  - 0|-https://t.me/MrXbin-72
+  - 0|-https://t.me/MrXbin-74
+  - 0|-https://t.me/MrXbin-80
+  - 0|-https://t.me/MrXbin-82
+  - 0|-https://t.me/MrXbin-96
   - 2|d*********g.com_0
   - 2|d*********g.com_1
   - 2|d*********g.com_2
@@ -4722,43 +5310,47 @@ proxy-groups:
   - 11|🇻🇳越南 01 | 1x VN
   - 11|🇧🇷巴西 01 | 1x BR
   - 13|🇭🇰 香港|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian
   - 13|🇭🇰 香港3|@ripaojiedian
   - 13|🇭🇰 香港4|@ripaojiedian
+  - 13,14|香港5|@ripaojiedian
   - 13|🇭🇰 香港R|@ripaojiedian
   - 13,14|台湾|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian 2
-  - 13|🇯🇵 日本2|@ripaojiedian
   - 13,14|日本3|@ripaojiedian
-  - 13,14|日本4|@ripaojiedian
+  - 13,14|新加坡|@ripaojiedian
+  - 13|🇸🇬 新加坡2|@ripaojiedian
   - 13|🇰🇷 韩国|@ripaojiedian
   - 13,14|韩国2|@ripaojiedian
-  - 13,14|新加坡|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian
+  - 13,14|美国2|@ripaojiedian
   - 13|🇺🇸 美国3|@ripaojiedian
   - 13,14|美国4|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian 2
-  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian
+  - 13,14|美国6|@ripaojiedian
   - 13|🇸🇬 狮城特殊|@ripaojiedian
   - 13|🇯🇵 日本特殊|@ripaojiedian
   - 13|🇰🇷 韩国特殊|@ripaojiedian
+  - 13|🇬🇧 英国|@ripaojiedian
+  - 13|🇩🇪 德国|@ripaojiedian
   - 14|香港|@ripaojiedian
   - 14|香港2|@ripaojiedian
   - 14|香港3|@ripaojiedian
   - 14|香港4|@ripaojiedian
   - 14|香港R|@ripaojiedian
-  - 14|日本|@ripaojiedian
-  - 14|日本2|@ripaojiedian
+  - 14|新加坡2|@ripaojiedian
   - 14|韩国|@ripaojiedian
+  - 14|美国|@ripaojiedian
   - 14|美国3|@ripaojiedian
   - 14|美国5|@ripaojiedian
   - 14|狮城特殊|@ripaojiedian
   - 14|日本特殊|@ripaojiedian
   - 14|韩国特殊|@ripaojiedian
-  - 15|HK_speednode_0209
-  - 15|HK_speednode_0222
-  - 15|US_speednode_0488
-  - 15|US_speednode_0491
+  - 14|英国|@ripaojiedian
+  - 14|德国|@ripaojiedian
+  - 15|HK_speednode_0179
+  - 15|HK_speednode_0180
+  - 15|US_speednode_0339
+  - 15|US_speednode_0343
   - '16|d*********g.com_2 #3'
   - 香港核心 IEPL 01
   - 香港核心 IEPL 02
@@ -4777,71 +5369,6 @@ proxy-groups:
   - 免费-日本5-Ver.8
   - 免费-日本6-Ver.7
   - 免费-日本7-Ver.1
-  - 美国 CloudFlare节点
-  - 美国 Akamai科技公司CDN网络节点
-  - 美国 CloudFlare节点 2
-  - 美国 CloudFlare节点 3
-  - 美国 CloudFlare节点 4
-  - 美国 CloudFlare节点 5
-  - 意大利 V2CROSS.COM
-  - 英国 V2CROSS.COM
-  - 美国 CloudFlare节点 6
-  - 美国 CloudFlare节点 7
-  - 美国 CloudFlare节点 8
-  - 美国 CloudFlare节点 9
-  - 美国 CloudFlare节点 10
-  - 美国 CloudFlare节点 11
-  - 美国 CloudFlare节点 12
-  - 美国 CloudFlare节点 13
-  - 美国 CloudFlare节点 14
-  - 美国 CloudFlare节点 15
-  - 美国 CloudFlare节点 16
-  - 美国 CloudFlare节点 17
-  - 美国 CloudFlare节点 18
-  - 美国 CloudFlare节点 19
-  - 俄罗斯 V2CROSS.COM
-  - 美国 CloudFlare节点 20
-  - 美国 CloudFlare节点 21
-  - 美国 CloudFlare节点 22
-  - 美国 CloudFlare公司CDN节点(shopify)
-  - 美国 CloudFlare节点 23
-  - 美国 CloudFlare节点 24
-  - 美国 V2CROSS.COM
-  - 美国 Amazon数据中心
-  - 美国 CloudFlare节点 25
-  - 美国 V2CROSS.COM 2
-  - 美国 CloudFlare节点 26
-  - 美国 CloudFlare节点 27
-  - 美国科罗拉多州布隆菲尔德市 Level3
-  - 美国 CloudFlare节点 28
-  - 美国 CloudFlare节点 29
-  - 美国 CloudFlare节点 30
-  - 美国 Amazon EC2服务器
-  - 美国 CloudFlare节点 31
-  - 美国 CloudFlare节点 32
-  - 美国 CloudFlare节点 33
-  - 美国 CloudFlare节点 34
-  - 美国 CloudFlare节点 35
-  - 北美地区 V2CROSS.COM
-  - 广东省江门市 移动
-  - 美国 CloudFlare节点 36
-  - 印度 V2CROSS.COM
-  - 美国 CloudFlare节点 37
-  - 美国 CloudFlare节点 38
-  - 美国 CloudFlare节点 39
-  - 美国 Fastly全球Anycast节点
-  - 美国 CloudFlare节点 40
-  - 美国 CloudFlare节点 41
-  - 美国 CloudFlare节点 42
-  - 美国 CloudFlare节点 43
-  - 美国 CloudFlare节点 44
-  - 美国 CloudFlare节点 45
-  - 英国 伦敦Amazon数据中心
-  - 美国 惠普HP
-  - 美国 CloudFlare节点 46
-  - 美国 CloudFlare节点 47
-  - 美国 CloudFlare节点 48
-  - 美国 CloudFlare节点 49
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf 🔓 VM-WS-N/A 🇨🇦 CA 5ms
@@ -4889,6 +5416,135 @@ proxy-groups:
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 3
+  - 0|-https://t.me/MrXbin-48 2
+  - 0|-https://t.me/MrXbin-61 2
+  - 0|-https://t.me/MrXbin-62 2
+  - 0|-https://t.me/MrXbin-63 2
+  - 0|-https://t.me/MrXbin-72 2
+  - 0|-https://t.me/MrXbin-74 2
+  - 0|-https://t.me/MrXbin-80 2
+  - 0|-https://t.me/MrXbin-82 2
+  - 0|-https://t.me/MrXbin-96 2
+  - 2|d*********g.com_0 2
+  - 2|d*********g.com_1 2
+  - 2|d*********g.com_2 2
+  - 2|d*********g.com_3 2
+  - '3|d*********g.com_0 #1 2'
+  - '3|d*********g.com_1 #1 2'
+  - '3|d*********g.com_2 #1 2'
+  - '3|d*********g.com_3 #1 2'
+  - '4|d*********g.com_0 #2 2'
+  - '4|d*********g.com_1 #2 2'
+  - '4|d*********g.com_2 #2 2'
+  - '4|d*********g.com_3 #2 2'
+  - 9|🇭🇰 香港 01 | 1x HK 2
+  - 9|🇭🇰 香港 02 | 1x HK 2
+  - 9|🇭🇰 香港住宅IP 03 | 1x HK 2
+  - 9|🇹🇼 台湾 01 | 1x TW 2
+  - 9|🇹🇼 台湾 02 | 1x TW 2
+  - 9|🇹🇼 台湾 03 | 1x TW 2
+  - 9|🇯🇵 日本 01 | 1x JP 2
+  - 9|🇯🇵 日本 02 | 1x JP 2
+  - 9|🇯🇵 日本 03 | 1x JP 2
+  - 9|🇸🇬 新加坡 01 | 1x SG 2
+  - 9|🇸🇬 新加坡 02 | 1x SG 2
+  - 9|🇸🇬 新加坡 03 | 1x SG 2
+  - 9|🇰🇷 韩国 01 | 1x KR 2
+  - 9|🇰🇷 韩国 02 | 1x KR 2
+  - 9|🇰🇷 韩国 03 | 1x KR 2
+  - 9|🇵🇭 菲律宾 01 | 1x PH 2
+  - 9|🇺🇸 美国 01 | 1x US Los Angeles 2
+  - 9|🇺🇸 美国住宅IP 02 | 1x US Los Angel... 2
+  - 9|🇺🇸 美国 03 | 1x US Washington 2
+  - 9|🇬🇧 英国住宅IP 01 | 1x UK 2
+  - 9|🇲🇾马来西亚 01 | 1x MY 2
+  - 9|🇮🇳西班牙 01 | 1x ES 2
+  - 9|🇹🇭泰国 01 | 1x TH 2
+  - 9|🇮🇳 印度 01 | 1x IN 2
+  - 9|🇦🇺 澳大利亚 01 | 1x AU 2
+  - 9|🇨🇦 加拿大 01 | 1x CA 2
+  - 9|🇩🇪 德国 01 | 1x DE 2
+  - 9|🇷🇺 俄罗斯 01 | 1x RU 2
+  - 9|🇹🇷 土耳其 01 | 1x TR 2
+  - 9|🇺🇦 乌克兰 01 | 1x UA 2
+  - 9|🇻🇳 越南 01 | 1x VN 2
+  - 9|🇧🇷 巴西 01 | 1x BR 2
+  - 11|🇭🇰香港 01 | 1x HK 2
+  - 11|🇭🇰香港 02 | 1x HK 2
+  - 11|🇭🇰香港家宽 03 | 1x HK 2
+  - 11|🇹🇼台湾 01 | 1x TW 2
+  - 11|🇹🇼台湾 02 | 1x TW 2
+  - 11|🇹🇼台湾 03 | 1x TW 2
+  - 11|🇯🇵日本 01 | 1x JP 2
+  - 11|🇯🇵日本 02 | 1x JP 2
+  - 11|🇯🇵日本 03 | 1x JP 2
+  - 11|🇸🇬新加坡 01 | 1x SG 2
+  - 11|🇸🇬新加坡 02 | 1x SG 2
+  - 11|🇸🇬新加坡 03 | 1x SG 2
+  - 11|🇰🇷韩国 01 | 1x KR 2
+  - 11|🇰🇷韩国 02 | 1x KR 2
+  - 11|🇰🇷韩国 03 | 1x KR 2
+  - 11|🇵🇭菲律宾 01 | 1x PH 2
+  - 11|🇺🇸美国 01 | 1x US Los Angeles 2
+  - 11|🇺🇸美国家宽 02 | 1x US Los Angeles 2
+  - 11|🇺🇸美国 03 | 1x US Washington 2
+  - 11|🇺🇸美国 04 | 1x US Honolulu 2
+  - 11|🇺🇸美国 05 | 1x US New Jersey 2
+  - 11|🇬🇧英国家宽 01 | 1x UK 2
+  - 11|🇹🇭泰国01  | 1x TH 2
+  - 11|🇲🇾马来西亚01 | 1x MY 2
+  - 11|🇮🇳印度 01 | 1x IN 2
+  - 11|🇦🇺澳大利亚 01 | 1x AU 2
+  - 11|🇨🇦加拿大 01 | 1x CA 2
+  - 11|🇩🇪德国 01 | 1x DE 2
+  - 11|🇷🇺俄罗斯 01 | 1x RU 2
+  - 11|🇹🇷土耳其 01 | 1x TR 2
+  - 11|🇺🇦乌克兰 01 | 1x UA 2
+  - 11|🇻🇳越南 01 | 1x VN 2
+  - 11|🇧🇷巴西 01 | 1x BR 2
+  - 13|🇭🇰 香港|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港3|@ripaojiedian 2
+  - 13|🇭🇰 香港4|@ripaojiedian 2
+  - 13,14|香港5|@ripaojiedian 2
+  - 13|🇭🇰 香港R|@ripaojiedian 2
+  - 13,14|台湾|@ripaojiedian 2
+  - 13,14|日本3|@ripaojiedian 2
+  - 13,14|新加坡|@ripaojiedian 2
+  - 13|🇸🇬 新加坡2|@ripaojiedian 2
+  - 13|🇰🇷 韩国|@ripaojiedian 2
+  - 13,14|韩国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian 2
+  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国3|@ripaojiedian 2
+  - 13,14|美国4|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian 2
+  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇸🇬 狮城特殊|@ripaojiedian 2
+  - 13|🇯🇵 日本特殊|@ripaojiedian 2
+  - 13|🇰🇷 韩国特殊|@ripaojiedian 2
+  - 13|🇬🇧 英国|@ripaojiedian 2
+  - 13|🇩🇪 德国|@ripaojiedian 2
+  - 14|香港|@ripaojiedian 2
+  - 14|香港2|@ripaojiedian 2
+  - 14|香港3|@ripaojiedian 2
+  - 14|香港4|@ripaojiedian 2
+  - 14|香港R|@ripaojiedian 2
+  - 14|新加坡2|@ripaojiedian 2
+  - 14|韩国|@ripaojiedian 2
+  - 14|美国|@ripaojiedian 2
+  - 14|美国3|@ripaojiedian 2
+  - 14|美国5|@ripaojiedian 2
+  - 14|狮城特殊|@ripaojiedian 2
+  - 14|日本特殊|@ripaojiedian 2
+  - 14|韩国特殊|@ripaojiedian 2
+  - 14|英国|@ripaojiedian 2
+  - 14|德国|@ripaojiedian 2
+  - 15|HK_speednode_0179 2
+  - 15|HK_speednode_0180 2
+  - 15|US_speednode_0339 2
+  - 15|US_speednode_0343 2
+  - '16|d*********g.com_2 #3 2'
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -4908,15 +5564,14 @@ proxy-groups:
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 香港R|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 日本|@ripaojiedian
-  - 日本2|@ripaojiedian
   - 日本3|@ripaojiedian
-  - 日本4|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 新加坡2|@ripaojiedian
   - 韩国|@ripaojiedian
   - 韩国2|@ripaojiedian
-  - 新加坡|@ripaojiedian
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -4926,24 +5581,18 @@ proxy-groups:
   - 狮城特殊|@ripaojiedian
   - 日本特殊|@ripaojiedian
   - 韩国特殊|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian
+  - 英国|@ripaojiedian
+  - 德国|@ripaojiedian
   - 高性价比机场:https://kfyun.uk
-  - 0|-https://t.me/MrXbin-1
-  - 0|-https://t.me/MrXbin-7
-  - 0|-https://t.me/MrXbin-9
-  - 0|-https://t.me/MrXbin-10
-  - 0|-https://t.me/MrXbin-18
-  - 0|-https://t.me/MrXbin-38
-  - 0|-https://t.me/MrXbin-39
-  - 0|-https://t.me/MrXbin-41
-  - 0|-https://t.me/MrXbin-46
-  - 0|-https://t.me/MrXbin-47
-  - 0|-https://t.me/MrXbin-49
-  - 0,13,14|美国|@ripaojiedian
+  - 0|-https://t.me/MrXbin-48
+  - 0|-https://t.me/MrXbin-61
+  - 0|-https://t.me/MrXbin-62
+  - 0|-https://t.me/MrXbin-63
+  - 0|-https://t.me/MrXbin-72
+  - 0|-https://t.me/MrXbin-74
+  - 0|-https://t.me/MrXbin-80
+  - 0|-https://t.me/MrXbin-82
+  - 0|-https://t.me/MrXbin-96
   - 2|d*********g.com_0
   - 2|d*********g.com_1
   - 2|d*********g.com_2
@@ -5022,43 +5671,47 @@ proxy-groups:
   - 11|🇻🇳越南 01 | 1x VN
   - 11|🇧🇷巴西 01 | 1x BR
   - 13|🇭🇰 香港|@ripaojiedian
-  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian
   - 13|🇭🇰 香港3|@ripaojiedian
   - 13|🇭🇰 香港4|@ripaojiedian
+  - 13,14|香港5|@ripaojiedian
   - 13|🇭🇰 香港R|@ripaojiedian
   - 13,14|台湾|@ripaojiedian
-  - 13|🇯🇵 日本|@ripaojiedian 2
-  - 13|🇯🇵 日本2|@ripaojiedian
   - 13,14|日本3|@ripaojiedian
-  - 13,14|日本4|@ripaojiedian
+  - 13,14|新加坡|@ripaojiedian
+  - 13|🇸🇬 新加坡2|@ripaojiedian
   - 13|🇰🇷 韩国|@ripaojiedian
   - 13,14|韩国2|@ripaojiedian
-  - 13,14|新加坡|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian
+  - 13,14|美国2|@ripaojiedian
   - 13|🇺🇸 美国3|@ripaojiedian
   - 13,14|美国4|@ripaojiedian
-  - 13|🇺🇸 美国5|@ripaojiedian 2
-  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian
+  - 13,14|美国6|@ripaojiedian
   - 13|🇸🇬 狮城特殊|@ripaojiedian
   - 13|🇯🇵 日本特殊|@ripaojiedian
   - 13|🇰🇷 韩国特殊|@ripaojiedian
+  - 13|🇬🇧 英国|@ripaojiedian
+  - 13|🇩🇪 德国|@ripaojiedian
   - 14|香港|@ripaojiedian
   - 14|香港2|@ripaojiedian
   - 14|香港3|@ripaojiedian
   - 14|香港4|@ripaojiedian
   - 14|香港R|@ripaojiedian
-  - 14|日本|@ripaojiedian
-  - 14|日本2|@ripaojiedian
+  - 14|新加坡2|@ripaojiedian
   - 14|韩国|@ripaojiedian
+  - 14|美国|@ripaojiedian
   - 14|美国3|@ripaojiedian
   - 14|美国5|@ripaojiedian
   - 14|狮城特殊|@ripaojiedian
   - 14|日本特殊|@ripaojiedian
   - 14|韩国特殊|@ripaojiedian
-  - 15|HK_speednode_0209
-  - 15|HK_speednode_0222
-  - 15|US_speednode_0488
-  - 15|US_speednode_0491
+  - 14|英国|@ripaojiedian
+  - 14|德国|@ripaojiedian
+  - 15|HK_speednode_0179
+  - 15|HK_speednode_0180
+  - 15|US_speednode_0339
+  - 15|US_speednode_0343
   - '16|d*********g.com_2 #3'
   - 香港核心 IEPL 01
   - 香港核心 IEPL 02
@@ -5077,71 +5730,6 @@ proxy-groups:
   - 免费-日本5-Ver.8
   - 免费-日本6-Ver.7
   - 免费-日本7-Ver.1
-  - 美国 CloudFlare节点
-  - 美国 Akamai科技公司CDN网络节点
-  - 美国 CloudFlare节点 2
-  - 美国 CloudFlare节点 3
-  - 美国 CloudFlare节点 4
-  - 美国 CloudFlare节点 5
-  - 意大利 V2CROSS.COM
-  - 英国 V2CROSS.COM
-  - 美国 CloudFlare节点 6
-  - 美国 CloudFlare节点 7
-  - 美国 CloudFlare节点 8
-  - 美国 CloudFlare节点 9
-  - 美国 CloudFlare节点 10
-  - 美国 CloudFlare节点 11
-  - 美国 CloudFlare节点 12
-  - 美国 CloudFlare节点 13
-  - 美国 CloudFlare节点 14
-  - 美国 CloudFlare节点 15
-  - 美国 CloudFlare节点 16
-  - 美国 CloudFlare节点 17
-  - 美国 CloudFlare节点 18
-  - 美国 CloudFlare节点 19
-  - 俄罗斯 V2CROSS.COM
-  - 美国 CloudFlare节点 20
-  - 美国 CloudFlare节点 21
-  - 美国 CloudFlare节点 22
-  - 美国 CloudFlare公司CDN节点(shopify)
-  - 美国 CloudFlare节点 23
-  - 美国 CloudFlare节点 24
-  - 美国 V2CROSS.COM
-  - 美国 Amazon数据中心
-  - 美国 CloudFlare节点 25
-  - 美国 V2CROSS.COM 2
-  - 美国 CloudFlare节点 26
-  - 美国 CloudFlare节点 27
-  - 美国科罗拉多州布隆菲尔德市 Level3
-  - 美国 CloudFlare节点 28
-  - 美国 CloudFlare节点 29
-  - 美国 CloudFlare节点 30
-  - 美国 Amazon EC2服务器
-  - 美国 CloudFlare节点 31
-  - 美国 CloudFlare节点 32
-  - 美国 CloudFlare节点 33
-  - 美国 CloudFlare节点 34
-  - 美国 CloudFlare节点 35
-  - 北美地区 V2CROSS.COM
-  - 广东省江门市 移动
-  - 美国 CloudFlare节点 36
-  - 印度 V2CROSS.COM
-  - 美国 CloudFlare节点 37
-  - 美国 CloudFlare节点 38
-  - 美国 CloudFlare节点 39
-  - 美国 Fastly全球Anycast节点
-  - 美国 CloudFlare节点 40
-  - 美国 CloudFlare节点 41
-  - 美国 CloudFlare节点 42
-  - 美国 CloudFlare节点 43
-  - 美国 CloudFlare节点 44
-  - 美国 CloudFlare节点 45
-  - 英国 伦敦Amazon数据中心
-  - 美国 惠普HP
-  - 美国 CloudFlare节点 46
-  - 美国 CloudFlare节点 47
-  - 美国 CloudFlare节点 48
-  - 美国 CloudFlare节点 49
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf 🔓 VM-WS-N/A 🇨🇦 CA 5ms
@@ -5189,6 +5777,135 @@ proxy-groups:
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 2
   - ip_cf_configs 🔒 VM-WS-TLS 🇨🇦 CA 5ms 3
+  - 0|-https://t.me/MrXbin-48 2
+  - 0|-https://t.me/MrXbin-61 2
+  - 0|-https://t.me/MrXbin-62 2
+  - 0|-https://t.me/MrXbin-63 2
+  - 0|-https://t.me/MrXbin-72 2
+  - 0|-https://t.me/MrXbin-74 2
+  - 0|-https://t.me/MrXbin-80 2
+  - 0|-https://t.me/MrXbin-82 2
+  - 0|-https://t.me/MrXbin-96 2
+  - 2|d*********g.com_0 2
+  - 2|d*********g.com_1 2
+  - 2|d*********g.com_2 2
+  - 2|d*********g.com_3 2
+  - '3|d*********g.com_0 #1 2'
+  - '3|d*********g.com_1 #1 2'
+  - '3|d*********g.com_2 #1 2'
+  - '3|d*********g.com_3 #1 2'
+  - '4|d*********g.com_0 #2 2'
+  - '4|d*********g.com_1 #2 2'
+  - '4|d*********g.com_2 #2 2'
+  - '4|d*********g.com_3 #2 2'
+  - 9|🇭🇰 香港 01 | 1x HK 2
+  - 9|🇭🇰 香港 02 | 1x HK 2
+  - 9|🇭🇰 香港住宅IP 03 | 1x HK 2
+  - 9|🇹🇼 台湾 01 | 1x TW 2
+  - 9|🇹🇼 台湾 02 | 1x TW 2
+  - 9|🇹🇼 台湾 03 | 1x TW 2
+  - 9|🇯🇵 日本 01 | 1x JP 2
+  - 9|🇯🇵 日本 02 | 1x JP 2
+  - 9|🇯🇵 日本 03 | 1x JP 2
+  - 9|🇸🇬 新加坡 01 | 1x SG 2
+  - 9|🇸🇬 新加坡 02 | 1x SG 2
+  - 9|🇸🇬 新加坡 03 | 1x SG 2
+  - 9|🇰🇷 韩国 01 | 1x KR 2
+  - 9|🇰🇷 韩国 02 | 1x KR 2
+  - 9|🇰🇷 韩国 03 | 1x KR 2
+  - 9|🇵🇭 菲律宾 01 | 1x PH 2
+  - 9|🇺🇸 美国 01 | 1x US Los Angeles 2
+  - 9|🇺🇸 美国住宅IP 02 | 1x US Los Angel... 2
+  - 9|🇺🇸 美国 03 | 1x US Washington 2
+  - 9|🇬🇧 英国住宅IP 01 | 1x UK 2
+  - 9|🇲🇾马来西亚 01 | 1x MY 2
+  - 9|🇮🇳西班牙 01 | 1x ES 2
+  - 9|🇹🇭泰国 01 | 1x TH 2
+  - 9|🇮🇳 印度 01 | 1x IN 2
+  - 9|🇦🇺 澳大利亚 01 | 1x AU 2
+  - 9|🇨🇦 加拿大 01 | 1x CA 2
+  - 9|🇩🇪 德国 01 | 1x DE 2
+  - 9|🇷🇺 俄罗斯 01 | 1x RU 2
+  - 9|🇹🇷 土耳其 01 | 1x TR 2
+  - 9|🇺🇦 乌克兰 01 | 1x UA 2
+  - 9|🇻🇳 越南 01 | 1x VN 2
+  - 9|🇧🇷 巴西 01 | 1x BR 2
+  - 11|🇭🇰香港 01 | 1x HK 2
+  - 11|🇭🇰香港 02 | 1x HK 2
+  - 11|🇭🇰香港家宽 03 | 1x HK 2
+  - 11|🇹🇼台湾 01 | 1x TW 2
+  - 11|🇹🇼台湾 02 | 1x TW 2
+  - 11|🇹🇼台湾 03 | 1x TW 2
+  - 11|🇯🇵日本 01 | 1x JP 2
+  - 11|🇯🇵日本 02 | 1x JP 2
+  - 11|🇯🇵日本 03 | 1x JP 2
+  - 11|🇸🇬新加坡 01 | 1x SG 2
+  - 11|🇸🇬新加坡 02 | 1x SG 2
+  - 11|🇸🇬新加坡 03 | 1x SG 2
+  - 11|🇰🇷韩国 01 | 1x KR 2
+  - 11|🇰🇷韩国 02 | 1x KR 2
+  - 11|🇰🇷韩国 03 | 1x KR 2
+  - 11|🇵🇭菲律宾 01 | 1x PH 2
+  - 11|🇺🇸美国 01 | 1x US Los Angeles 2
+  - 11|🇺🇸美国家宽 02 | 1x US Los Angeles 2
+  - 11|🇺🇸美国 03 | 1x US Washington 2
+  - 11|🇺🇸美国 04 | 1x US Honolulu 2
+  - 11|🇺🇸美国 05 | 1x US New Jersey 2
+  - 11|🇬🇧英国家宽 01 | 1x UK 2
+  - 11|🇹🇭泰国01  | 1x TH 2
+  - 11|🇲🇾马来西亚01 | 1x MY 2
+  - 11|🇮🇳印度 01 | 1x IN 2
+  - 11|🇦🇺澳大利亚 01 | 1x AU 2
+  - 11|🇨🇦加拿大 01 | 1x CA 2
+  - 11|🇩🇪德国 01 | 1x DE 2
+  - 11|🇷🇺俄罗斯 01 | 1x RU 2
+  - 11|🇹🇷土耳其 01 | 1x TR 2
+  - 11|🇺🇦乌克兰 01 | 1x UA 2
+  - 11|🇻🇳越南 01 | 1x VN 2
+  - 11|🇧🇷巴西 01 | 1x BR 2
+  - 13|🇭🇰 香港|@ripaojiedian 2
+  - 13|🇭🇰 香港2|@ripaojiedian 2
+  - 13|🇭🇰 香港3|@ripaojiedian 2
+  - 13|🇭🇰 香港4|@ripaojiedian 2
+  - 13,14|香港5|@ripaojiedian 2
+  - 13|🇭🇰 香港R|@ripaojiedian 2
+  - 13,14|台湾|@ripaojiedian 2
+  - 13,14|日本3|@ripaojiedian 2
+  - 13,14|新加坡|@ripaojiedian 2
+  - 13|🇸🇬 新加坡2|@ripaojiedian 2
+  - 13|🇰🇷 韩国|@ripaojiedian 2
+  - 13,14|韩国2|@ripaojiedian 2
+  - 13|🇺🇸 美国|@ripaojiedian 2
+  - 13,14|美国2|@ripaojiedian 2
+  - 13|🇺🇸 美国3|@ripaojiedian 2
+  - 13,14|美国4|@ripaojiedian 2
+  - 13|🇺🇸 美国5|@ripaojiedian 2
+  - 13,14|美国6|@ripaojiedian 2
+  - 13|🇸🇬 狮城特殊|@ripaojiedian 2
+  - 13|🇯🇵 日本特殊|@ripaojiedian 2
+  - 13|🇰🇷 韩国特殊|@ripaojiedian 2
+  - 13|🇬🇧 英国|@ripaojiedian 2
+  - 13|🇩🇪 德国|@ripaojiedian 2
+  - 14|香港|@ripaojiedian 2
+  - 14|香港2|@ripaojiedian 2
+  - 14|香港3|@ripaojiedian 2
+  - 14|香港4|@ripaojiedian 2
+  - 14|香港R|@ripaojiedian 2
+  - 14|新加坡2|@ripaojiedian 2
+  - 14|韩国|@ripaojiedian 2
+  - 14|美国|@ripaojiedian 2
+  - 14|美国3|@ripaojiedian 2
+  - 14|美国5|@ripaojiedian 2
+  - 14|狮城特殊|@ripaojiedian 2
+  - 14|日本特殊|@ripaojiedian 2
+  - 14|韩国特殊|@ripaojiedian 2
+  - 14|英国|@ripaojiedian 2
+  - 14|德国|@ripaojiedian 2
+  - 15|HK_speednode_0179 2
+  - 15|HK_speednode_0180 2
+  - 15|US_speednode_0339 2
+  - 15|US_speednode_0343 2
+  - '16|d*********g.com_2 #3 2'
   type: select
 rules:
 - DOMAIN-SUFFIX,local,🎯 全球直连
