@@ -1,4 +1,5 @@
 import re
+import uuid
 from pprint import pprint
 import requests
 import yaml
@@ -88,13 +89,17 @@ def download_yaml():
     """
     下载 YAML 文件
     """
-    # 替换 cipher 配置
+
     def replace_cipher(data):
+
         for config in data.get('proxies', []):
             if config.get('type') == 'ss':
                 config['cipher'] = 'aes-128-gcm'
 
-    # 去重函数
+        data['proxies'] = [proxy for proxy in data.get('proxies', []) if proxy.get('network') != 'grpc']
+
+        return data
+
     def remove_duplicates(data):
         if isinstance(data, dict):
             unique_data = {}
@@ -115,50 +120,77 @@ def download_yaml():
         return data
 
     def fix_yaml_errors(yaml_content):
-        """
-        移除 YAML 文件中所有的 '!<str>' 标签，并将值保留为普通的字符串。
-        """
-        # 使用正则表达式移除 `!<str>` 标签
-        # 查找 password: !<str> value 并将其替换为 password: value
         yaml_content = re.sub(r'!<str>\s*', '', yaml_content)
+        return yaml_content
 
-        with open('config.yaml', 'w', encoding='utf-8') as f:
-            f.write(yaml_content)
+    def is_valid_uuid(uuid_to_test, version=4):
+        uuid_regex = re.compile(r'^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$',
+                                re.IGNORECASE)
+        if not uuid_regex.match(uuid_to_test):
+            return False
+        try:
+            uuid_obj = uuid.UUID(uuid_to_test, version=version)
+        except ValueError:
+            return False
+        return str(uuid_obj) == uuid_to_test
+
+    def clear_invalid_uuid(data):
+        valid_proxies = []
+        for proxy in data.get('proxies', []):
+            uuid = proxy.get('uuid')
+            if uuid is None:
+                # print(f"代理没有 UUID，代理名称: {proxy.get('name')}")
+                continue
+            if is_valid_uuid(uuid):
+                valid_proxies.append(proxy)
+            # else:
+            #     print(f"无效 UUID: {uuid}，代理名称: {proxy.get('name')}")
+        data['proxies'] = valid_proxies
+        return data
+
+    def checkbox_config(data):
+        # 获取现有的代理名称列表
+        proxy_list = data.get("proxies", [])
+        proxies_name = []
+        for proxy in proxy_list:
+            if 'name' in proxy:
+                proxies_name.append(proxy['name'])
+        # 将排序后的 name 写入到 proxy-group 中
+        for group in data.get('proxy-groups', []):
+            if 'proxies' in group:
+                if 'proxies' in group:
+                    group['proxies'] = [name for name in proxies_name]
+        return data
 
     try:
-        urls = []
         with open('suburls', 'r') as f:
-            for url in f:
-                urls.append(url.strip())  # 去除行尾的换行符
-        # 使用 '|' 将多个URL连接
+            urls = [url.strip() for url in f]  # 去除行尾的换行符
+
         joined_urls = '|'.join(urls)
-        encode_url(joined_urls)
-        yaml_url = 'http://10.35.26.42:25500/sub?target=clash&url=' + encode_url(joined_urls)
+        yaml_url = f'http://127.0.0.1:25500/sub?target=clash&url={joined_urls}'
         response = requests.get(yaml_url)
+
         if response.status_code == 200:
-            # 下载节点保存到本地
             with open('config.yaml', 'w', encoding='utf-8') as f:
                 f.write(response.text)
                 print("YAML 文件已下载到本地: config.yaml")
-            # 读取节点解析 YAML 文件
-            with open('config.yaml', 'r', encoding='utf-8') as file:
-                yaml_content = file.read()
-                # 修复 YAML 内容中的常见错误
-                fix_yaml_errors(yaml_content)
 
             with open('config.yaml', 'r', encoding='utf-8') as file:
-                data = yaml.safe_load(file)
-                # 替换 cipher 配置 cipher: aes-128-gcm
-                # pprint(data)
-                replace_cipher(data)
-                # 删除重复节点
-                remove_duplicates(data)
+                yaml_content = fix_yaml_errors(file.read())
+                data = yaml.safe_load(yaml_content)
+                data = replace_cipher(data)
+                data = remove_duplicates(data)
+                data = clear_invalid_uuid(data)
+                # to_remove 是全局变量，传入 checkbox_config
+                data = checkbox_config(data)
                 with open('config.yaml', 'w', encoding='utf-8') as file:
                     yaml.dump(data, file, default_flow_style=False, allow_unicode=True)
                     print("YAML 修正后保存: config.yaml")
-                    return data
+                    # return data
+                return data
         else:
             raise Exception(f"无法下载 YAML 文件: {response.status_code}")
+
     except Exception as e:
         print(f"下载 YAML 文件时出错: {e}")
         return None
@@ -255,7 +287,7 @@ def run_tests_in_parallel():
     # 获取所有代理节点并测试延迟
     proxies = get_proxies()
     try:
-        with ThreadPoolExecutor(max_workers=5) as executor:
+        with ThreadPoolExecutor(max_workers=10) as executor:
             # 提交所有任务
             futures = [executor.submit(test_proxy_delay, proxy_name) for proxy_name in proxies['proxies']]
 
@@ -282,10 +314,6 @@ def start_latency_testing():
     time.sleep(2)
     # 按延迟从小到大排序
     sorted_delays = sorted(delay_results, key=lambda x: x[1])
-    # 要删除的元素列表（只检查第一个元素）
-    to_remove = ['🌍 国外媒体', '🔰 节点选择', '🍎 苹果服务', '🎥 NETFLIX', '🐟 漏网之鱼', '♻️ 自动选择', '🌏 国内媒体',
-                 '📲 电报信息', '🚫 运营劫持', '🛑 全球拦截', '⛔️ 广告拦截', '🎯 全球直连', '🔰 节点选择', 'Ⓜ️ 微软服务',
-                 'GLOBAL', 'DIRECT', 'REJECT']
     # 使用列表推导式删除指定的元素
     proxy_list = [item for item in sorted_delays if item[0] not in to_remove]
     pprint(proxy_list)
@@ -307,13 +335,13 @@ def switch_proxy(proxy_name):
     }
 
     try:
-        response = requests.put(url, json=data)
+        response = requests.put(url, json=data, timeout=5)
         # 检查响应状态
         if response.status_code == 204:  # Clash API 切换成功返回 204 No Content
-            print(f"\nSwitched to proxy '{proxy_name}' in selector '🔰 节点选择' successfully.")
+            # print(f"\nSwitched to proxy '{proxy_name}' in selector '🔰 节点选择' successfully.")
             return {"status": "success", "message": f"Switched to proxy '{proxy_name}'."}
         else:
-            print(f"Failed to switch proxy. HTTP status code: {response.status_code}")
+            # print(f"Failed to switch proxy. HTTP status code: {response.status_code}")
             return response.json()
     except Exception as e:
         print(f"Error occurred: {e}")
@@ -346,12 +374,16 @@ def test_proxy_speed(proxy_name):
 
     # 不断发起请求直到达到时间限制
     while time.time() - start_time < test_duration:
-        response = requests.get(test_url, stream=True, proxies=proxies, timeout=test_duration)
-        for data in response.iter_content(chunk_size=524288):
-            total_length += len(data)
-            if time.time() - start_time >= test_duration:
-                break
-        # time.sleep(0.5)  # 引入短暂的延迟，防止过快完成
+        try:
+            response = requests.get(test_url, stream=True, proxies=proxies, timeout=test_duration)
+            for data in response.iter_content(chunk_size=524288):
+                total_length += len(data)
+                if time.time() - start_time >= test_duration:
+                    break
+            # time.sleep(0.5)  # 引入短暂的延迟，防止过快完成
+        except Exception as e:
+            print(f"测试节点 {proxy_name} 下载失败: {e}")
+
 
     # 逐块下载，直到达到 10MB 为止
     # max_size = 10 * 1024 * 1024  # 50MB 转换为字节
@@ -366,7 +398,7 @@ def test_proxy_speed(proxy_name):
     speed = total_length / elapsed_time if elapsed_time > 0 else 0
 
     # 返回下载速度（MB/s）
-    print(f"Testing proxy: {proxy_name}")
+    print(f"\nTesting proxy: {proxy_name}")
     print(f"Total downloaded: {total_length} bytes in {elapsed_time:.2f} seconds.")
     print(f"Average speed: {speed / 1024 / 1024:.2f} MB/s")
 
@@ -376,19 +408,20 @@ def test_proxy_speed(proxy_name):
 
 # 测试所有代理节点的下载速度，并排序结果
 def test_all_proxies():
-    proxies = get_proxies()
-    proxy_names = proxies.get('proxies', {}).keys()
-
-    # 单线程节点速度下载测试
-    # try:
-    #     for proxy_name in proxy_names:
-    #         result = test_proxy_speed(proxy_name)
-    #         # 处理结果，例如输出或存储
-    # except Exception as e:
-    #     print(f"测试节点延迟时出错: {e}")
-
-    # 多线程节点速度下载测试
     try:
+        proxies = get_proxies()
+        proxy_names = proxies.get('proxies', {}).keys()
+
+        # 单线程节点速度下载测试
+        # try:
+        #     for proxy_name in proxy_names:
+        #         result = test_proxy_speed(proxy_name)
+        #         # 处理结果，例如输出或存储
+        # except Exception as e:
+        #     print(f"测试节点延迟时出错: {e}")
+
+        # 多线程节点速度下载测试
+
         with ThreadPoolExecutor(max_workers=5) as executor:
             # 提交所有任务
             futures = [executor.submit(test_proxy_speed, proxy_name) for proxy_name in proxy_names]
@@ -398,7 +431,7 @@ def test_all_proxies():
                 try:
                     result = future.result()  # 获取任务结果
                 except Exception as e:
-                    print(f"任务发生异常: {e}")
+                    print(f"任务发生异常: proxy timed out")
     except Exception as e:
         print(f"并发测试节点延迟时出错: {e}")
 
@@ -462,10 +495,6 @@ def start_download_test(speed_limit):
     # 按下载速度从大到小排序
     sorted_list = sorted(filtered_list, key=lambda x: float(x[1]), reverse=True)
 
-    # 要删除的元素列表（只检查第一个元素）
-    to_remove = ['🌍 国外媒体', '🔰 节点选择', '🍎 苹果服务', '🎥 NETFLIX', '🐟 漏网之鱼', '♻️ 自动选择', '🌏 国内媒体',
-                 '📲 电报信息', '🚫 运营劫持', '🛑 全球拦截', '⛔️ 广告拦截', '🎯 全球直连', '🔰 节点选择', 'Ⓜ️ 微软服务',
-                 'GLOBAL', 'DIRECT', 'REJECT']
     # 使用列表推导式删除指定的元素
     proxy_list = [item for item in sorted_list if item[0] not in to_remove]
     pprint(proxy_list)
@@ -484,6 +513,10 @@ def start_download_test(speed_limit):
 
 if __name__ == '__main__':
     print('YAML 文件开始下载。。。。。')
+    # 要删除的元素列表（只检查第一个元素）
+    to_remove = ['🌍 国外媒体', '🔰 节点选择', '🍎 苹果服务', '🎥 NETFLIX', '🐟 漏网之鱼', '♻️ 自动选择', '🌏 国内媒体',
+                 '📲 电报信息', '🚫 运营劫持', '🛑 全球拦截', '⛔️ 广告拦截', '🎯 全球直连', '🔰 节点选择', 'Ⓜ️ 微软服务',
+                 'GLOBAL', 'DIRECT', 'REJECT']
     # 定义 Clash API 地址
     clash_api_url = 'http://127.0.0.1:9090'
     # 存储所有节点的延迟测试结果
@@ -499,7 +532,7 @@ if __name__ == '__main__':
     # 存储所有节点的速度测试结果
     results_speed = []
     # 下载速度限制 单位 MB/s
-    speed_limit = 0.2
+    speed_limit = 0.1
     # 开始下载测试
     start_download_test(speed_limit)
     kill_clash_process()
