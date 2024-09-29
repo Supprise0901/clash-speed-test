@@ -29,7 +29,7 @@ def push_github():
 def job():
     print(f'\n在{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}开始执行\n')
     if run_main_script():
-        push_github()
+        # push_github()
         print(f'\n在{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}执行结束')
 
 
