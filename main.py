@@ -167,7 +167,10 @@ def download_yaml():
             urls = [url.strip() for url in f]  # 去除行尾的换行符
 
         joined_urls = '|'.join(urls)
-        yaml_url = f'http://127.0.0.1:25500/sub?target=clash&url={joined_urls}'
+        # 本地下载
+        # yaml_url = f'http://127.0.0.1:25500/sub?target=clash&url={joined_urls}'
+        # 容器下载
+        yaml_url = f'http://10.35.26.42:25500/sub?target=clash&url={joined_urls}'
         response = requests.get(yaml_url)
 
         if response.status_code == 200:
@@ -523,7 +526,6 @@ if __name__ == '__main__':
     delay_results = []
     # 开始延迟测试
     start_latency_testing()
-
     # 节点延迟测试等待5秒钟以便 Clash 内核启动下载测试
     time.sleep(5)
     # 测试文件 URL

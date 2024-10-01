@@ -27,10 +27,14 @@ def push_github():
 
 
 def job():
+    start_time = time.time()
     print(f'\n在{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}开始执行\n')
     if run_main_script():
         # push_github()
         print(f'\n在{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}执行结束')
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print(f"收集节点共耗时: {execution_time:.2f} 秒\n")
 
 
 if __name__ == '__main__':

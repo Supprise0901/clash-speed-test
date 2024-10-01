@@ -4,342 +4,15 @@ log-level: info
 mode: Rule
 port: 7890
 proxies:
-- alterId: 64
-  cipher: auto
-  name: 14|美国|@ripaojiedian
-  port: 52112
-  server: 183.236.51.23
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 64
-  cipher: auto
-  name: 美国|@ripaojiedian
-  port: 52112
-  server: 183.236.51.23
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 64
-  cipher: auto
-  name: 13|🇺🇸 美国|@ripaojiedian
-  port: 52112
-  server: 183.236.51.23
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: 13,14|美国6|@ripaojiedian
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13019
-  server: naiu-us.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- name: 15|US_speednode_0343 2
-  network: ws
-  password: 95b
-  port: 10511
-  server: 65.75.194.43
-  skip-cert-verify: true
-  sni: 2022585a-86a7-4231-b3a0-eeda14f77f4d.8f18237c-8e5f-4ffb-a434-1b2948c87be3.ddnsfree.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: 2022585a-86a7-4231-b3a0-eeda14f77f4d.8f18237c-8e5f-4ffb-a434-1b2948c87be3.ddnsfree.com
-    path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
 - alterId: 0
   cipher: auto
-  name: 2|d*********g.com_0
-  network: ws
-  port: 2086
-  server: 104.19.51.232
-  servername: ip006.freegradely.xyz
-  tls: false
-  type: vmess
-  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
-  ws-opts:
-    headers:
-      Host: ip006.freegradely.xyz
-    path: github.com/Alvin9999
-- name: 13,14|日本3|@ripaojiedian
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13011
-  server: naiu-jp.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- name: 15|US_speednode_0343
-  network: ws
-  password: 95b
-  port: 10511
-  server: 65.75.194.43
-  skip-cert-verify: true
-  sni: 2022585a-86a7-4231-b3a0-eeda14f77f4d.8f18237c-8e5f-4ffb-a434-1b2948c87be3.ddnsfree.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: 2022585a-86a7-4231-b3a0-eeda14f77f4d.8f18237c-8e5f-4ffb-a434-1b2948c87be3.ddnsfree.com
-    path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
-- name: 15|US_speednode_0339
-  network: ws
-  password: 95b
-  port: 443
-  server: 43.153.103.203
-  skip-cert-verify: true
-  sni: 15212712-20f5-40a5-b9aa-8363e0130171.ee137666-1e0a-46db-bbd6-cc18f9841234.accesscam.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: 15212712-20f5-40a5-b9aa-8363e0130171.ee137666-1e0a-46db-bbd6-cc18f9841234.accesscam.org
-    path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
-- alterId: 0
-  cipher: auto
-  name: 2|d*********g.com_2
-  network: ws
-  port: 2086
-  server: 104.16.148.244
-  servername: ip006.freegradely.xyz
-  tls: false
-  type: vmess
-  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
-  ws-opts:
-    headers:
-      Host: ip006.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 美国2|@ripaojiedian 2
-  network: ws
-  port: 2086
-  server: 104.26.0.56
+  name: 香港5|@ripaojiedian
+  port: 44826
+  server: ambxxid02hk.dorabbb.top
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 2|d*********g.com_1
-  network: ws
-  port: 2086
-  server: 23.227.38.5
-  servername: ip006.freegradely.xyz
-  tls: false
-  type: vmess
-  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
-  ws-opts:
-    headers:
-      Host: ip006.freegradely.xyz
-    path: github.com/Alvin9999
-- name: 韩国2|@ripaojiedian
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13036
-  server: naiu-other.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 美国2|@ripaojiedian
-  network: ws
-  port: 2086
-  server: 104.26.0.56
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 13,14|美国2|@ripaojiedian
-  network: ws
-  port: 2086
-  server: 104.26.0.56
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- name: 日本3|@ripaojiedian
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13011
-  server: naiu-jp.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- name: 13,14|韩国2|@ripaojiedian
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13036
-  server: naiu-other.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 2|d*********g.com_0 2
-  network: ws
-  port: 2086
-  server: 104.19.51.232
-  servername: ip006.freegradely.xyz
-  tls: false
-  type: vmess
-  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
-  ws-opts:
-    headers:
-      Host: ip006.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 2|d*********g.com_1 2
-  network: ws
-  port: 2086
-  server: 23.227.38.5
-  servername: ip006.freegradely.xyz
-  tls: false
-  type: vmess
-  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
-  ws-opts:
-    headers:
-      Host: ip006.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 13,14|美国2|@ripaojiedian 2
-  network: ws
-  port: 2086
-  server: 104.26.0.56
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- name: 15|HK_speednode_0180
-  network: ws
-  password: 95b
-  port: 443
-  server: aliyun.2096.us.kg
-  skip-cert-verify: true
-  sni: 68123106-3e43-4958-b75a-b06e81eabf79.50d88e28-a870-497d-bf87-c20fb6802871.camdvr.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: 68123106-3e43-4958-b75a-b06e81eabf79.50d88e28-a870-497d-bf87-c20fb6802871.camdvr.org
-    path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
-- name: 15|HK_speednode_0180 2
-  network: ws
-  password: 95b
-  port: 443
-  server: aliyun.2096.us.kg
-  skip-cert-verify: true
-  sni: 68123106-3e43-4958-b75a-b06e81eabf79.50d88e28-a870-497d-bf87-c20fb6802871.camdvr.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: 68123106-3e43-4958-b75a-b06e81eabf79.50d88e28-a870-497d-bf87-c20fb6802871.camdvr.org
-    path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
-- alterId: 64
-  cipher: auto
-  name: 13|🇺🇸 美国5|@ripaojiedian
-  port: 58831
-  server: 120.232.153.27
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 0
-  cipher: auto
-  name: 2|d*********g.com_3 2
-  network: ws
-  port: 2086
-  server: 104.19.38.62
-  servername: ip006.freegradely.xyz
-  tls: false
-  type: vmess
-  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
-  ws-opts:
-    headers:
-      Host: ip006.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 2|d*********g.com_3
-  network: ws
-  port: 2086
-  server: 104.19.38.62
-  servername: ip006.freegradely.xyz
-  tls: false
-  type: vmess
-  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
-  ws-opts:
-    headers:
-      Host: ip006.freegradely.xyz
-    path: github.com/Alvin9999
-- name: 新加坡|@ripaojiedian 2
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13027
-  server: naiu-sg.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- name: 13,14|新加坡|@ripaojiedian 2
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13027
-  server: naiu-sg.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- name: 13,14|新加坡|@ripaojiedian
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13027
-  server: naiu-sg.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- name: 新加坡|@ripaojiedian
-  password: c471ef32-798d-40a0-a57c-acf3475a204e
-  port: 13027
-  server: naiu-sg.05vr9nyqg5.download
-  skip-cert-verify: false
-  sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- alterId: 64
-  cipher: auto
-  name: 14|香港4|@ripaojiedian
-  port: 35601
-  server: 120.232.153.40
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: 15|HK_speednode_0179
-  network: ws
-  password: 95b
-  port: 443
-  server: aliyun.2096.us.kg
-  skip-cert-verify: true
-  sni: 30388d70-6f5c-4d7c-8daa-9d3df7c5c526.9150e878-8296-4798-a172-c3fe66b8dee5.ddnsgeek.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: 30388d70-6f5c-4d7c-8daa-9d3df7c5c526.9150e878-8296-4798-a172-c3fe66b8dee5.ddnsgeek.com
-    path: /trojan-6qo.pages.dev/?ed=2560?ed=2560
-- alterId: 64
-  cipher: auto
-  name: 13|🇭🇰 香港4|@ripaojiedian
-  port: 35601
-  server: 120.232.153.40
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 0b411754-172d-406c-95fb-7ee650a5b9ad
 - alterId: 64
   cipher: auto
   name: 美国5|@ripaojiedian
@@ -349,476 +22,170 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 64
+  cipher: auto
+  name: 香港4|@ripaojiedian
+  port: 35601
+  server: 120.232.153.40
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: 加拿大 017
+  network: ws
+  port: 2086
+  server: 104.19.47.77
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip14.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: SG-103.14.92.61-254
+  port: 12953
+  server: 63.lwdh.us
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: a32313ad-5e39-4f9a-9cad-512041790050
+- alterId: 0
+  cipher: auto
+  name: RELAY-104.19.45.245-181
+  network: ws
+  port: 2095
+  server: 104.19.45.245
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  ws-opts:
+    headers:
+      Host: onea.flha.ru
+    path: /
 proxy-groups:
 - name: 🔰 节点选择
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: select
 - interval: 300
   name: ♻️ 自动选择
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: url-test
   url: http://www.gstatic.com/generate_204
 - name: 🎥 NETFLIX
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: select
 - name: ⛔️ 广告拦截
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: select
 - name: 🚫 运营劫持
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: select
 - name: 🌍 国外媒体
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: select
 - name: 🌏 国内媒体
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: select
 - name: 📲 电报信息
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: select
 - name: 🍎 苹果服务
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: select
 - name: 🎯 全球直连
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: select
 - name: 🛑 全球拦截
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: select
 - name: 🐟 漏网之鱼
   proxies:
-  - 14|美国|@ripaojiedian
-  - 美国|@ripaojiedian
-  - 13|🇺🇸 美国|@ripaojiedian
-  - 13,14|美国6|@ripaojiedian
-  - 15|US_speednode_0343 2
-  - 2|d*********g.com_0
-  - 13,14|日本3|@ripaojiedian
-  - 15|US_speednode_0343
-  - 15|US_speednode_0339
-  - 2|d*********g.com_2
-  - 美国2|@ripaojiedian 2
-  - 2|d*********g.com_1
-  - 韩国2|@ripaojiedian
-  - 美国2|@ripaojiedian
-  - 13,14|美国2|@ripaojiedian
-  - 日本3|@ripaojiedian
-  - 13,14|韩国2|@ripaojiedian
-  - 2|d*********g.com_0 2
-  - 2|d*********g.com_1 2
-  - 13,14|美国2|@ripaojiedian 2
-  - 15|HK_speednode_0180
-  - 15|HK_speednode_0180 2
-  - 13|🇺🇸 美国5|@ripaojiedian
-  - 2|d*********g.com_3 2
-  - 2|d*********g.com_3
-  - 新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian 2
-  - 13,14|新加坡|@ripaojiedian
-  - 新加坡|@ripaojiedian
-  - 14|香港4|@ripaojiedian
-  - 15|HK_speednode_0179
-  - 13|🇭🇰 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   - 美国5|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 加拿大 017
+  - SG-103.14.92.61-254
+  - RELAY-104.19.45.245-181
   type: select
 rules:
 - DOMAIN-SUFFIX,local,🎯 全球直连
@@ -918,7 +285,6 @@ rules:
 - DOMAIN,update.googleapis.com,🎯 全球直连
 - DOMAIN,dl.google.com,🎯 全球直连
 - DOMAIN,dl.l.google.com,🎯 全球直连
-- DOMAIN,update.googleapis.com,🎯 全球直连
 - DOMAIN,mtalk.google.com,🎯 全球直连
 - DOMAIN,alt1-mtalk.google.com,🎯 全球直连
 - DOMAIN,alt2-mtalk.google.com,🎯 全球直连
@@ -9576,235 +8942,43 @@ rules:
 - IP-CIDR,220.115.251.25/32,🛑 全球拦截,no-resolve
 - IP-CIDR,222.73.156.235/32,🛑 全球拦截,no-resolve
 - IP-CIDR,188.89.204.198/32,🛑 全球拦截,no-resolve
-- DOMAIN-SUFFIX,17gouwuba.com,🛑 全球拦截
-- DOMAIN-SUFFIX,186078.com,🛑 全球拦截
 - DOMAIN-SUFFIX,189key.com,🛑 全球拦截
-- DOMAIN-SUFFIX,189zj.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,285680.com,🛑 全球拦截
-- DOMAIN-SUFFIX,3721zh.com,🛑 全球拦截
-- DOMAIN-SUFFIX,4336wang.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,51chumoping.com,🛑 全球拦截
-- DOMAIN-SUFFIX,51mld.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,51mypc.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,58mingri.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,58mingtian.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,5vl58stm.com,🛑 全球拦截
-- DOMAIN-SUFFIX,6d63d3.com,🛑 全球拦截
-- DOMAIN-SUFFIX,7gg.cc,🛑 全球拦截
-- DOMAIN-SUFFIX,91veg.com,🛑 全球拦截
-- DOMAIN-SUFFIX,9s6q.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,adsame.com,🛑 全球拦截
-- DOMAIN-SUFFIX,akuai.top,🛑 全球拦截
-- DOMAIN-SUFFIX,atplay.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,baiwanchuangyi.com,🛑 全球拦截
-- DOMAIN-SUFFIX,beerto.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,beilamusi.com,🛑 全球拦截
-- DOMAIN-SUFFIX,benshiw.net,🛑 全球拦截
-- DOMAIN-SUFFIX,bianxianmao.com,🛑 全球拦截
 - DOMAIN-SUFFIX,bkyhq.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,bryonypie.com,🛑 全球拦截
-- DOMAIN-SUFFIX,cishantao.com,🛑 全球拦截
-- DOMAIN-SUFFIX,cszlks.com,🛑 全球拦截
-- DOMAIN-SUFFIX,cudaojia.com,🛑 全球拦截
-- DOMAIN-SUFFIX,dafapromo.com,🛑 全球拦截
-- DOMAIN-SUFFIX,daitdai.com,🛑 全球拦截
-- DOMAIN-SUFFIX,dsaeerf.com,🛑 全球拦截
-- DOMAIN-SUFFIX,dugesheying.com,🛑 全球拦截
-- DOMAIN-SUFFIX,dv8c1t.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,echatu.com,🛑 全球拦截
-- DOMAIN-SUFFIX,erdoscs.com,🛑 全球拦截
-- DOMAIN-SUFFIX,fan-yong.com,🛑 全球拦截
-- DOMAIN-SUFFIX,feih.com.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,fjlqqc.com,🛑 全球拦截
-- DOMAIN-SUFFIX,fkku194.com,🛑 全球拦截
-- DOMAIN-SUFFIX,freedrive.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,gclick.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,goufanli100.com,🛑 全球拦截
-- DOMAIN-SUFFIX,goupaoerdai.com,🛑 全球拦截
-- DOMAIN-SUFFIX,gouwubang.com,🛑 全球拦截
 - DOMAIN-SUFFIX,gscxs.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,gzxnlk.com,🛑 全球拦截
-- DOMAIN-SUFFIX,haoshengtoys.com,🛑 全球拦截
 - DOMAIN-SUFFIX,hbssjd.cn,🛑 全球拦截
 - DOMAIN-SUFFIX,hyunke.com,🛑 全球拦截
-- DOMAIN-SUFFIX,ichaosheng.com,🛑 全球拦截
-- DOMAIN-SUFFIX,ishop789.com,🛑 全球拦截
-- DOMAIN-SUFFIX,jdkic.com,🛑 全球拦截
-- DOMAIN-SUFFIX,jiubuhua.com,🛑 全球拦截
 - DOMAIN-SUFFIX,jsncke.com,🛑 全球拦截
 - DOMAIN-SUFFIX,junkucm.com,🛑 全球拦截
-- DOMAIN-SUFFIX,jwg365.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,kawo77.com,🛑 全球拦截
-- DOMAIN-SUFFIX,kualianyingxiao.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,kumihua.com,🛑 全球拦截
-- DOMAIN-SUFFIX,ltheanine.cn,🛑 全球拦截
 - DOMAIN-SUFFIX,lvehaisen.com,🛑 全球拦截
-- DOMAIN-SUFFIX,maipinshangmao.com,🛑 全球拦截
-- DOMAIN-SUFFIX,minisplat.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,mkitgfs.com,🛑 全球拦截
-- DOMAIN-SUFFIX,mlnbike.com,🛑 全球拦截
-- DOMAIN-SUFFIX,mobjump.com,🛑 全球拦截
-- DOMAIN-SUFFIX,nbkbgd.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,newapi.com,🛑 全球拦截
-- DOMAIN-SUFFIX,pinzhitmall.com,🛑 全球拦截
-- DOMAIN-SUFFIX,poppyta.com,🛑 全球拦截
-- DOMAIN-SUFFIX,qianchuanghr.com,🛑 全球拦截
-- DOMAIN-SUFFIX,qichexin.com,🛑 全球拦截
-- DOMAIN-SUFFIX,qinchugudao.com,🛑 全球拦截
-- DOMAIN-SUFFIX,quanliyouxi.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,qutaobi.com,🛑 全球拦截
-- DOMAIN-SUFFIX,ry51w.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,sg536.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,sifubo.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,sifuce.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,sifuda.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,sifufu.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,sifuge.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,sifugu.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,sifuhe.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,sifuhu.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,sifuji.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,sifuka.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,smgru.net,🛑 全球拦截
-- DOMAIN-SUFFIX,taoggou.com,🛑 全球拦截
-- DOMAIN-SUFFIX,tcxshop.com,🛑 全球拦截
-- DOMAIN-SUFFIX,tjqonline.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,topitme.com,🛑 全球拦截
 - DOMAIN-SUFFIX,tt114.net,🛑 全球拦截
-- DOMAIN-SUFFIX,tt3sm4.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,tuia.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,tuipenguin.com,🛑 全球拦截
-- DOMAIN-SUFFIX,tuitiger.com,🛑 全球拦截
 - DOMAIN-SUFFIX,urlaw.cn,🛑 全球拦截
 - DOMAIN-SUFFIX,urlet.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,websd8.com,🛑 全球拦截
 - DOMAIN-SUFFIX,wsgblw.com,🛑 全球拦截
-- DOMAIN-SUFFIX,wx16999.com,🛑 全球拦截
 - DOMAIN-SUFFIX,xchmai.com,🛑 全球拦截
-- DOMAIN-SUFFIX,xiaohuau.xyz,🛑 全球拦截
 - DOMAIN-SUFFIX,ygyzx.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,yinmong.com,🛑 全球拦截
-- DOMAIN-SUFFIX,yitaopt.com,🛑 全球拦截
-- DOMAIN-SUFFIX,yjqiqi.com,🛑 全球拦截
-- DOMAIN-SUFFIX,yukhj.com,🛑 全球拦截
-- DOMAIN-SUFFIX,zhaozecheng.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,zhenxinet.com,🛑 全球拦截
-- DOMAIN-SUFFIX,zlne800.com,🛑 全球拦截
 - DOMAIN-SUFFIX,zmlled.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,zunmi.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,zzd6.com,🛑 全球拦截
-- IP-CIDR,39.107.15.115/32,🛑 全球拦截,no-resolve
-- IP-CIDR,47.89.59.182/32,🛑 全球拦截,no-resolve
-- IP-CIDR,103.49.209.27/32,🛑 全球拦截,no-resolve
-- IP-CIDR,123.56.152.96/32,🛑 全球拦截,no-resolve
-- IP-CIDR,61.160.200.223/32,🛑 全球拦截,no-resolve
-- IP-CIDR,61.160.200.242/32,🛑 全球拦截,no-resolve
-- IP-CIDR,61.160.200.252/32,🛑 全球拦截,no-resolve
-- IP-CIDR,61.174.50.214/32,🛑 全球拦截,no-resolve
-- IP-CIDR,111.175.220.163/32,🛑 全球拦截,no-resolve
-- IP-CIDR,111.175.220.164/32,🛑 全球拦截,no-resolve
 - IP-CIDR,122.229.8.47/32,🛑 全球拦截,no-resolve
 - IP-CIDR,122.229.29.89/32,🛑 全球拦截,no-resolve
-- IP-CIDR,124.232.160.178/32,🛑 全球拦截,no-resolve
-- IP-CIDR,175.6.223.15/32,🛑 全球拦截,no-resolve
-- IP-CIDR,183.59.53.237/32,🛑 全球拦截,no-resolve
-- IP-CIDR,218.93.127.37/32,🛑 全球拦截,no-resolve
-- IP-CIDR,221.228.17.152/32,🛑 全球拦截,no-resolve
-- IP-CIDR,221.231.6.79/32,🛑 全球拦截,no-resolve
-- IP-CIDR,222.186.61.91/32,🛑 全球拦截,no-resolve
-- IP-CIDR,222.186.61.95/32,🛑 全球拦截,no-resolve
-- IP-CIDR,222.186.61.96/32,🛑 全球拦截,no-resolve
-- IP-CIDR,222.186.61.97/32,🛑 全球拦截,no-resolve
-- IP-CIDR,106.75.231.48/32,🛑 全球拦截,no-resolve
-- IP-CIDR,119.4.249.166/32,🛑 全球拦截,no-resolve
-- IP-CIDR,220.196.52.141/32,🛑 全球拦截,no-resolve
-- IP-CIDR,221.6.4.148/32,🛑 全球拦截,no-resolve
-- IP-CIDR,114.247.28.96/32,🛑 全球拦截,no-resolve
 - IP-CIDR,120.240.95.37/32,🛑 全球拦截,no-resolve
-- IP-CIDR,221.179.131.72/32,🛑 全球拦截,no-resolve
-- IP-CIDR,221.179.140.145/32,🛑 全球拦截,no-resolve
-- IP-CIDR,115.182.16.79/32,🛑 全球拦截,no-resolve
-- IP-CIDR,118.144.88.126/32,🛑 全球拦截,no-resolve
-- IP-CIDR,118.144.88.215/32,🛑 全球拦截,no-resolve
-- IP-CIDR,118.144.88.216/32,🛑 全球拦截,no-resolve
-- IP-CIDR,120.76.189.132/32,🛑 全球拦截,no-resolve
-- IP-CIDR,124.14.21.147/32,🛑 全球拦截,no-resolve
-- IP-CIDR,124.14.21.151/32,🛑 全球拦截,no-resolve
-- IP-CIDR,180.166.52.24/32,🛑 全球拦截,no-resolve
-- IP-CIDR,211.161.101.106/32,🛑 全球拦截,no-resolve
 - IP-CIDR,211.161.101.110/32,🛑 全球拦截,no-resolve
-- IP-CIDR,220.115.251.25/32,🛑 全球拦截,no-resolve
-- IP-CIDR,222.73.156.235/32,🛑 全球拦截,no-resolve
 - IP-CIDR,114.119.160.0/21,🛑 全球拦截,no-resolve
 - DOMAIN-SUFFIX,kuaizip.com,🛑 全球拦截
-- DOMAIN-SUFFIX,mackeeper.com,🛑 全球拦截
 - DOMAIN-SUFFIX,zryydi.com,🛑 全球拦截
-- DOMAIN-SUFFIX,flash.cn,🛑 全球拦截
 - DOMAIN,geo2.adobe.com,🛑 全球拦截
-- DOMAIN-SUFFIX,4009997658.com,🛑 全球拦截
-- DOMAIN-SUFFIX,abbyychina.com,🛑 全球拦截
 - DOMAIN-SUFFIX,alienskins.cn,🛑 全球拦截
 - DOMAIN-SUFFIX,anydeskchina.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,bartender.cc,🛑 全球拦截
-- DOMAIN-SUFFIX,betterzip.net,🛑 全球拦截
 - DOMAIN-SUFFIX,betterzipcn.com,🛑 全球拦截
-- DOMAIN-SUFFIX,beyondcompare.cc,🛑 全球拦截
-- DOMAIN-SUFFIX,bingdianhuanyuan.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,chemdraw.com.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,cjmakeding.com,🛑 全球拦截
-- DOMAIN-SUFFIX,cjmkt.com,🛑 全球拦截
-- DOMAIN-SUFFIX,codesoftchina.com,🛑 全球拦截
-- DOMAIN-SUFFIX,coreldrawchina.com,🛑 全球拦截
-- DOMAIN-SUFFIX,crossoverchina.com,🛑 全球拦截
 - DOMAIN-SUFFIX,dongmansoft.com,🛑 全球拦截
 - DOMAIN-SUFFIX,earmasterchina.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,easyrecoverychina.com,🛑 全球拦截
-- DOMAIN-SUFFIX,ediuschina.com,🛑 全球拦截
-- DOMAIN-SUFFIX,flstudiochina.com,🛑 全球拦截
 - DOMAIN-SUFFIX,folxchina.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,formysql.com,🛑 全球拦截
-- DOMAIN-SUFFIX,guitarpro.cc,🛑 全球拦截
-- DOMAIN-SUFFIX,huishenghuiying.com.cn,🛑 全球拦截
 - DOMAIN-SUFFIX,hypeapp.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,hypersnap.net,🛑 全球拦截
-- DOMAIN-SUFFIX,iconworkshop.cn,🛑 全球拦截
 - DOMAIN-SUFFIX,idmchina.net,🛑 全球拦截
 - DOMAIN-SUFFIX,imazingchina.com,🛑 全球拦截
-- DOMAIN-SUFFIX,imindmap.cc,🛑 全球拦截
-- DOMAIN-SUFFIX,jihehuaban.com.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,keyshot.cc,🛑 全球拦截
-- DOMAIN-SUFFIX,kingdeecn.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,logoshejishi.com,🛑 全球拦截
 - DOMAIN-SUFFIX,luping.net.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,mairuan.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,mairuan.com,🛑 全球拦截
-- DOMAIN-SUFFIX,mairuan.com.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,mairuan.net,🛑 全球拦截
-- DOMAIN-SUFFIX,mairuanwang.com,🛑 全球拦截
-- DOMAIN-SUFFIX,makeding.com,🛑 全球拦截
-- DOMAIN-SUFFIX,mathtype.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,mindmanager.cc,🛑 全球拦截
 - DOMAIN-SUFFIX,mindmanager.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,mindmapper.cc,🛑 全球拦截
-- DOMAIN-SUFFIX,mycleanmymac.com,🛑 全球拦截
-- DOMAIN-SUFFIX,nicelabel.cc,🛑 全球拦截
-- DOMAIN-SUFFIX,ntfsformac.cc,🛑 全球拦截
-- DOMAIN-SUFFIX,ntfsformac.cn,🛑 全球拦截
 - DOMAIN-SUFFIX,officesoftcn.com,🛑 全球拦截
-- DOMAIN-SUFFIX,overturechina.com,🛑 全球拦截
-- DOMAIN-SUFFIX,passwordrecovery.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,pdfexpert.cc,🛑 全球拦截
 - DOMAIN-SUFFIX,photozoomchina.com,🛑 全球拦截
-- DOMAIN-SUFFIX,shankejingling.com,🛑 全球拦截
-- DOMAIN-SUFFIX,ultraiso.net,🛑 全球拦截
-- DOMAIN-SUFFIX,vegaschina.cn,🛑 全球拦截
 - DOMAIN-SUFFIX,xitongqingli.com,🛑 全球拦截
-- DOMAIN-SUFFIX,xmindchina.net,🛑 全球拦截
-- DOMAIN-SUFFIX,xshellcn.com,🛑 全球拦截
-- DOMAIN-SUFFIX,yihuifu.cn,🛑 全球拦截
-- DOMAIN-SUFFIX,yuanchengxiezuo.com,🛑 全球拦截
-- DOMAIN-SUFFIX,zbrushcn.com,🛑 全球拦截
-- DOMAIN-SUFFIX,zhzzx.com,🛑 全球拦截
 - DOMAIN-SUFFIX,netflix.com,🎥 NETFLIX
 - DOMAIN-SUFFIX,netflix.net,🎥 NETFLIX
 - DOMAIN-SUFFIX,nflxext.com,🎥 NETFLIX
@@ -9861,7 +9035,6 @@ rules:
 - DOMAIN,fls-na.amazon.com,🌍 国外媒体
 - DOMAIN,avodmp4s3ww-a.akamaihd.net,🌍 国外媒体
 - DOMAIN,d25xi40x97liuc.cloudfront.net,🌍 国外媒体
-- DOMAIN,dmqdd6hw24ucf.cloudfront.net,🌍 国外媒体
 - DOMAIN,dmqdd6hw24ucf.cloudfront.net,🌍 国外媒体
 - DOMAIN,d22qjgkvxw22r6.cloudfront.net,🌍 国外媒体
 - DOMAIN,d1v5ir2lpwr8os.cloudfront.net,🌍 国外媒体
@@ -10025,7 +9198,6 @@ rules:
 - DOMAIN-SUFFIX,tiktokv.com,🌍 国外媒体
 - DOMAIN-KEYWORD,tiktokcdn-,🌍 国外媒体
 - DOMAIN-SUFFIX,tver.jp,🌍 国外媒体
-- DOMAIN,edge.api.brightcove.com,🌍 国外媒体
 - DOMAIN-SUFFIX,viu.com,🌍 国外媒体
 - DOMAIN-SUFFIX,viu.tv,🌍 国外媒体
 - DOMAIN,api.viu.now.com,🌍 国外媒体
