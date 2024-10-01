@@ -6,111 +6,1322 @@ port: 7890
 proxies:
 - alterId: 0
   cipher: auto
-  name: 香港5|@ripaojiedian
-  port: 44826
-  server: ambxxid02hk.dorabbb.top
-  skip-cert-verify: false
+  name: 美国 CloudFlare节点 64
+  network: ws
+  port: 80
+  server: 172.64.229.209
   tls: false
   type: vmess
-  uuid: 0b411754-172d-406c-95fb-7ee650a5b9ad
+  uuid: 5820093a-bb7d-4e15-8575-1a529f2d8282
+  ws-opts:
+    headers:
+      Host: rn2.hostmjj.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: RELAY-172.64.229.209-215
+  network: ws
+  port: 80
+  server: 172.64.229.209
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 5820093a-bb7d-4e15-8575-1a529f2d8282
+  ws-opts:
+    headers:
+      Host: rn2.hostmjj.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 10
+  network: ws
+  port: 2086
+  server: 172.64.167.19
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 40
+  network: ws
+  port: 80
+  server: 162.159.136.106
+  tls: false
+  type: vmess
+  uuid: 5820093a-bb7d-4e15-8575-1a529f2d8282
+  ws-opts:
+    headers:
+      Host: rn2.hostmjj.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: RELAY-104.19.45.17-264
+  network: ws
+  port: 2086
+  server: 104.19.45.17
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip13.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: RELAY-162.159.129.138-234
+  network: ws
+  port: 80
+  server: 162.159.129.138
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 5820093a-bb7d-4e15-8575-1a529f2d8282
+  ws-opts:
+    headers:
+      Host: rn2.hostmjj.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 14
+  network: ws
+  port: 2086
+  server: 172.64.175.88
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip14.freegradely.xyz
+    path: github.com/Alvin9999
 - alterId: 64
   cipher: auto
-  name: 香港4|@ripaojiedian
-  port: 35601
-  server: 120.232.153.40
+  name: 11,16|美国5|@ripaojiedian
+  port: 58831
+  server: 120.232.153.27
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 33
+  network: ws
+  port: 2086
+  server: 172.64.167.15
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 64
+  cipher: auto
+  name: CN-120.232.153.27-228
+  port: 58831
+  server: 120.232.153.27
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: RELAY-104.19.32.216-205
+  network: ws
+  port: 2086
+  server: 104.19.32.216
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip14.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 23
+  network: ws
+  port: 2086
+  server: 104.19.38.12
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip14.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 5
+  network: ws
+  port: 2086
+  server: 172.64.166.28
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 20
+  network: ws
+  port: 2086
+  server: 172.64.166.9
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: RELAY-172.64.166.12-329
+  network: ws
+  port: 2086
+  server: 172.64.166.12
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: RELAY-104.19.32.88-285
+  network: ws
+  port: 2086
+  server: 104.19.32.88
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip5-4.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: RELAY-104.19.21.230-325
+  network: ws
+  port: 2086
+  server: 104.19.21.230
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip14.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: RELAY-172.64.166.32-202
+  network: ws
+  port: 2086
+  server: 172.64.166.32
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 56
+  network: ws
+  port: 2086
+  server: 104.19.45.15
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip13.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 加拿大 017
+  network: ws
+  port: 2086
+  server: 104.19.47.77
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip14.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: RELAY-104.19.46.42-333
+  network: ws
+  port: 2086
+  server: 104.19.46.42
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 32
+  network: ws
+  port: 2086
+  server: 172.64.167.35
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 加拿大 015
+  network: ws
+  port: 2086
+  server: 104.19.46.17
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip13.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 47
+  network: ws
+  port: 2086
+  server: skk.moe
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: RELAY-104.19.46.63-305
+  network: ws
+  port: 2086
+  server: 104.19.46.63
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip14.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 加拿大 003
+  network: ws
+  port: 2086
+  server: russia.com
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 88
+  network: ws
+  port: 2086
+  server: 162.159.140.77
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: RELAY-104.26.0.56-288
+  network: ws
+  port: 2086
+  server: 104.26.0.56
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip14.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: RELAY-172.67.75.172-238
+  network: ws
+  port: 2086
+  server: ip.sb
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 4
+  network: ws
+  port: 2086
+  server: 104.26.10.11
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: RELAY-172.67.70.92-179
+  network: ws
+  port: 2086
+  server: japan.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 2
+  network: ws
+  port: 2086
+  server: 104.26.5.57
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 Fastly全球Anycast节点 2
+  network: ws
+  port: 443
+  server: 151.101.66.219
+  servername: speedtest.net
+  tls: true
+  type: vmess
+  uuid: 507a9a57-6ec1-4978-a386-41d301369e34
+  ws-opts:
+    headers:
+      Host: Dbdjhiw72ebsu272hs519j.com
+    path: ws/?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 11|日本 东京Fastly节点
+  network: ws
+  port: 80
+  server: www.hkbu.edu.hk
+  tls: false
+  type: vmess
+  uuid: c0b05000-23dd-4de9-9041-ec130166ff1a
+  ws-opts:
+    headers:
+      Host: nmsl.kp
+    path: /aries?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 63
+  network: ws
+  port: 2086
+  server: 172.64.99.22
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip11.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 日本 东京Fastly节点
+  network: ws
+  port: 80
+  server: www.hkbu.edu.hk
+  tls: false
+  type: vmess
+  uuid: c0b05000-23dd-4de9-9041-ec130166ff1a
+  ws-opts:
+    headers:
+      Host: nmsl.kp
+    path: /aries?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 美国 Fastly全球Anycast节点
+  network: ws
+  port: 80
+  server: 151.101.195.10
+  tls: false
+  type: vmess
+  uuid: c0b05000-23dd-4de9-9041-ec130166ff1a
+  ws-opts:
+    headers:
+      Host: nmsl.kp
+    path: /aries?ed=2048
+- alterId: 0
+  cipher: auto
+  name: RELAY-104.19.47.65-241
+  network: ws
+  port: 2086
+  server: 104.19.47.65
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip11-2.freegradely.xyz
+    path: github.com/Alvin9999
+- alterId: 64
+  cipher: auto
+  name: 广东省广州市 移动
+  port: 58831
+  server: 120.232.153.27
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: RELAY-172.64.166.2-182
+  network: ws
+  port: 2086
+  server: 172.64.166.2
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 71
+  network: ws
+  port: 2086
+  server: 104.26.5.145
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts:
+    headers:
+      Host: ip1.1789034.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 85
+  network: ws
+  port: 2095
+  server: 104.19.45.242
+  tls: false
+  type: vmess
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  ws-opts:
+    headers:
+      Host: onea.flha.ru
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 加拿大 036
+  network: ws
+  port: 2095
+  server: 104.19.45.16
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  ws-opts:
+    headers:
+      Host: onea.flha.ru
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 瑞典 V2CROSS.COM
+  network: ws
+  port: 80
+  server: www.hkbu.edu.hk
+  tls: false
+  type: vmess
+  uuid: c0b05000-23dd-4de9-9041-ec130166ff1a
+  ws-opts:
+    headers:
+      Host: nmsl.kp
+    path: /aries?ed=2048
+- alterId: 0
+  cipher: auto
+  name: RELAY-104.19.45.135-265
+  network: ws
+  port: 2095
+  server: 104.19.45.135
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  ws-opts:
+    headers:
+      Host: onea.flha.ru
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国 CloudFlare节点 51
+  network: ws
+  port: 2082
+  server: 172.67.130.140
+  tls: false
+  type: vmess
+  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+  ws-opts:
+    headers:
+      Host: s1c.v2.v001sss.xyz
+    path: /
+- alterId: 64
+  cipher: auto
+  name: 美国5|@ripaojiedian
+  port: 58831
+  server: 120.232.153.27
   skip-cert-verify: false
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 0
   cipher: auto
-  name: SG-103.14.92.61-254
-  port: 12953
-  server: 63.lwdh.us
+  name: RELAY-104.19.45.245-200
+  network: ws
+  port: 2095
+  server: 104.19.45.245
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: a32313ad-5e39-4f9a-9cad-512041790050
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  ws-opts:
+    headers:
+      Host: onea.flha.ru
+    path: /
+- alterId: 0
+  cipher: auto
+  name: RELAY-104.19.45.243-271
+  network: ws
+  port: 2095
+  server: 104.19.45.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  ws-opts:
+    headers:
+      Host: onea.flha.ru
+    path: /
 proxy-groups:
 - name: 🔰 节点选择
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: select
 - interval: 300
   name: ♻️ 自动选择
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: url-test
   url: http://www.gstatic.com/generate_204
 - name: 🎥 NETFLIX
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: select
 - name: ⛔️ 广告拦截
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: select
 - name: 🚫 运营劫持
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: select
 - name: 🌍 国外媒体
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: select
 - name: 🌏 国内媒体
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: select
 - name: 📲 电报信息
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: select
 - name: 🍎 苹果服务
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: select
 - name: 🎯 全球直连
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: select
 - name: 🛑 全球拦截
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: select
 - name: 🐟 漏网之鱼
   proxies:
-  - 香港5|@ripaojiedian
-  - 香港4|@ripaojiedian
-  - SG-103.14.92.61-254
+  - 美国 CloudFlare节点 64
+  - RELAY-172.64.229.209-215
+  - 美国 CloudFlare节点 10
+  - 美国 CloudFlare节点 40
+  - RELAY-104.19.45.17-264
+  - RELAY-162.159.129.138-234
+  - 美国 CloudFlare节点 14
+  - 11,16|美国5|@ripaojiedian
+  - 美国 CloudFlare节点 33
+  - CN-120.232.153.27-228
+  - RELAY-104.19.32.216-205
+  - 美国 CloudFlare节点 23
+  - 美国 CloudFlare节点 5
+  - 美国 CloudFlare节点 20
+  - RELAY-172.64.166.12-329
+  - RELAY-104.19.32.88-285
+  - RELAY-104.19.21.230-325
+  - RELAY-172.64.166.32-202
+  - 美国 CloudFlare节点 56
+  - 加拿大 017
+  - RELAY-104.19.46.42-333
+  - 美国 CloudFlare节点 32
+  - 加拿大 015
+  - 美国 CloudFlare节点 47
+  - RELAY-104.19.46.63-305
+  - 加拿大 003
+  - 美国 CloudFlare节点 88
+  - RELAY-104.26.0.56-288
+  - RELAY-172.67.75.172-238
+  - 美国 CloudFlare节点 4
+  - RELAY-172.67.70.92-179
+  - 美国 CloudFlare节点 2
+  - 美国 Fastly全球Anycast节点 2
+  - 11|日本 东京Fastly节点
+  - 美国 CloudFlare节点 63
+  - 日本 东京Fastly节点
+  - 美国 Fastly全球Anycast节点
+  - RELAY-104.19.47.65-241
+  - 广东省广州市 移动
+  - RELAY-172.64.166.2-182
+  - 美国 CloudFlare节点 71
+  - 美国 CloudFlare节点 85
+  - 加拿大 036
+  - 瑞典 V2CROSS.COM
+  - RELAY-104.19.45.135-265
+  - 美国 CloudFlare节点 51
+  - 美国5|@ripaojiedian
+  - RELAY-104.19.45.245-200
+  - RELAY-104.19.45.243-271
   type: select
 rules:
 - DOMAIN-SUFFIX,local,🎯 全球直连
@@ -9155,20 +10366,14 @@ rules:
 - DOMAIN-SUFFIX,hdslb.com,🌏 国内媒体
 - DOMAIN,upos-hz-mirrorakam.akamaized.net,🌏 国内媒体
 - DOMAIN,apiintl.biliapi.net,🌏 国内媒体
-- DOMAIN,intel-cache.m.iqiyi.com,🌏 国内媒体
-- DOMAIN,intel-cache.video.iqiyi.com,🌏 国内媒体
-- DOMAIN,intl-rcd.iqiyi.com,🌏 国内媒体
-- DOMAIN,intl-subscription.iqiyi.com,🌏 国内媒体
-- DOMAIN-SUFFIX,inter.iqiyi.com,🌏 国内媒体
-- DOMAIN-SUFFIX,inter.ptqy.gitv.tv,🌏 国内媒体
-- DOMAIN-SUFFIX,intl.iqiyi.com,🌏 国内媒体
+- DOMAIN-SUFFIX,iqiyi.com,🌏 国内媒体
+- DOMAIN-SUFFIX,iqiyipic.com,🌏 国内媒体
 - DOMAIN-SUFFIX,iq.com,🌏 国内媒体
-- IP-CIDR,103.44.56.0/22,🌏 国内媒体,no-resolve
-- IP-CIDR,118.26.120.0/24,🌏 国内媒体,no-resolve
-- IP-CIDR,118.26.32.0/23,🌏 国内媒体,no-resolve
-- IP-CIDR,223.119.62.225/28,🌏 国内媒体,no-resolve
-- IP-CIDR,23.40.241.251/32,🌏 国内媒体,no-resolve
-- IP-CIDR,23.40.242.10/32,🌏 国内媒体,no-resolve
+- DOMAIN-SUFFIX,qy.net,🌏 国内媒体
+- DOMAIN-SUFFIX,gitv.tv,🌏 国内媒体
+- DOMAIN-SUFFIX,71.am,🌏 国内媒体
+- DOMAIN-KEYWORD,qiyi,🌏 国内媒体
+- DOMAIN,cache.video.iqiyi.com,🌏 国内媒体
 - DOMAIN-SUFFIX,api.mob.app.letv.com,🌏 国内媒体
 - DOMAIN-SUFFIX,v.smtcdns.com,🌏 国内媒体
 - DOMAIN-SUFFIX,vv.video.qq.com,🌏 国内媒体

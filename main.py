@@ -96,7 +96,8 @@ def download_yaml():
             if config.get('type') == 'ss':
                 config['cipher'] = 'aes-128-gcm'
 
-        data['proxies'] = [proxy for proxy in data.get('proxies', []) if proxy.get('network') != 'grpc']
+        data['proxies'] = [proxy for proxy in data.get('proxies', []) if proxy.get('network') != 'grpc'
+                           and proxy.get('network') != 'h2']
 
         return data
 
@@ -165,12 +166,19 @@ def download_yaml():
     try:
         with open('suburls', 'r') as f:
             urls = [url.strip() for url in f if url.strip()]  # 去除行尾的换行符
+            valid_urls = []
+            for url in urls:
+                response = requests.get(url, headers=headers)
+                if response.status_code == 200:
+                    valid_urls.append(url)
+                else:
+                    print(f"无效 {url} 失败: {response.status_code}")
 
-        joined_urls = '|'.join(urls)
+        joined_urls = '|'.join(valid_urls)
         # 本地下载
-        # yaml_url = f'http://127.0.0.1:25500/sub?target=clash&url={joined_urls}'
+        yaml_url = f'http://127.0.0.1:25500/sub?target=clash&emoji=false&url={joined_urls}'
         # 容器下载
-        yaml_url = f'http://10.35.26.42:25500/sub?target=clash&emoji=false&url={joined_urls}'
+        # yaml_url = f'http://10.35.26.42:25500/sub?target=clash&emoji=false&url={joined_urls}'
         response = requests.get(yaml_url)
 
         if response.status_code == 200:
@@ -334,7 +342,6 @@ def switch_proxy(proxy_name):
     """
     url = f"{clash_api_url}/proxies/%F0%9F%8E%AF%20%E5%85%A8%E7%90%83%E7%9B%B4%E8%BF%9E"
     data = {
-        "timeout": 5000,  # 5秒超时
         "name": proxy_name
     }
 
@@ -515,6 +522,8 @@ def start_download_test(speed_limit):
 
 if __name__ == '__main__':
     print('YAML 文件开始下载。。。。。')
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
     # 要删除的元素列表（只检查第一个元素）
     to_remove = ['🌍 国外媒体', '🔰 节点选择', '🍎 苹果服务', '🎥 NETFLIX', '🐟 漏网之鱼', '♻️ 自动选择', '🌏 国内媒体',
                  '📲 电报信息', '🚫 运营劫持', '🛑 全球拦截', '⛔️ 广告拦截', '🎯 全球直连', '🔰 节点选择', 'Ⓜ️ 微软服务',
