@@ -170,7 +170,7 @@ def download_yaml():
         # 本地下载
         # yaml_url = f'http://127.0.0.1:25500/sub?target=clash&url={joined_urls}'
         # 容器下载
-        yaml_url = f'http://10.35.26.42:25500/sub?target=clash&url={joined_urls}'
+        yaml_url = f'http://10.35.26.42:25500/sub?target=clash&emoji=false&url={joined_urls}'
         response = requests.get(yaml_url)
 
         if response.status_code == 200:
@@ -290,7 +290,7 @@ def run_tests_in_parallel():
     # 获取所有代理节点并测试延迟
     proxies = get_proxies()
     try:
-        with ThreadPoolExecutor(max_workers=10) as executor:
+        with ThreadPoolExecutor(max_workers=5) as executor:
             # 提交所有任务
             futures = [executor.submit(test_proxy_delay, proxy_name) for proxy_name in proxies['proxies']]
 
@@ -332,16 +332,17 @@ def switch_proxy(proxy_name):
     :param proxy_name: 要切换到的代理节点名称
     :return: 返回切换结果或错误信息
     """
-    url = f"{clash_api_url}/proxies/%F0%9F%94%B0%20%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9"
+    url = f"{clash_api_url}/proxies/%F0%9F%8E%AF%20%E5%85%A8%E7%90%83%E7%9B%B4%E8%BF%9E"
     data = {
+        "timeout": 5000,  # 5秒超时
         "name": proxy_name
     }
 
     try:
-        response = requests.put(url, json=data, timeout=5)
+        response = requests.put(url, json=data)
         # 检查响应状态
         if response.status_code == 204:  # Clash API 切换成功返回 204 No Content
-            # print(f"\nSwitched to proxy '{proxy_name}' in selector '🔰 节点选择' successfully.")
+            print(f"\nSwitched to proxy '{proxy_name}' in selector '🎯%20全球直连' successfully.")
             return {"status": "success", "message": f"Switched to proxy '{proxy_name}'."}
         else:
             # print(f"Failed to switch proxy. HTTP status code: {response.status_code}")
@@ -355,6 +356,8 @@ def switch_proxy(proxy_name):
 def test_proxy_speed(proxy_name):
     # 切换到该代理节点
     switch_proxy(proxy_name)
+    # 等待代理切换生效
+    time.sleep(1)
 
     # 设置代理
     proxies = {
@@ -378,7 +381,8 @@ def test_proxy_speed(proxy_name):
     # 不断发起请求直到达到时间限制
     while time.time() - start_time < test_duration:
         try:
-            response = requests.get(test_url, stream=True, proxies=proxies, timeout=test_duration)
+            response = requests.get(test_url, stream=True, proxies=proxies, headers={'Cache-Control': 'no-cache'},
+                                    timeout=test_duration)
             for data in response.iter_content(chunk_size=524288):
                 total_length += len(data)
                 if time.time() - start_time >= test_duration:
@@ -386,7 +390,6 @@ def test_proxy_speed(proxy_name):
             # time.sleep(0.5)  # 引入短暂的延迟，防止过快完成
         except Exception as e:
             print(f"测试节点 {proxy_name} 下载失败: {e}")
-
 
     # 逐块下载，直到达到 10MB 为止
     # max_size = 10 * 1024 * 1024  # 50MB 转换为字节
@@ -416,30 +419,26 @@ def test_all_proxies():
         proxy_names = proxies.get('proxies', {}).keys()
 
         # 单线程节点速度下载测试
-        # try:
-        #     for proxy_name in proxy_names:
-        #         result = test_proxy_speed(proxy_name)
-        #         # 处理结果，例如输出或存储
-        # except Exception as e:
-        #     print(f"测试节点延迟时出错: {e}")
+        for proxy_name in proxy_names:
+            if proxy_name not in to_remove:
+                test_proxy_speed(proxy_name)
 
         # 多线程节点速度下载测试
+        # with ThreadPoolExecutor(max_workers=1) as executor:
+        #     # 提交所有任务
+        #     futures = [executor.submit(test_proxy_speed, proxy_name) for proxy_name in proxy_names]
+        #
+        #     # 等待所有任务完成
+        #     for future in as_completed(futures):
+        #         try:
+        #             result = future.result()  # 获取任务结果
+        #         except Exception as e:
+        #             print(f"任务发生异常: proxy timed out")
 
-        with ThreadPoolExecutor(max_workers=5) as executor:
-            # 提交所有任务
-            futures = [executor.submit(test_proxy_speed, proxy_name) for proxy_name in proxy_names]
-
-            # 等待所有任务完成
-            for future in as_completed(futures):
-                try:
-                    result = future.result()  # 获取任务结果
-                except Exception as e:
-                    print(f"任务发生异常: proxy timed out")
+        # 输出排序结果
+        print("\n=== Test Results (sorted by speed) ===")
     except Exception as e:
-        print(f"并发测试节点延迟时出错: {e}")
-
-    # 输出排序结果
-    print("\n=== Test Results (sorted by speed) ===")
+        print(f"测试节点速度时出错: {e}")
 
 
 # 生成新的 YAML 配置文件
