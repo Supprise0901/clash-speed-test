@@ -164,7 +164,7 @@ def download_yaml():
 
     try:
         with open('suburls', 'r') as f:
-            urls = [url.strip() for url in f]  # 去除行尾的换行符
+            urls = [url.strip() for url in f if url.strip()]  # 去除行尾的换行符
 
         joined_urls = '|'.join(urls)
         # 本地下载

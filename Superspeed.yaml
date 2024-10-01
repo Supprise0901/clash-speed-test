@@ -13,42 +13,6 @@ proxies:
   tls: true
   type: vmess
   uuid: a32313ad-5e39-4f9a-9cad-512041790050
-- alterId: 0
-  cipher: auto
-  name: 加拿大 017
-  network: ws
-  port: 2086
-  server: 104.19.47.77
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip14.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 64
-  cipher: auto
-  name: 美国5|@ripaojiedian
-  port: 58831
-  server: 120.232.153.27
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 0
-  cipher: auto
-  name: RELAY-104.19.45.245-181
-  network: ws
-  port: 2095
-  server: 104.19.45.245
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-  ws-opts:
-    headers:
-      Host: onea.flha.ru
-    path: /
 - alterId: 64
   cipher: auto
   name: 香港4|@ripaojiedian
@@ -58,112 +22,95 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: 香港5|@ripaojiedian
+  port: 44826
+  server: ambxxid02hk.dorabbb.top
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 0b411754-172d-406c-95fb-7ee650a5b9ad
 proxy-groups:
 - name: 🔰 节点选择
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: select
 - interval: 300
   name: ♻️ 自动选择
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: url-test
   url: http://www.gstatic.com/generate_204
 - name: 🎥 NETFLIX
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: select
 - name: ⛔️ 广告拦截
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: select
 - name: 🚫 运营劫持
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: select
 - name: 🌍 国外媒体
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: select
 - name: 🌏 国内媒体
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: select
 - name: 📲 电报信息
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: select
 - name: 🍎 苹果服务
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: select
 - name: 🎯 全球直连
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: select
 - name: 🛑 全球拦截
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: select
 - name: 🐟 漏网之鱼
   proxies:
   - SG-103.14.92.61-254
-  - 加拿大 017
-  - 美国5|@ripaojiedian
-  - RELAY-104.19.45.245-181
   - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
   type: select
 rules:
 - DOMAIN-SUFFIX,local,🎯 全球直连
