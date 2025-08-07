@@ -2,7 +2,7 @@
 
 # 通过clash/clash_Meta内核测试节点速度
 
-[本地subconverter工具]（https://github.com/tindy2013/subconverter/releases）
+[本地subconverter工具](https://github.com/tindy2013/subconverter/releases)
 
 * ### 测试方式
 * 主目录创建文件suburls（使用方式main中checkbox_config函数内），内容填写订阅地址
