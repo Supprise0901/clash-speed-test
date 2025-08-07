@@ -4,7 +4,7 @@
 
 [本地subconverter工具]（https://github.com/tindy2013/subconverter/releases）
 
-** 测试方式
+* ### 测试方式
 * 主目录创建文件suburls（使用方式main中checkbox_config函数内），内容填写订阅地址
 
 * 需要在本地运行subconverter工具，将suburls订阅链接转换为clash的配置文件
